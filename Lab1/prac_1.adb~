@@ -68,7 +68,7 @@ begin
 end Remove;
 
 procedure List (B: in out Circular_Buffer) is
-myIndex : Index := 0;
+myIndex : Index := B.Rem_index;
 begin
  if Empty(B) then
    Put_Line("Buffer empty.");
@@ -80,7 +80,6 @@ begin
      end if;
      myIndex := myIndex + 1;
    end loop;
-   Put_Line("");
  end if;
 
 end List;
@@ -105,7 +104,7 @@ begin
            Add(My_Buffer,Elem);
 	end if;
       when 2 =>
-	if Full(My_Buffer) then 
+	if Empty(My_Buffer) then 
 	   Put_Line ("Buffer Empty! Unable to remove element!");
         else
            Remove(My_Buffer,Elem);
@@ -118,6 +117,7 @@ begin
       when 4 => 
 	Put("Buffer elements:");
 	List(My_Buffer);
+	New_Line;
       when 0 =>
         exit;
       when  others => null;

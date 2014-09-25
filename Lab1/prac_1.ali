@@ -3,7 +3,7 @@ M P W=b
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
 
-U prac_1%b		prac_1.adb		7cbd013c NE OO SU
+U prac_1%b		prac_1.adb		6d183594 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -23,7 +23,7 @@ D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
-D prac_1.adb		20140925140505 b29b7d4c
+D prac_1.adb		20140925141032 a33e49e4
 D system.ads		20140416172229 23e1f70b
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
@@ -62,7 +62,7 @@ X 14 prac_1.adb
 18R8 Circular_Buffer 24e15 25r14 27r23 36r24 45r33 52r26 61r30 70r27
 20a9 Queue{17A8} 55m6 64r10 77r26
 21m9 Add_Index{16M8} 47m5 55r14 56m6 56r21
-22m9 Rem_Index{16M8} 48m5 64r18 65m6 65r21
+22m9 Rem_Index{16M8} 48m5 64r18 65m6 65r21 71r22
 23i9 Counter{integer} 29r7 38r7 49m5 57m6 57r19 66m6 66r19 76r18 78r16
 25r3 My_Buffer{18R8} 99r17 104m16 107r18 110m19 116m20 119m14
 27V10 Full{boolean} 27b10 27>16 34l5 34t9 54s9 99s12
@@ -78,7 +78,7 @@ X 14 prac_1.adb
 61r19 B{18R8} 63r15 64r8 64r16 65m4 65r19 66m4 66r17
 61i47 I{integer} 64m4
 70U11 List 70b11 70=17 85l5 85t9 119s9
-70r17 B{18R8} 73r11 76r16 77r24 78r14
+70r17 B{18R8} 71r20 73r11 76r16 77r24 78r14
 71m1 myIndex{16M8} 77r32 81m6 81r17
 76i8 I{integer} 78r9
 87i1 Command{integer} 96m9 97r10

@@ -68,10 +68,10 @@ begin
 end Remove;
 
 procedure List (B: in out Circular_Buffer) is
-myIndex : Index := 0;
+myIndex : Index := B.Rem_index;
 begin
  if Empty(B) then
-   Put_Line("Buffer empty.");
+   Put_Line(" Buffer empty.");
  else
    for I in 1..B.Counter loop
      Put(Integer'Image(B.Queue(myIndex)));
