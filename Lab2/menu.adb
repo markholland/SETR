@@ -1,12 +1,14 @@
 
-with Ada.Text_IO, Ada.Integer_Text_IO, Buffers;
-use  Ada.Text_IO, Ada.Integer_Text_IO, Buffers;
+with Ada.Text_IO, Ada.Integer_Text_IO, Buffers, Ada.Exceptions;
+use  Ada.Text_IO, Ada.Integer_Text_IO, Buffers, Ada.Exceptions;
 
 procedure Menu is
 
 Buffer_Full, Buffer_Empty : exception;
 My_Buffer: Circular_Buffer;
 Command, Elem: Integer;
+Exception_Name : String := " ";
+Exception_Message : String := " ";
 begin
   Put_Line("BUFFER MANAGER");
   loop
@@ -37,4 +39,7 @@ begin
       when  others => null;
     end case;
   end loop;
+  exception
+    when E: others =>
+      Put_Line("Exception " & Exception_Name(E) & " in " & Exception_Message(E));
 end Menu;

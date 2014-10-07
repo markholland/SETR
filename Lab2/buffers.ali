@@ -1,20 +1,19 @@
 V "GNAT Lib v4.6"
 P SS ZX
-R nnnnnnnnnnnnnnnnnnvnnvnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnn
+R nnnnnnnnnnnnnnnnnnnnnvnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnn
 
-U buffers%b		buffers.adb		ab09266a OO PK IL
+U buffers%b		buffers.adb		7234d967 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
-W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W interfaces%s		interfac.ads		interfac.ali
+
+U buffers%s		buffers.ads		0eda0c99 EE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
 W system%s		system.ads		system.ali
 W system.exception_table%s  s-exctab.adb	s-exctab.ali
-W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
-
-U buffers%s		buffers.ads		6729894c EE NE OO PK
 
 D ada.ads		20070406091342 3ffc8e18
 D a-except.ads		20090727140100 0c711ac9
@@ -27,8 +26,8 @@ D a-tags.ads		20101021101406 c7695348
 D a-textio.ads		20091028140912 386df5d4
 D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
-D buffers.ads		20141001174336 6729894c
-D buffers.adb		20141001181432 0206d356
+D buffers.ads		20141001182535 0eda0c99
+D buffers.adb		20141001182152 b2c8a98e
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
 D system.ads		20140416172229 23e1f70b
@@ -54,37 +53,37 @@ X 5 a-inteio.ads
 18K13*Integer_Text_IO[10|45] 13|1w23 2r23
 X 9 a-textio.ads
 49K13*Text_IO 472e16 13|1w10 2r10
-264U14*Put_Line 13|41s7 55s7 62s10
+264U14*Put_Line 13|55s10
 X 10 a-tiinio.ads
-65U14*Put 13|65s13[5|18]
+65U14*Put 13|58s13[5|18]
 X 12 buffers.ads
-1K9*Buffers 20l5 20e12 13|3b14 70l5 70t12
-2R9*Circular_Buffer 3r29 4r32 5r34 6r28 7r25 8r26 13c7 19e17 13|7r26 15r27
-. 23r35 30r29 44r32 58r31
-3U13*Add 3=18 3>46 13|30b14 42l8 42t11
-3r18 B{2R9} 13|30b19 32r19 33m10 33r18 34m10 34r25 35m10 35r23
-3i46 I{integer} 13|30b46 33r34
-4U13*Remove 4=21 4<48 13|44b14 56l8 56t14
-4r21 B{2R9} 13|44b22 46r20 47r14 47r22 48m10 48r25 49m10 49r23
-4i48 I{integer} 13|44b49 47m10
-5U13*Initialise 5=24 13|23b13 28l8 28t18
-5r24 B{2R9} 13|23b25 25m7 26m7 27m7
-6U13*List 6=18 13|58b14 69l8 69t12
-6r18 B{2R9} 13|58b20 59r27 61r16 64r24 65r17
-7V13*Full{boolean} 7>18 13|7b13 13l8 13t12 32s14
-7r18 B{2R9} 13|7b19 9r10
-8V13*Empty{boolean} 8>19 13|15b13 21l8 21t13 46s14 61s10
-8r19 B{2R9} 13|15b20 17r10
-10i3 N{integer} 11r20 13|9r22
-11M7 Index 12r24 17r22 13|59r18
-12A7 Buffer(integer)<11M7> 15r18
-15a10*Queue{12A7} 13|33m12 47r16 65r19
-16m10*Add_Index{11M7} 13|25m9 33r20 34m12 34r27
-17m10*Rem_Index{11M7} 13|26m9 47r24 48m12 48r27 59r29
-18i10*Counter{integer} 13|9r12 17r12 27m9 35m12 35r25 49m12 49r25 64r26
+1K9*Buffers 26l5 26e12 13|3b14 63l5 63t12
+2R8*Circular_Buffer 6r29 7r32 8r34 9r28 10r25 11r26 18c8 24e17 13|5r26 13r27
+. 21r35 28r29 40r32 51r31
+4X3*Buffer_Full 13|35r16 47r16
+4X16*Buffer_Empty
+6U13*Add 6=18 6>46 13|28b14 37l8 37t11
+6r18 B{2R8} 13|28b19 30r19 31m10 31r18 32m10 32r25 33m10 33r23
+6i46 I{integer} 13|28b46 31r34
+7U13*Remove 7=21 7<49 13|40b14 49l8 49t14
+7r21 B{2R8} 13|40b22 42r20 43r14 43r22 44m10 44r25 45m10 45r23
+7i49 I{integer} 13|40b49 43m10
+8U13*Initialise 8=24 13|21b13 26l8 26t18
+8r24 B{2R8} 13|21b25 23m7 24m7 25m7
+9U13*List 9=18 13|51b14 62l8 62t12
+9r18 B{2R8} 13|51b20 52r27 54r16 57r24 58r17
+10V13*Full{boolean} 10>18 13|5b13 11l8 11t12 30s14
+10r18 B{2R8} 13|5b19 7r10
+11V13*Empty{boolean} 11>19 13|13b13 19l8 19t13 42s14 54s10
+11r19 B{2R8} 13|13b20 15r10
+15i3 N{integer} 16r21 13|7r22
+16M8 Index 17r25 22r22 13|52r18
+17A8 Buffer(integer)<16M8> 20r18
+20a10*Queue{17A8} 13|31m12 43r16 58r19
+21m10*Add_Index{16M8} 13|23m9 31r20 32m12 32r27
+22m10*Rem_Index{16M8} 13|24m9 43r24 44m12 44r27 52r29
+23i10*Counter{integer} 13|7r12 15r12 25m9 33m12 33r25 45m12 45r25 57r26
 X 13 buffers.adb
-5X9 Buffer_Full 37r16 40r10
-5X22 Buffer_Empty 51r16 54r12
-59m7 My_Index{12|11M7} 65r25 66m13 66r23
-64i14 I{integer}
+52m7 My_Index{12|16M8} 58r25 59m13 59r23
+57i14 I{integer}
 
