@@ -1,0 +1,60 @@
+V "GNAT Lib v4.6"
+M P W=b
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U remove_blanks%b	remove_blanks.adb	04fc486d NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D remove_blanks.adb	20141007102440 3c91bdb9
+D system.ads		20140416172229 23e1f70b
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-imgint.ads		20090409150019 02dbe0c2
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 12|1r6 2r6
+X 8 a-textio.ads
+49K13*Text_IO 472e16 12|1w10 2r10
+243U14*Put 12|22s1 28s1
+250U14*Get_Line 12|23s1
+251s7 Item{string} 12|23r10
+252i7 Last{natural} 12|23r25
+264U14*Put_Line 12|24s1 25s1 27s1
+X 12 remove_blanks.adb
+4U11*Remove_Blanks 4b11 29l5 29t18
+6U11 Eliminar_espacios 6b11 6=30 6<52 16l5 16t22 26s1
+6s30 Item{string} 8r24 9r22 10r31 11m25 11r36
+6i52 Blanks_Removed{natural} 13m17 13r35
+8i16 I{integer} 9r27 10r26
+10i21 J{integer} 11r30 11r41
+18a1 input{string} 23m18 25r10 26m19 27r10
+19i1 Count{natural} 23m33 24r24 25r19 27r20
+20i1 Blanks_Removed{natural} 26m26 27r26 28r19
+
