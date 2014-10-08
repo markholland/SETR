@@ -1,14 +1,17 @@
 V "GNAT Lib v4.6"
 M P W=b
 P SS ZX
-R nnnnnnnnnnnnnnnnnnvnnvnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
+R nnnnnnnnnnnnnnnnnnvvnvnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
 
-U menu%b		menu.adb		c3f5720f NE OO SU
+U menu%b		menu.adb		3af975cb NE OO SU
 W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W buffers%s		buffers.adb		buffers.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 
 D ada.ads		20070406091342 3ffc8e18
@@ -22,11 +25,12 @@ D a-tags.ads		20101021101406 c7695348
 D a-textio.ads		20091028140912 386df5d4
 D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
-D buffers.ads		20141001182535 0eda0c99
+D buffers.ads		20141008084840 2e5c7426
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
-D menu.adb		20141007104601 030902e6
+D menu.adb		20141008091138 d6f26754
 D system.ads		20140416172229 23e1f70b
+D s-conca4.ads		20090420091404 025fe3be
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
 D s-ficobl.ads		20100909103250 443b9d66
@@ -44,29 +48,32 @@ D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 15|2r6 2r19 3r6 3r19
+16K9*Ada 19e8 15|2r6 2r19 2r49 3r6 3r19 3r49
+X 2 a-except.ads
+55K13*Exceptions 370e19 15|2w53 3r53
+77V13*Exception_Name{string} 15|48s31
+99V13*Exception_Message{string} 15|48s60
 X 5 a-inteio.ads
 18K13*Integer_Text_IO[10|45] 15|2w23 3r23
 X 9 a-textio.ads
 49K13*Text_IO 472e16 15|2w10 3r10
-167U14*New_Line 15|27s12 33s9
-243U14*Put 15|20s18 25s12 31s9
-264U14*Put_Line 15|10s3 12s5 13s5 14s5 15s5 16s5 41s7 43s7
+167U14*New_Line 15|30s12 36s9
+243U14*Put 15|23s18 28s12 34s9
+264U14*Put_Line 15|10s3 12s5 13s5 14s5 15s5 16s5 48s7
 X 10 a-tiinio.ads
-55U14*Get 15|17s5[5|18] 21s12[5|18]
-65U14*Put 15|26s12[5|18]
+55U14*Get 15|17s5[5|18] 24s12[5|18]
+65U14*Put 15|29s12[5|18]
 X 12 buffers.ads
-1K9*Buffers 26e12 15|2w40 3r40
-2R8*Circular_Buffer 24e17 15|7r12
-4X3*Buffer_Full 15|40r10
-4X16*Buffer_Empty 15|42r10
-6U13*Add 15|22s12
-7U13*Remove 15|24s18
-8U13*Initialise 15|29s9
-9U13*List 15|32s9
+1K9*Buffers 27e12 15|2w40 3r40
+2R8*Circular_Buffer 25e17 15|7r12
+7U13*Add 15|25s12
+8U13*Remove 15|27s18
+9U13*Initialise 15|32s9
+10U13*List 15|35s9
 X 15 menu.adb
-5U11*Menu 5b11 44l5 44t9
-7r1 My_Buffer{12|2R8} 22m16 24m25 29m20 32m14
-8i1 Command{integer} 17m9 18r10
-8i10 Elem{integer} 21m16 22r26 24m35 26r16
+5U11*Menu 5b11 51l5 51t9
+7r1 My_Buffer{12|2R8} 25m16 27m25 32m20 35m14
+8i1 Command{integer} 17m9 21r10
+8i10 Elem{integer} 24m16 25r26 27m35 29r16
+47r10 E{2|68R9} 48r46 48r78
 

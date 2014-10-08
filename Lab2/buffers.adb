@@ -2,11 +2,9 @@ with Ada.Text_IO, Ada.Integer_Text_IO;
 use  Ada.Text_IO, Ada.Integer_Text_IO;
 package body buffers is
 
-	Buffer_Full, Buffer_Empty : exception;
-
    function Full (B : in Circular_Buffer) return Boolean is
    begin
-      if B.Counter = N -1 then
+      if B.Counter = N then
          return True;
       else return False;
       end if;
@@ -36,10 +34,8 @@ package body buffers is
       else 
       	 raise Buffer_Full;
       end if;
-      exception
-    when Buffer_Full =>
-      Put_Line ("Buffer Full! Unable to add element!");
    end Add;
+
 
    procedure Remove (B: in out Circular_Buffer; I : out Integer ) is
     begin
@@ -47,12 +43,9 @@ package body buffers is
          I:= B.Queue(B.Rem_Index);
          B.Rem_Index := B.Rem_Index + 1;
          B.Counter := B.Counter - 1;
-      else 
-      	 raise Buffer_Empty;
+         else 
+         raise Buffer_Empty;
       end if;
-      exception
-      when Buffer_Empty =>
-      Put_Line ("Buffer Full! Unable to add element!");
    end Remove;
 
    procedure List (B : in out Circular_Buffer) is
@@ -61,10 +54,13 @@ package body buffers is
       if Empty(B) then
          Put_Line("Buffer Empty");
       else
-         for I in 1 .. B.Counter loop
-            Put(B.Queue(My_Index));
-            My_Index:=My_Index+1;
-         end loop;
+        for I in 1..B.Counter loop
+     		Put(Integer'Image(B.Queue(My_Index)));
+     		if I /= B.Counter then
+				Put(",");
+     		end if;
+     		My_Index := My_Index + 1;
+   		end loop;
       end if;
    end List;
 end buffers;

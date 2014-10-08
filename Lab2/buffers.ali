@@ -2,14 +2,15 @@ V "GNAT Lib v4.6"
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnvnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnn
 
-U buffers%b		buffers.adb		7234d967 NE OO PK IL
+U buffers%b		buffers.adb		365a1034 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W interfaces%s		interfac.ads		interfac.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
 
-U buffers%s		buffers.ads		0eda0c99 EE OO PK
+U buffers%s		buffers.ads		2e5c7426 EE OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W system%s		system.ads		system.ali
 W system.exception_table%s  s-exctab.adb	s-exctab.ali
@@ -26,8 +27,8 @@ D a-tags.ads		20101021101406 c7695348
 D a-textio.ads		20091028140912 386df5d4
 D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
-D buffers.ads		20141001182535 0eda0c99
-D buffers.adb		20141001182152 b2c8a98e
+D buffers.ads		20141008084840 2e5c7426
+D buffers.adb		20141008091016 d6201862
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
 D system.ads		20140416172229 23e1f70b
@@ -36,6 +37,7 @@ D s-exctab.ads		20090417131547 66e51330
 D s-ficobl.ads		20100909103250 443b9d66
 D s-finimp.ads		20090409150019 46853fe8
 D s-finroo.ads		20090409150019 dbb860c9
+D s-imgint.ads		20090409150019 02dbe0c2
 D s-parame.ads		20091130110856 9c5d83fa
 D s-secsta.ads		20090707124243 eea35a36
 D s-soflin.ads		20090729085153 9414c974
@@ -53,37 +55,38 @@ X 5 a-inteio.ads
 18K13*Integer_Text_IO[10|45] 13|1w23 2r23
 X 9 a-textio.ads
 49K13*Text_IO 472e16 13|1w10 2r10
+243U14*Put 13|58s17 60s33
 264U14*Put_Line 13|55s10
-X 10 a-tiinio.ads
-65U14*Put 13|58s13[5|18]
 X 12 buffers.ads
-1K9*Buffers 26l5 26e12 13|3b14 63l5 63t12
-2R8*Circular_Buffer 6r29 7r32 8r34 9r28 10r25 11r26 18c8 24e17 13|5r26 13r27
+1K9*Buffers 27l5 27e12 13|3b14 66l5 66t12
+2R8*Circular_Buffer 7r29 8r32 9r34 10r28 11r25 12r26 19c8 25e17 13|5r26 13r27
 . 21r35 28r29 40r32 51r31
-4X3*Buffer_Full 13|35r16 47r16
-4X16*Buffer_Empty
-6U13*Add 6=18 6>46 13|28b14 37l8 37t11
-6r18 B{2R8} 13|28b19 30r19 31m10 31r18 32m10 32r25 33m10 33r23
-6i46 I{integer} 13|28b46 31r34
-7U13*Remove 7=21 7<49 13|40b14 49l8 49t14
-7r21 B{2R8} 13|40b22 42r20 43r14 43r22 44m10 44r25 45m10 45r23
-7i49 I{integer} 13|40b49 43m10
-8U13*Initialise 8=24 13|21b13 26l8 26t18
-8r24 B{2R8} 13|21b25 23m7 24m7 25m7
-9U13*List 9=18 13|51b14 62l8 62t12
-9r18 B{2R8} 13|51b20 52r27 54r16 57r24 58r17
-10V13*Full{boolean} 10>18 13|5b13 11l8 11t12 30s14
-10r18 B{2R8} 13|5b19 7r10
-11V13*Empty{boolean} 11>19 13|13b13 19l8 19t13 42s14 54s10
-11r19 B{2R8} 13|13b20 15r10
-15i3 N{integer} 16r21 13|7r22
-16M8 Index 17r25 22r22 13|52r18
-17A8 Buffer(integer)<16M8> 20r18
-20a10*Queue{17A8} 13|31m12 43r16 58r19
-21m10*Add_Index{16M8} 13|23m9 31r20 32m12 32r27
-22m10*Rem_Index{16M8} 13|24m9 43r24 44m12 44r27 52r29
-23i10*Counter{integer} 13|7r12 15r12 25m9 33m12 33r25 45m12 45r25 57r26
+4X4*Buffer_Full 13|35r16
+4X17*Buffer_Empty 13|47r16
+5a4*Exception_Id{string}
+5a18*Exception_Occurrence{string}
+7U13*Add 7=18 7>46 13|28b14 37l8 37t11
+7r18 B{2R8} 13|28b19 30r19 31m10 31r18 32m10 32r25 33m10 33r23
+7i46 I{integer} 13|28b46 31r34
+8U13*Remove 8=21 8<49 13|40b14 49l8 49t14
+8r21 B{2R8} 13|40b22 42r20 43r14 43r22 44m10 44r25 45m10 45r23
+8i49 I{integer} 13|40b49 43m10
+9U13*Initialise 9=24 13|21b13 26l8 26t18
+9r24 B{2R8} 13|21b25 23m7 24m7 25m7
+10U13*List 10=18 13|51b14 65l8 65t12
+10r18 B{2R8} 13|51b20 52r27 54r16 57r21 58r35 59r25
+11V13*Full{boolean} 11>18 13|5b13 11l8 11t12 30s14
+11r18 B{2R8} 13|5b19 7r10
+12V13*Empty{boolean} 12>19 13|13b13 19l8 19t13 42s14 54s10
+12r19 B{2R8} 13|13b20 15r10
+16i3 N{integer} 17r21 13|7r22
+17M8 Index 18r25 23r22 13|52r18
+18A8 Buffer(integer)<17M8> 21r18
+21a10*Queue{18A8} 13|31m12 43r16 58r37
+22m10*Add_Index{17M8} 13|23m9 31r20 32m12 32r27
+23m10*Rem_Index{17M8} 13|24m9 43r24 44m12 44r27 52r29
+24i10*Counter{integer} 13|7r12 15r12 25m9 33m12 33r25 45m12 45r25 57r23 59r27
 X 13 buffers.adb
-52m7 My_Index{12|16M8} 58r25 59m13 59r23
-57i14 I{integer}
+52m7 My_Index{12|17M8} 58r43 62m17 62r29
+57i13 I{integer} 59r20
 

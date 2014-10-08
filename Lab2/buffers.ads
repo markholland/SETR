@@ -1,8 +1,9 @@
 package Buffers is
   type Circular_Buffer is private;
   
-  Buffer_Full, Buffer_Empty : exception;
-
+   Buffer_Full, Buffer_Empty : exception;
+   Exception_Id, Exception_Occurrence : String := " " ;
+   
   procedure Add (B : in out Circular_Buffer; I : in Integer);
   procedure Remove (B : in out Circular_Buffer; I : out Integer);
   procedure Initialise(B: in out Circular_Buffer);

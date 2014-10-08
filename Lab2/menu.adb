@@ -4,11 +4,8 @@ use  Ada.Text_IO, Ada.Integer_Text_IO, Buffers, Ada.Exceptions;
 
 procedure Menu is
 
-Buffer_Full, Buffer_Empty : exception;
 My_Buffer: Circular_Buffer;
 Command, Elem: Integer;
-Exception_Name : String := " ";
-Exception_Message : String := " ";
 begin
   Put_Line("BUFFER MANAGER");
   loop
@@ -18,6 +15,9 @@ begin
     Put_Line("4. Buffer contents");
     Put_Line("0. Quit");
     Get(Command);
+    declare 
+     begin
+         
     case Command is
       when 1 =>
 	         Put("Element to add:");
@@ -38,8 +38,14 @@ begin
         exit;
       when  others => null;
     end case;
-  end loop;
-  exception
-    when E: others =>
+
+ exception
+    --when Buffer_Full =>
+      --Put_Line ("Buffer Full! Unable to add element!");
+    --when Buffer_Empty =>
+      --Put_Line ("Buffer Empty! Unable to remove element!");
+    when E : others =>
       Put_Line("Exception " & Exception_Name(E) & " in " & Exception_Message(E));
+    end;        
+  end loop;       
 end Menu;
