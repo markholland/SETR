@@ -1,0 +1,78 @@
+V "GNAT Lib v4.6"
+M P W=b
+P SS ZX
+R nnnnnnnvnvnnnnnnnnnnnnnvvvvnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U calendar_test%b	calendar_test.adb	258aaece NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.img_lld%s	s-imglld.adb		s-imglld.ali
+W system.img_real%s	s-imgrea.adb		s-imgrea.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-caldel.ads		20090409150019 9f20b83d
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D calendar_test.adb	20141011125512 0a3a2fcc
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D system.ads		20140416172229 23e1f70b
+D s-conca2.ads		20090420091404 fbd0f2fc
+D s-conca4.ads		20090420091404 025fe3be
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-imgint.ads		20090409150019 02dbe0c2
+D s-imglld.ads		20090409150019 f3220969
+D s-imgrea.ads		20090409150019 c7a851e2
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 12|1r6 1r25 2r6 2r25 6r17 17r16
+X 2 a-calend.ads
+36K13*Calendar 358e17 12|1w10 1r29 6r21 17r20
+38I9*Time 12|6r30
+52V13*Clock{38I9} 12|17s29
+63U14*Split 12|18s7
+X 10 a-textio.ads
+49K13*Text_IO 472e16 12|2w10 2r29
+264U14*Put_Line 12|11s4 12s4 14s4 15s4 23s7
+X 12 calendar_test.adb
+5U11*Calendar_Test 5b11 33l5 33t18
+6i4 T_Cal{2|38I9} 17m7 18r14
+7i4 Yr{integer} 18m21 25r30
+7i8 Mh{integer} 18m25 24r30
+7i12 Dy{integer} 18m29 23r30
+8o4 Ss{duration} 18m33 19r21 20r22 21r21 22m7 22r13 29r31
+9i4 Hr{integer} 19m7 22r25 26r30
+9i8 Mn{integer} 20m7 22r35 27r30
+9i12 Sd{integer} 21m7 28r30
+16i8 I{integer}
+X 15 system.ads
+37K9*System 12|3w6 14r57 15|153e11
+60N4*Tick 12|14r64
+

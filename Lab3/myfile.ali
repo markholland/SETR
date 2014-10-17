@@ -3,7 +3,7 @@ M P W=b
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U remove_blanks%b	remove_blanks.adb	37c8f595 NE OO SU
+U myfile%b		myfile.adb		00867f79 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
@@ -19,7 +19,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
-D remove_blanks.adb	20141017092438 0fa50041
+D myfile.adb		20141017092328 38eb8aad
 D system.ads		20140416172229 23e1f70b
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
@@ -42,19 +42,21 @@ X 1 ada.ads
 16K9*Ada 19e8 12|1r6 2r6
 X 8 a-textio.ads
 49K13*Text_IO 472e16 12|1w10 2r10
-243U14*Put 12|23s1 29s1
-250U14*Get_Line 12|24s1
-251s7 Item{string} 12|24r10
-252i7 Last{natural} 12|24r25
-264U14*Put_Line 12|25s1 26s1 28s1
-X 12 remove_blanks.adb
-4U11*Remove_Blanks 4b11 30l5 30t18
-6U11 Eliminar_espacios 6b11 6=30 6<52 17l5 17t22 27s1
-6s30 Item{string} 9r24 10r22 11r31 12m25 12r36
-6i52 Blanks_Removed{natural} 8m12 14m17 14r35
-9i16 I{integer} 10r27 11r26
-11i21 J{integer} 12r30 12r41
-19a1 input{string} 24m18 26r10 27m19 28r10
-20i1 Count{natural} 24m33 25r24 26r19 27r28 28r20
-21i1 Blanks_Removed{natural} 27m36 28r26 29r19
+167U14*New_Line 12|18s7 30s6 33s8
+209U14*Put 12|10s10
+243U14*Put 12|25s1 29s4 32s4 35s1
+250U14*Get_Line 12|26s1
+251s7 Item{string} 12|26r10
+252i7 Last{natural} 12|26r25
+264U14*Put_Line 12|27s1 28s4 34s1
+X 12 myfile.adb
+4U11*myfile 4b11 36l5 36t11
+6U11 Eliminar_espacios 6b11 6=30 6<52 19l5 19t22 31s4
+6s30 Item{string} 9r19 10r14 11r22 12r31 13m25 13r36
+6i52 Blanks_Removed{natural} 8m7 15m17 15r35
+9i11 I{integer} 10r19 11r27 12r26
+12i21 J{integer} 13r30 13r41
+21a1 input{string} 26m18 28r13 31m22 34r10
+22i1 Count{natural} 26m33 27r24 28r22 29r22 31r31 34r20
+23i1 Blanks_Removed{natural} 31m39 32r22 34r26 35r19
 
