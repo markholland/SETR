@@ -1,0 +1,10 @@
+	task Periodic_Task;	        -- Task specification
+	task body Periodic_Task is  -- Task body
+		Next : Time := Clock;
+		Period : Time_Span := 0.1;
+	begin
+		loop
+			Next := Next + Period;
+			delay until Next;
+		end loop;
+	end Periodic_Task;
