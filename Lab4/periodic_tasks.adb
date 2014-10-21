@@ -19,6 +19,7 @@ procedure Periodic_Tasks is
 			Put_Line(Integer'Image(Hr) & " :" &
                Integer'Image(Mn) & " :" &
                Integer'Image(Sd));
+			Put_Line("I="&Integer'Image(I));
 			delay 1.0;
 		end loop;
 	end Timer;
@@ -28,7 +29,6 @@ procedure Periodic_Tasks is
 	begin
 		loop
 			I := (I + 1) mod 16;
-			Put_Line("I="&Integer'Image(I));
 			delay 0.5;
 		end loop;
 	end Incrementer;
