@@ -1,33 +1,35 @@
 V "GNAT Lib v4.6"
 M P W=b
 P SS ZX
-R nnnnnnnvnvnnnnnnnnnnnnnvnvnvnnnnnnnnnnnvnnnnvnnnnvnvnnnnnnvnnnnnnnnnnnnnnv1+nnnnnn
+R nnnnnnnvnvnnnnnnnnnnnnnvnvnvvnnvnnnnnnnnnnvnvnnnnvnvnnnnnnvnnnnnnnnnnv1nv2nv1+nnnnnn
 
-U periodic_tasks%b	periodic_tasks.adb	9a26025c NE OO SU
+U periodic_tasks_2_rt_time%b  periodic_tasks_2_rt_time.adb  20db5705 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
-W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W system%s		system.ads		system.ali
 W system.concat_2%s	s-conca2.adb		s-conca2.ali
-W system.concat_5%s	s-conca5.adb		s-conca5.ali
+W system.concat_8%s	s-conca8.adb		s-conca8.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.img_lld%s	s-imglld.adb		s-imglld.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.task_info%s	s-tasinf.adb		s-tasinf.ali
 W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
 D ada.ads		20070406091342 3ffc8e18
 D a-calend.ads		20090409150019 343c83dd
-D a-caldel.ads		20090409150019 9f20b83d
 D a-except.ads		20090727140100 0c711ac9
 D a-finali.ads		20090409150019 e5e85fa4
 D a-filico.ads		20090409150019 872dc219
 D a-ioexce.ads		20091130110856 8b9de6cd
 D a-reatim.ads		20090409150019 63f07669
+D a-retide.ads		20090409150019 081cdaa4
 D a-stream.ads		20090409150019 2ca4ee37
 D a-tags.ads		20101021101406 c7695348
 D a-textio.ads		20091028140912 386df5d4
@@ -35,17 +37,18 @@ D a-unccon.ads		20070406091342 f9eb8f06
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
-D periodic_tasks.adb	20141022055815 96777455
+D periodic_tasks_2_rt_time.adb  20141022090124 4f7a5765
 D system.ads		20140416172229 23e1f70b
 D s-atacco.ads		20090409150019 1dc856ad
 D s-conca2.ads		20090420091404 fbd0f2fc
-D s-conca5.ads		20090420091404 1039cea1
+D s-conca8.ads		20090420091404 ea110f26
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
 D s-ficobl.ads		20100909103250 443b9d66
 D s-finimp.ads		20090409150019 46853fe8
 D s-finroo.ads		20090409150019 dbb860c9
 D s-imgint.ads		20090409150019 02dbe0c2
+D s-imglld.ads		20090409150019 f3220969
 D s-linux.ads		20090730092306 47911ab1
 D s-multip.ads		20101011073009 38ac9f73
 D s-osinte.ads		20101127183452 6e2d2e09
@@ -62,31 +65,54 @@ D s-tasinf.ads		20090409150019 21316953
 D s-taspri.ads		20080408071349 af44aca8
 D s-taprop.ads		20090409150019 07f79e46
 D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-tpoben.ads		20090409150019 e8374469
+D s-tasren.ads		20090409150019 86fa7427
 D s-tassta.ads		20101018103456 e88ef99e
 D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 16|1r6 1r25 2r6 2r23 6r22 14r34
+16K9*Ada 19e8 16|1r6 1r25 2r6 2r25 3r6 3r23 7r22 16r24 17r26 20r25 26r42
+. 48r24 49r26 52r25 65r8 66r10 72r17
 X 2 a-calend.ads
-36K13*Calendar 358e17 16|1w10 1r29 6r26 14r38
-38I9*Time 16|6r35
-52V13*Clock{38I9} 16|14s47
-63U14*Split 16|15s17
+36K13*Calendar 358e17 16|1w10 1r29 7r26 26r46
+38I9*Time 16|7r35
+52V13*Clock{38I9} 16|26s55
+63U14*Split 16|27s33
+X 7 a-reatim.ads
+39K13*Real_Time 139e18 16|2w10 2r29 16r28 17r30 20r29 48r28 49r30 52r29 65r12
+. 66r14 72r21
+41O9*Time 16|16r38 48r38 65r22
+46O9*Time_Span 16|17r40 49r40 66r24
+53V13*Clock{41O9} 16|20s39 52s39 72s31
+55V13*"+"{41O9} 16|37s46 59s46 73s22
+85V13*Milliseconds{46O9} 16|49s53
+87V13*Seconds{46O9} 16|17s53 66s37
 X 11 a-textio.ads
-49K13*Text_IO 472e16 16|2w10 2r27
-264U14*Put_Line 16|19s25 22s25 38s9
-X 16 periodic_tasks.adb
-4U11*Periodic_Tasks 4b11 40l5 40t19
-5i9 I{integer} 22r53 31m25 31r31
-6i9 T_Cal{2|38I9} 14m25 15r24
-7i9 Yr{integer} 15m31
-7i13 Mh{integer} 15m35
-7i17 Dy{integer} 15m39
-8o5 Ss{duration} 15m43 16r39 17r32 18r31
-9i9 Hr{integer} 16m25 19r48
-9i13 Mn{integer} 17m17 20r30
-9i17 Sd{integer} 18m17 21r30
-10t14 Timer 11b19 25l13 25t18
-27t14 Incrementer 28b19 34l13 34t24
+49K13*Text_IO 472e16 16|3w10 3r27
+264U14*Put_Line 16|32s33 36s33 69s9 77s9
+X 16 periodic_tasks_2_rt_time.adb
+5U11*Periodic_Tasks_2_rt_time 5b11 78l5 78t29
+6i9 I{integer} 36r61 58m33 58r39
+7i9 T_Cal{2|38I9} 26m33 27r40
+8i9 Yr{integer} 27m47
+8i13 Mh{integer} 27m51
+8i17 Dy{integer} 27m55
+9o5 Ss{duration} 27m59 28r47 29r40 30r39 31m25 31r31 35r36
+10i9 Hr{integer} 28m33 31r43 32r56
+10i13 Mn{integer} 29m25 31r53 33r35
+10i17 Sd{integer} 30m25 34r35
+11t14 Timer 15b19 41l13 41t18 70r9 75r9
+12Y23 Start 19b24 70s15
+13Y23 Stop 23b40 75s15
+16o17 Next{7|41O9} 20m17 37m33 37r41 38r45
+17o17 Period{7|46O9} 37r48
+43t14 Incrementer 47b19 63l13 63t24 71r9 76r9
+44Y23 Start 51b24 71s21
+45Y23 Stop 55b40 76s21
+48o17 Next{7|41O9} 52m17 59m33 59r41 60r45
+49o17 Period{7|46O9} 59r48
+65o1 Next{7|41O9} 72m9 73m9 73r17 74r21
+66o1 Period{7|46O9} 73r24
 
