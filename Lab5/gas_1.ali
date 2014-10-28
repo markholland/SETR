@@ -1,20 +1,20 @@
 V "GNAT Lib v4.6"
 M P W=b
 P SS ZX
-R nnnnnnnvnvnnnnnnnnnnnnnvnvnvvnnvnnnnnnnnnnvnvnnnnvnvnnnnnnvnnnnnnnnnnv1nv2nv1+nnnnnn
+R nnnnnnnnnvnnnnnnnnvnnvnnnvnvvnnvnnnnnnnnnnvnvnnnnvnvnnnnnnvnnnnnnnnnnv3nv4nv1+nnnnnn
 
-U periodic_tasks_2_rt_time%b  periodic_tasks_2_rt_time.adb  20db5705 NE OO SU
+U gas_1%b		gas_1.adb		805a8ada NE OO SU
 W ada%s			ada.ads			ada.ali
-W ada.calendar%s	a-calend.adb		a-calend.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.real_time.delays%s  a-retide.adb		a-retide.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W consolas%s		consolas.adb		consolas.ali
 W system%s		system.ads		system.ali
-W system.concat_2%s	s-conca2.adb		s-conca2.ali
-W system.concat_8%s	s-conca8.adb		s-conca8.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.concat_5%s	s-conca5.adb		s-conca5.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
-W system.img_lld%s	s-imglld.adb		s-imglld.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.task_info%s	s-tasinf.adb		s-tasinf.ali
@@ -23,32 +23,33 @@ W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
 D ada.ads		20070406091342 3ffc8e18
-D a-calend.ads		20090409150019 343c83dd
 D a-except.ads		20090727140100 0c711ac9
 D a-finali.ads		20090409150019 e5e85fa4
 D a-filico.ads		20090409150019 872dc219
+D a-inteio.ads		20070406091342 f64b89a4
 D a-ioexce.ads		20091130110856 8b9de6cd
 D a-reatim.ads		20090409150019 63f07669
 D a-retide.ads		20090409150019 081cdaa4
 D a-stream.ads		20090409150019 2ca4ee37
 D a-tags.ads		20101021101406 c7695348
 D a-textio.ads		20091028140912 386df5d4
+D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
+D consolas.ads		20001025203310 6b07c94f
+D gas_1.adb		20141028091834 468b498c
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
-D periodic_tasks_2_rt_time.adb  20141022090124 4f7a5765
 D system.ads		20140416172229 23e1f70b
 D s-atacco.ads		20090409150019 1dc856ad
-D s-conca2.ads		20090420091404 fbd0f2fc
-D s-conca8.ads		20090420091404 ea110f26
+D s-conca3.ads		20090420091404 762a026a
+D s-conca5.ads		20090420091404 1039cea1
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
 D s-ficobl.ads		20100909103250 443b9d66
 D s-finimp.ads		20090409150019 46853fe8
 D s-finroo.ads		20090409150019 dbb860c9
 D s-imgint.ads		20090409150019 02dbe0c2
-D s-imglld.ads		20090409150019 f3220969
 D s-linux.ads		20090730092306 47911ab1
 D s-multip.ads		20101011073009 38ac9f73
 D s-osinte.ads		20101127183452 6e2d2e09
@@ -73,46 +74,49 @@ D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 16|1r6 1r25 2r6 2r25 3r6 3r23 7r22 16r24 17r26 20r25 26r42
-. 48r24 49r26 52r25 65r8 66r10 72r17
-X 2 a-calend.ads
-36K13*Calendar 358e17 16|1w10 1r29 7r26 26r46
-38I9*Time 16|7r35
-52V13*Clock{38I9} 16|26s55
-63U14*Split 16|27s33
+16K9*Ada 19e8 15|9r16 9r31 9r44 10r16 10r31 10r44
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[12|45] 15|9w48 10r48
 X 7 a-reatim.ads
-39K13*Real_Time 139e18 16|2w10 2r29 16r28 17r30 20r29 48r28 49r30 52r29 65r12
-. 66r14 72r21
-41O9*Time 16|16r38 48r38 65r22
-46O9*Time_Span 16|17r40 49r40 66r24
-53V13*Clock{41O9} 16|20s39 52s39 72s31
-55V13*"+"{41O9} 16|37s46 59s46 73s22
-85V13*Milliseconds{46O9} 16|49s53
-87V13*Seconds{46O9} 16|17s53 66s37
+39K13*Real_Time 139e18 15|9w20 10r20
+41O9*Time 15|38r14 93r16 107r16
+46O9*Time_Span 15|39r16 94r16 108r16
+53V13*Clock{41O9} 15|42s18 97s18 111s18
+55V13*"+"{41O9} 15|46s23 101s23 115s23
+85V13*Milliseconds{46O9} 15|94s29
+87V13*Seconds{46O9} 15|39s29 108s29
 X 11 a-textio.ads
-49K13*Text_IO 472e16 16|3w10 3r27
-264U14*Put_Line 16|32s33 36s33 69s9 77s9
-X 16 periodic_tasks_2_rt_time.adb
-5U11*Periodic_Tasks_2_rt_time 5b11 78l5 78t29
-6i9 I{integer} 36r61 58m33 58r39
-7i9 T_Cal{2|38I9} 26m33 27r40
-8i9 Yr{integer} 27m47
-8i13 Mh{integer} 27m51
-8i17 Dy{integer} 27m55
-9o5 Ss{duration} 27m59 28r47 29r40 30r39 31m25 31r31 35r36
-10i9 Hr{integer} 28m33 31r43 32r56
-10i13 Mn{integer} 29m25 31r53 33r35
-10i17 Sd{integer} 30m25 34r35
-11t14 Timer 15b19 41l13 41t18 70r9 75r9
-12Y23 Start 19b24 70s15
-13Y23 Stop 23b40 75s15
-16o17 Next{7|41O9} 20m17 37m33 37r41 38r45
-17o17 Period{7|46O9} 37r48
-43t14 Incrementer 47b19 63l13 63t24 71r9 76r9
-44Y23 Start 51b24 71s21
-45Y23 Stop 55b40 76s21
-48o17 Next{7|41O9} 52m17 59m33 59r41 60r45
-49o17 Period{7|46O9} 59r48
-65o1 Next{7|41O9} 72m9 73m9 73r17 74r21
-66o1 Period{7|46O9} 73r24
+49K13*Text_IO 472e16 15|9w35 10r35
+264U14*Put_Line 15|65s13 70s15 74s15 80s15 84s15
+X 14 consolas.ads
+1K9*Consolas 25e13 15|9w6 10r6
+X 15 gas_1.adb
+12U11*Gas_1 12b11 125l5 125t10
+16t9 Reparto 37b14 49l8 49t15 122r4
+17Y13 Start 41b14 43l11 43t16 122s12
+20t9 Consumidor_Gasolina 92b14 104l8 104t27 123r4
+21Y13 Start 96b14 98l11 98t16 123s24
+24t9 Consumidor_Gasoil 106b14 118l8 118t25 124r4
+25Y13 Start 110b14 112l11 112t16 124s22
+28t9 Gasolinera 45r10 51b13 89l7 89t17 100r10 114r10 121r4
+29Y13 Start 58b13 121s15
+30Y13 Rellenar 30>23 30>33 45s21 62b18 66l15 66t23
+30i23 Gasolina{integer} 45r31 63r48 65r53
+30i33 Gasoil{integer} 45r48 64r50 65r103
+31Y13 Servir_Gasolina 31>30 68b18 76l15 76t30 100s21
+31i30 Pedido{integer} 69r16 73r50 74r64
+32Y13 Servir_Gasoil 32>28 78b18 86l15 86t28 114s21
+32i28 Pedido{integer} 79r16 83r52 84r62
+38o7 Next{7|41O9} 42m10 46m10 46r18 47r22
+39o7 Period{7|46O9} 46r25
+52i6 Cantidad_Super{integer} 63m13 63r31 69r25 70r79 71m15 73m15 73r33 74r99
+53i6 Cantidad_Gasoil{integer} 64m13 64r32 79r25 80r77 81m15 83m15 83r34 84r96
+62i28 Gasolina{integer}
+62i38 Gasoil{integer}
+68i34 Pedido{integer}
+78i32 Pedido{integer}
+93o7 Next{7|41O9} 97m10 101m10 101r18 102r22
+94o7 Period{7|46O9} 101r25
+107o7 Next{7|41O9} 111m10 115m10 115r18 116r22
+108o7 Period{7|46O9} 115r25
 

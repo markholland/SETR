@@ -1,0 +1,117 @@
+V "GNAT Lib v4.6"
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnvnnnnnnnvnnnnnnnnnnnnnvnnnnvnnnnnnnnnnnnnnnn
+
+U consolas%b		consolas.adb		4a7d641d NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U consolas%s		consolas.ads		6b07c94f EE OO PK
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-inteio.ads		20070406091342 f64b89a4
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D consolas.ads		20001025203310 6b07c94f
+D consolas.adb		20001025203630 ef5cd122
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D system.ads		20140416172229 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 13|1r6 1r23 2r6 2r31 18r10 23r10 28r10 29r10 30r10 31r10 36r10
+. 37r10 38r10 39r10 40r10 45r10 46r10 47r10 56r10 62r10 72r10 73r10 74r10
+. 75r10 81r10 82r10 83r10 84r10 85r10 91r10 92r10 93r10
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|45] 13|2w10 2r35 23r14 29r14 31r14 37r14 39r14 46r14
+. 62r14 73r14 75r14 82r14 84r14 92r14
+X 9 a-textio.ads
+49K13*Text_IO 472e16 13|1w10 1r27 18r14 28r14 30r14 36r14 38r14 40r14 45r14
+. 47r14 56r14 72r14 74r14 81r14 83r14 85r14 91r14 93r14
+167U14*New_Line 13|57s10 63s10 76s10 86s10 94s10
+243U14*Put 13|18s22 28s22 30s22 36s22 38s22 40s22 45s22 47s22 56s22 72s22
+. 74s22 81s22 83s22 85s22 91s22 93s22
+X 10 a-tiinio.ads
+65U14*Put 13|23s30[5|18] 29s30[5|18] 31s30[5|18] 37s30[5|18] 39s30[5|18]
+. 46s30[5|18] 62s30[5|18] 73s30[5|18] 75s30[5|18] 82s30[5|18] 84s30[5|18]
+. 92s30[5|18]
+X 12 consolas.ads
+1K9*Consolas 25l5 25e13 13|4b14 99l5 99t13
+3w14*Consola 13|10b19 97l8 97t15
+4U17 Put 4>21 13|16b17 19l11 19t14
+4s21 S1{string} 13|16b22 18r26
+5U17 Put_Line 5>26 13|54b17 58l11 58t19
+5s26 S1{string} 13|54b27 56r26
+7U17 Put 7>21 13|21b17 24l11 24t14
+7i21 I{integer} 13|21b22 23r34
+8U17 Put_Line 8>26 13|60b17 64l11 64t19
+8i26 I{integer} 13|60b27 62r34
+10U17 Put 10>21 10>33 11>21 11>33 13|26b17 32l11 32t14
+10s21 S1{string} 13|26b22 28r26
+10i33 I1{integer} 13|26b34 29r34
+11s21 S2{string} 13|26b48 30r26
+11i33 I2{integer} 13|26b60 31r34
+12U17 Put_Line 12>26 12>38 13>26 13>38 13|66b17 77l11 77t19
+12s26 S1{string} 13|67b10 72r26
+12i38 I1{integer} 13|68b10 73r34
+13s26 S2{string} 13|69b10 74r26
+13i38 I2{integer} 13|70b10 75r34
+15U17 Put 15>21 15>33 16>21 16>33 16>46 13|34b17 41l11 41t14
+15s21 S1{string} 13|34b22 36r26
+15i33 I1{integer} 13|34b34 37r34
+16s21 S2{string} 13|34b48 38r26
+16i33 I2{integer} 13|34b60 39r34
+16s46 S3{string} 13|34b73 40r26
+17U17 Put_Line 17>26 17>38 18>26 18>38 18>51 13|79b17 87l11 87t19
+17s26 S1{string} 13|79b27 81r26
+17i38 I1{integer} 13|79b39 82r34
+18s26 S2{string} 13|79b53 83r26
+18i38 I2{integer} 13|79b65 84r34
+18s51 S3{string} 13|79b78 85r26
+21U17 Put 21>21 21>33 21>46 13|43b17 48l11 48t14
+21s21 S1{string} 13|43b22 45r26
+21i33 I1{integer} 13|43b34 46r34
+21s46 S2{string} 13|43b47 47r26
+22U17 Put_Line 22>27 22>39 22>52 13|89b17 95l11 95t19
+22s27 S1{string} 13|89b27 91r26
+22i39 I1{integer} 13|89b39 92r34
+22s52 S2{string} 13|89b52 93r26
+

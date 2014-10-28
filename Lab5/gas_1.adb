@@ -6,8 +6,8 @@
 -- Guarda las distintas versiones como gas_1.adb, gas_2.adb, gas_3.adb y gas_4.adb
 
 
-with Consolas, Ada.Real_Time;
-use  Consolas, Ada.Real_Time;
+with Consolas, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO;
+use  Consolas, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO;
 
 procedure Gas_1 is
 
@@ -58,6 +58,33 @@ procedure Gas_1 is
      accept Start;
      loop
         -- Aceptacion selectiva
+        select
+          accept Rellenar (Gasolina, Gasoil : in Integer) do
+            Cantidad_Super := Cantidad_Super + Gasolina;
+            Cantidad_Gasoil := Cantidad_Gasoil + Gasoil;
+            Put_Line("### RELLENADO:"&Integer'Image(Gasolina)& " litros de GASOLINA y "&Integer'Image(Gasoil)&" litros de GASOIL");
+          end Rellenar;
+          or
+          accept Servir_Gasolina(Pedido : in Integer) do
+            if Pedido > Cantidad_Super then
+              Put_Line("-_- DEPOSITO GASOLINA VACIO. Servidos "&Integer'Image(Cantidad_Super)&" litros.");
+              Cantidad_Super := 0;
+            else
+              Cantidad_Super := Cantidad_Super - Pedido;
+              Put_Line("--> SERVICIO GASOLINA:" &Integer'Image(Pedido)& "; Quedan "&Integer'Image(Cantidad_Super)&" litros de GASOLINA.");
+            end if;
+          end Servir_Gasolina;
+          or
+          accept Servir_Gasoil(Pedido : in Integer) do
+            if Pedido > Cantidad_Gasoil then
+              Put_Line("=_= DEPOSITO GASOIL VACIO. Servidos "&Integer'Image(Cantidad_Gasoil)&" litros.");
+              Cantidad_Gasoil := 0;
+            else
+              Cantidad_Gasoil := Cantidad_Gasoil - Pedido;
+              Put_Line("==> SERVICIO GASOIL: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Gasoil)&" litros de GASOIL.");
+            end if;
+          end Servir_Gasoil;
+        end select;
      end loop;
   end Gasolinera;
 
