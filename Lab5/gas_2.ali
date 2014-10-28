@@ -1,9 +1,9 @@
 V "GNAT Lib v4.6"
 M P W=b
 P SS ZX
-R nnnnnnnnnvnnnnnnnnvnnvnnnvnvvnnvnnnnnnnnnnvnvnnnnvnvnnnnnnvnnnnnnnnnnv3nv4nv1+nnnnnn
+R nnnnnnnnnvnnnnnnnnvnnvnnnvvvvnnvnnnnnnnnnnvnvnnnnvnvnnnnnnvnnnnnnnnnnv4nv5nv1+nnnv1+nn
 
-U gas_1%b		gas_1.adb		5c657c4f NE OO SU
+U gas_2%b		gas_2.adb		4f10b047 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
@@ -14,6 +14,7 @@ W consolas%s		consolas.adb		consolas.ali
 W system%s		system.ads		system.ali
 W system.concat_3%s	s-conca3.adb		s-conca3.ali
 W system.concat_5%s	s-conca5.adb		s-conca5.ali
+W system.concat_7%s	s-conca7.adb		s-conca7.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
@@ -36,7 +37,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
 D consolas.ads		20001025203310 6b07c94f
-D gas_1.adb		20141028223229 9ab4bf19
+D gas_2.adb		20141028224559 89c17311
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
@@ -44,6 +45,7 @@ D system.ads		20140416172229 23e1f70b
 D s-atacco.ads		20090409150019 1dc856ad
 D s-conca3.ads		20090420091404 762a026a
 D s-conca5.ads		20090420091404 1039cea1
+D s-conca7.ads		20090420091404 1c57f31a
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
 D s-ficobl.ads		20100909103250 443b9d66
@@ -79,46 +81,55 @@ X 5 a-inteio.ads
 18K13*Integer_Text_IO[12|45] 15|9w48 10r48
 X 7 a-reatim.ads
 39K13*Real_Time 139e18 15|9w20 10r20
-41O9*Time 15|38r14 95r16 109r16
-46O9*Time_Span 15|39r16 96r16 110r16
-53V13*Clock{41O9} 15|42s18 99s18 113s18
-55V13*"+"{41O9} 15|46s23 103s23 117s23
-85V13*Milliseconds{46O9} 15|96s29
-87V13*Seconds{46O9} 15|39s29 110s29
+41O9*Time 15|39r14 109r16 129r16
+46O9*Time_Span 15|40r16 110r16 130r16
+53V13*Clock{41O9} 15|43s18 113s18 133s18
+55V13*"+"{41O9} 15|47s23 123s22 138s23
+85V13*Milliseconds{46O9} 15|110s29
+87V13*Seconds{46O9} 15|40s29 130s29
 X 11 a-textio.ads
 49K13*Text_IO 472e16 15|9w35 10r35
-264U14*Put_Line 15|65s13 71s15 75s15 82s15 86s15
+264U14*Put_Line 15|68s13 74s15 78s15 85s15 89s15 96s15 100s15
 X 14 consolas.ads
 1K9*Consolas 25e13 15|9w6 10r6
-X 15 gas_1.adb
-12U11*Gas_1 12b11 127l5 127t10
-16t9 Reparto 37b14 49l8 49t15 124r4
-17Y13 Start 41b14 43l11 43t16 124s12
-20t9 Consumidor_Gasolina 94b14 106l8 106t27 125r4
-21Y13 Start 98b14 100l11 100t16 125s24
-24t9 Consumidor_Gasoil 108b14 120l8 120t25 126r4
-25Y13 Start 112b14 114l11 114t16 126s22
-28t9 Gasolinera 45r10 51b13 91l7 91t17 102r10 116r10 123r4
-29Y13 Start 58b13 123s15
-30Y13 Rellenar 30>23 30>33 45s21 62b18 66l15 66t23
-30i23 Gasolina{integer} 45r31 63r48 65r53
-30i33 Gasoil{integer} 45r48 64r50 65r103
-31Y13 Servir_Gasolina 31>30 69b18 77l15 77t30 102s21
-31i30 Pedido{integer} 70r16 74r50 75r64
-32Y13 Servir_Gasoil 32>28 80b18 88l15 88t28 116s21
-32i28 Pedido{integer} 81r16 85r52 86r62
-38o7 Next{7|41O9} 42m10 46m10 46r18 47r22
-39o7 Period{7|46O9} 46r25
-52i6 Cantidad_Super{integer} 63m13 63r31 68r16 70r25 71r79 72m15 74m15 74r33
-. 75r99
-53i6 Cantidad_Gasoil{integer} 64m13 64r32 79r16 81r25 82r77 83m15 85m15 85r34
-. 86r96
-62i28 Gasolina{integer}
-62i38 Gasoil{integer}
-69i34 Pedido{integer}
-80i32 Pedido{integer}
-95o7 Next{7|41O9} 99m10 103m10 103r18 104r22
-96o7 Period{7|46O9} 103r25
-109o7 Next{7|41O9} 113m10 117m10 117r18 118r22
-110o7 Period{7|46O9} 117r25
+3w14*Consola 15|118r11 121r11
+5U17 Put_Line 15|118s19 121s19
+X 15 gas_2.adb
+12U11*Gas_2 12b11 148l5 148t10
+16t9 Reparto 38b14 50l8 50t15 145r4
+17Y13 Start 42b14 44l11 44t16 145s12
+20t9 Consumidor_Gasolina 108b14 126l8 126t27 146r4
+21Y13 Start 112b14 114l11 114t16 146s24
+24t9 Consumidor_Gasoil 128b14 141l8 141t25 147r4
+25Y13 Start 132b14 134l11 134t16 147s22
+28t9 Gasolinera 46r10 52b13 105l7 105t17 117r11 120r11 136r10 144r4
+29Y13 Start 60b13 144s15
+30Y13 Rellenar 30>23 30>33 30>41 46s21 64b18 69l15 69t23
+30i23 Gasolina{integer} 46r31 65r48 68r53
+30i33 Gasoil{integer} 46r48 66r50 68r92
+30i41 Biogasolina{integer} 46r63 67r60 68r125
+31Y13 Servir_Gasolina 31>30 72b18 80l15 80t30 120s22
+31i30 Pedido{integer} 73r16 77r50 78r64
+32Y13 Servir_Gasoil 32>28 83b18 91l15 91t28 136s21
+32i28 Pedido{integer} 84r16 88r52 89r62
+33Y13 Servir_Biogasolina 33>33 94b18 102l15 102t33 117s22
+33i33 Pedido{integer} 95r16 99r62 100r67
+39o7 Next{7|41O9} 43m10 47m10 47r18 48r22
+40o7 Period{7|46O9} 47r25
+53i6 Cantidad_Super{integer} 65m13 65r31 71r16 73r26 74r79 75m15 77m15 77r33
+. 78r99
+54i6 Cantidad_Gasoil{integer} 66m13 66r32 82r16 84r26 85r77 86m15 88m15 88r34
+. 89r96
+55i6 Cantidad_Biogasolina{integer} 67m13 67r37 93r16 95r25 97m15 99m15 99r39
+. 100r101
+64i28 Gasolina{integer}
+64i38 Gasoil{integer}
+64i46 Biogasolina{integer}
+72i34 Pedido{integer}
+83i32 Pedido{integer}
+94i37 Pedido{integer}
+109o7 Next{7|41O9} 113m10 123m9 123r17 124r21
+110o7 Period{7|46O9} 123r24
+129o7 Next{7|41O9} 133m10 138m10 138r18 139r22
+130o7 Period{7|46O9} 138r25
 

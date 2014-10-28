@@ -9,7 +9,7 @@
 with Consolas, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO;
 use  Consolas, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO;
 
-procedure Gas_1 is
+procedure Gas_2 is
 
    -- Especificación de tareas y tipos tarea
 
@@ -27,9 +27,10 @@ procedure Gas_1 is
 
    task Gasolinera is  -- Atiende las peticiones de servicio y rellenado
       entry Start;
-      entry Rellenar (Gasolina, Gasoil : in Integer);
+      entry Rellenar (Gasolina, Gasoil, Biogasolina : in Integer);
       entry Servir_Gasolina (Pedido : in Integer);
       entry Servir_Gasoil (Pedido : in Integer);
+      entry Servir_Biogasolina (Pedido : in Integer);
    end Gasolinera;
 
    -- Cuerpo de las tareas
@@ -42,7 +43,7 @@ procedure Gas_1 is
          Next := Clock;
       end Start;
       loop
-         Gasolinera.Rellenar (Gasolina => 150, Gasoil => 150);
+         Gasolinera.Rellenar (Gasolina => 150, Gasoil => 150, Biogasolina => 60);
          Next := Next + Period;
          delay until Next;
       end loop;
@@ -51,6 +52,7 @@ procedure Gas_1 is
   task body Gasolinera is
      Cantidad_Super  : Integer := 0;  -- Deposito inicial de super
      Cantidad_Gasoil : Integer := 0;  -- Deposito inicial de gasoil
+     Cantidad_Biogasolina : Integer := 0;  -- Deposito inicial de biogasolina
   begin
      -- ------------------------------------
      --         Tarea a completar
@@ -59,10 +61,11 @@ procedure Gas_1 is
      loop
         -- Aceptacion selectiva
         select
-          accept Rellenar (Gasolina, Gasoil : in Integer) do
+          accept Rellenar (Gasolina, Gasoil, Biogasolina : in Integer) do
             Cantidad_Super := Cantidad_Super + Gasolina;
             Cantidad_Gasoil := Cantidad_Gasoil + Gasoil;
-            Put_Line("### RELLENADO:"&Integer'Image(Gasolina)& " litros de GASOLINA y "&Integer'Image(Gasoil)&" litros de GASOIL");
+            Cantidad_Biogasolina := Cantidad_Biogasolina + Biogasolina;
+            Put_Line("### RELLENADO:"&Integer'Image(Gasolina)& " GASOLINA, "&Integer'Image(Gasoil)&" GASOIL "&Integer'Image(Biogasolina)&" BIOGASOLINA");
           end Rellenar;
           or
           when Cantidad_Super /= 0 =>
@@ -86,6 +89,17 @@ procedure Gas_1 is
               Put_Line("==> SERVICIO GASOIL: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Gasoil)&" litros de GASOIL.");
             end if;
           end Servir_Gasoil;
+          or
+          when Cantidad_Biogasolina /= 0 =>
+          accept Servir_Biogasolina(Pedido : in Integer) do
+            if Pedido = Cantidad_Biogasolina then
+              Put_Line("·_· DEPOSITO BIOGASOLINA VACIO. Servidos 30 litros.");
+              Cantidad_Biogasolina := 0;
+            else
+              Cantidad_Biogasolina := Cantidad_Biogasolina - Pedido;
+              Put_Line("==> SERVICIO BIOGASOLINA: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Biogasolina)&" litros de BIOGASOLINA.");
+            end if;
+          end Servir_Biogasolina;
         end select;
      end loop;
   end Gasolinera;
@@ -99,9 +113,15 @@ procedure Gas_1 is
          Next := Clock;
       end Start;
       loop
-         Gasolinera.Servir_Gasolina (25);
-         Next := Next + Period;
-         delay until Next;
+        select
+          Gasolinera.Servir_Biogasolina(30);
+          Consola.Put_Line("----------------------Me han servido Biogasolina");
+        else
+          Gasolinera.Servir_Gasolina (30);
+          Consola.Put_Line("----------------------Me han servido Gasolina");
+        end select;
+        Next := Next + Period;
+        delay until Next;
       end loop;
    end Consumidor_Gasolina;
 
@@ -114,6 +134,7 @@ procedure Gas_1 is
       end Start;
       loop
          Gasolinera.Servir_Gasoil (40);
+         --Consola.Put_Line("Me han servido Gasoil");
          Next := Next + Period;
          delay until Next;
       end loop;
@@ -124,4 +145,4 @@ begin
    Reparto.Start;
    Consumidor_Gasolina.Start;
    Consumidor_Gasoil.Start;
-end Gas_1;
+end Gas_2;
