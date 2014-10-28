@@ -13,25 +13,34 @@ procedure Gas_2 is
 
    -- Especificación de tareas y tipos tarea
 
-   task Reparto is -- Rellena los depósitos de la gasolinera
-      entry Start;
-   end Reparto;
+  task Reparto is -- Rellena los depósitos de la gasolinera
+    entry Start;
+  end Reparto;
 
-   task Consumidor_Gasolina is -- Consume Gasolina
-      entry Start;
-   end Consumidor_Gasolina;
+  task Consumidor_Gasoil is -- Consume Gasoil
+    entry Start;
+  end Consumidor_Gasoil;
 
-   task Consumidor_Gasoil is -- Consume Gasoil
-      entry Start;
-   end Consumidor_Gasoil;
+  task Gasolinera is  -- Atiende las peticiones de servicio y rellenado
+    entry Start;
+    entry Rellenar (Gasoil : in Integer);
+    entry Servir_Gasoil (Pedido : in Integer);
+  end Gasolinera;
 
-   task Gasolinera is  -- Atiende las peticiones de servicio y rellenado
-      entry Start;
-      entry Rellenar (Gasolina, Gasoil, Biogasolina : in Integer);
-      entry Servir_Gasolina (Pedido : in Integer);
-      entry Servir_Gasoil (Pedido : in Integer);
-      entry Servir_Biogasolina (Pedido : in Integer);
-   end Gasolinera;
+  protected Alarma is 
+    procedure Generar; 
+    entry Esperar;
+  private
+    Alarm : Boolean := False;
+  end Alarma;
+
+  task Genera_Alarmas is 
+    entry Start;
+  end Genera_Alarmas;
+
+  task Proteccion_Civil is
+    entry Start
+  end Proteccion_Civil;
 
    -- Cuerpo de las tareas
 
@@ -43,43 +52,27 @@ procedure Gas_2 is
          Next := Clock;
       end Start;
       loop
-         Gasolinera.Rellenar (Gasolina => 150, Gasoil => 150, Biogasolina => 60);
+         Gasolinera.Rellenar (Gasoil => 150);
          Next := Next + Period;
          delay until Next;
       end loop;
    end Reparto;
 
   task body Gasolinera is
-     Cantidad_Super  : Integer := 0;  -- Deposito inicial de super
      Cantidad_Gasoil : Integer := 0;  -- Deposito inicial de gasoil
-     Cantidad_Biogasolina : Integer := 0;  -- Deposito inicial de biogasolina
   begin
-     -- ------------------------------------
-     --         Tarea a completar
-     -- ------------------------------------
      accept Start;
      loop
         -- Aceptacion selectiva
         select
-          accept Rellenar (Gasolina, Gasoil, Biogasolina : in Integer) do
-            Cantidad_Super := Cantidad_Super + Gasolina;
+          accept Rellenar (Gasoil : in Integer) do
             Cantidad_Gasoil := Cantidad_Gasoil + Gasoil;
-            Cantidad_Biogasolina := Cantidad_Biogasolina + Biogasolina;
-            Put_Line("### RELLENADO:"&Integer'Image(Gasolina)& " GASOLINA, "&Integer'Image(Gasoil)&" GASOIL y "&Integer'Image(Biogasolina)&" BIOGASOLINA");
+            Put_Line("### RELLENADO:"&Integer'Image(Gasoil)&" GASOIL");
           end Rellenar;
           or
-          accept Servir_Gasolina(Pedido : in Integer) do
-            if Pedido > Cantidad_Super then
-              Put_Line("-_- DEPOSITO GASOLINA VACIO. Servidos "&Integer'Image(Cantidad_Super)&" litros.");
-              Cantidad_Super := 0;
-            else
-              Cantidad_Super := Cantidad_Super - Pedido;
-              Put_Line("--> SERVICIO GASOLINA:" &Integer'Image(Pedido)& "; Quedan "&Integer'Image(Cantidad_Super)&" litros de GASOLINA.");
-            end if;
-          end Servir_Gasolina;
-          or
+          when Cantidad_Gasoil /= 0 =>
           accept Servir_Gasoil(Pedido : in Integer) do
-            if Pedido > Cantidad_Gasoil then
+            if Pedido >= Cantidad_Gasoil then
               Put_Line("=_= DEPOSITO GASOIL VACIO. Servidos "&Integer'Image(Cantidad_Gasoil)&" litros.");
               Cantidad_Gasoil := 0;
             else
@@ -87,17 +80,7 @@ procedure Gas_2 is
               Put_Line("==> SERVICIO GASOIL: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Gasoil)&" litros de GASOIL.");
             end if;
           end Servir_Gasoil;
-          accept Servir_Biogasolina(Pedido : in Integer) do
-            if Pedido > Cantidad_Biogasolina then
-              null;
-            elsif Pedido = Cantidad_Biogasolina then
-              Cantidad_Biogasolina := 0;
-              Put_Line("·_· DEPOSITO BIOGASOLINA VACIO. Servidos 30 litros.");
-            else
-              Cantidad_Biogasolina := Cantidad_Biogasolina - Pedido;
-              Put_Line("==> SERVICIO BIOGASOLINA: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Biogasolina)&" litros de BIOGASOLINA.");
-            end if;
-          end Servir_Biogasolina;
+          
         end select;
      end loop;
   end Gasolinera;
@@ -111,13 +94,8 @@ procedure Gas_2 is
          Next := Clock;
       end Start;
       loop
-        select
-          Gasolinera.Servir_Biogasolina(30);
-          Consola.Put_Line("----------------------Me han servido Biogasolina");
-        else
-          Gasolinera.Servir_Gasolina (30);
-          Consola.Put_Line("----------------------Me han servido Gasolina");
-        end select;
+        Gasolinera.Servir_Gasolina (30);
+        Consola.Put_Line("----------------------Me han servido Gasolina");
         Next := Next + Period;
         delay until Next;
       end loop;
@@ -138,9 +116,50 @@ procedure Gas_2 is
       end loop;
    end Consumidor_Gasoil;
 
+  protected body Alarma is
+    procedure Generar is 
+    begin
+      Alarm := True; 
+    end Generar;
+
+    entry Esperar when Alarm is 
+    begin
+      Alarm := False; 
+    end Esperar;
+  end Alarma;
+
+  task body Genera_Alarmas is 
+    Next : Time;
+    Period : Time_Span := Seconds (16);
+  begin
+    accept Start do
+      Next := Clock; 
+    end Start;
+    loop
+      Next := Next + Period; 
+      delay until Next; 
+      Alarma.Generar;
+    end loop;
+  end Genera_Alarmas;
+
+  task body Proteccion_Civil is
+    Next : Time;
+    Period : Time_Span := Seconds (2);
+  begin
+    accept Start do
+      Next := Clock;
+    end Start;
+    loop
+      select
+         
+
+      Next := Next + Period; 
+      delay until Next;   
+    end loop;
+
 begin
    Gasolinera.Start;
    Reparto.Start;
-   Consumidor_Gasolina.Start;
    Consumidor_Gasoil.Start;
+   Genera_Alarmas.Start;
 end Gas_2;
