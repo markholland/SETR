@@ -65,39 +65,39 @@ procedure Gas_2 is
             Cantidad_Super := Cantidad_Super + Gasolina;
             Cantidad_Gasoil := Cantidad_Gasoil + Gasoil;
             Cantidad_Biogasolina := Cantidad_Biogasolina + Biogasolina;
-            Put_Line("### RELLENADO:"&Integer'Image(Gasolina)& " GASOLINA, "&Integer'Image(Gasoil)&" GASOIL "&Integer'Image(Biogasolina)&" BIOGASOLINA");
+            Consola.Put_Line("### RELLENADO:"&Integer'Image(Gasolina)& " GASOLINA, "&Integer'Image(Gasoil)&" GASOIL "&Integer'Image(Biogasolina)&" BIOGASOLINA");
           end Rellenar;
           or
           when Cantidad_Super /= 0 =>
           accept Servir_Gasolina(Pedido : in Integer) do
             if Pedido >= Cantidad_Super then
-              Put_Line("-_- DEPOSITO GASOLINA VACIO. Servidos "&Integer'Image(Cantidad_Super)&" litros.");
+              Consola.Put_Line("-_- DEPOSITO GASOLINA VACIO. Servidos "&Integer'Image(Cantidad_Super)&" litros.");
               Cantidad_Super := 0;
             else
               Cantidad_Super := Cantidad_Super - Pedido;
-              Put_Line("--> SERVICIO GASOLINA:" &Integer'Image(Pedido)& "; Quedan "&Integer'Image(Cantidad_Super)&" litros de GASOLINA.");
+              Consola.Put_Line("--> SERVICIO GASOLINA:" &Integer'Image(Pedido)& "; Quedan "&Integer'Image(Cantidad_Super)&" litros de GASOLINA.");
             end if;
           end Servir_Gasolina;
           or
           when Cantidad_Gasoil /= 0 =>
           accept Servir_Gasoil(Pedido : in Integer) do
             if Pedido >= Cantidad_Gasoil then
-              Put_Line("=_= DEPOSITO GASOIL VACIO. Servidos "&Integer'Image(Cantidad_Gasoil)&" litros.");
+              Consola.Put_Line("=_= DEPOSITO GASOIL VACIO. Servidos "&Integer'Image(Cantidad_Gasoil)&" litros.");
               Cantidad_Gasoil := 0;
             else
               Cantidad_Gasoil := Cantidad_Gasoil - Pedido;
-              Put_Line("==> SERVICIO GASOIL: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Gasoil)&" litros de GASOIL.");
+              Consola.Put_Line("==> SERVICIO GASOIL: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Gasoil)&" litros de GASOIL.");
             end if;
           end Servir_Gasoil;
           or
           when Cantidad_Biogasolina /= 0 =>
           accept Servir_Biogasolina(Pedido : in Integer) do
             if Pedido = Cantidad_Biogasolina then
-              Put_Line("·_· DEPOSITO BIOGASOLINA VACIO. Servidos 30 litros.");
+              Consola.Put_Line("·_· DEPOSITO BIOGASOLINA VACIO. Servidos 30 litros.");
               Cantidad_Biogasolina := 0;
             else
               Cantidad_Biogasolina := Cantidad_Biogasolina - Pedido;
-              Put_Line("==> SERVICIO BIOGASOLINA: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Biogasolina)&" litros de BIOGASOLINA.");
+              Consola.Put_Line("==> SERVICIO BIOGASOLINA: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Biogasolina)&" litros de BIOGASOLINA.");
             end if;
           end Servir_Biogasolina;
         end select;

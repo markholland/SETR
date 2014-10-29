@@ -3,7 +3,7 @@ M P W=b
 P SS ZX
 R nnnnnnnnnvnnnnnnnnvnnvnnnvvvvnnvnnnnnnnnnnvnvnnnnvnvnnnnnnvnnnnnnnnnnv4nv5nv1+nnnv1+nn
 
-U gas_2%b		gas_2.adb		4f10b047 NE OO SU
+U gas_2%b		gas_2.adb		a13e2b92 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
@@ -37,7 +37,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
 D consolas.ads		20001025203310 6b07c94f
-D gas_2.adb		20141028224559 89c17311
+D gas_2.adb		20141029075224 67efe8c4
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
@@ -89,11 +89,10 @@ X 7 a-reatim.ads
 87V13*Seconds{46O9} 15|40s29 130s29
 X 11 a-textio.ads
 49K13*Text_IO 472e16 15|9w35 10r35
-264U14*Put_Line 15|68s13 74s15 78s15 85s15 89s15 96s15 100s15
 X 14 consolas.ads
 1K9*Consolas 25e13 15|9w6 10r6
-3w14*Consola 15|118r11 121r11
-5U17 Put_Line 15|118s19 121s19
+3w14*Consola 15|68r13 74r15 78r15 85r15 89r15 96r15 100r15 118r11 121r11
+5U17 Put_Line 15|68s21 74s23 78s23 85s23 89s23 96s23 100s23 118s19 121s19
 X 15 gas_2.adb
 12U11*Gas_2 12b11 148l5 148t10
 16t9 Reparto 38b14 50l8 50t15 145r4
@@ -105,23 +104,23 @@ X 15 gas_2.adb
 28t9 Gasolinera 46r10 52b13 105l7 105t17 117r11 120r11 136r10 144r4
 29Y13 Start 60b13 144s15
 30Y13 Rellenar 30>23 30>33 30>41 46s21 64b18 69l15 69t23
-30i23 Gasolina{integer} 46r31 65r48 68r53
-30i33 Gasoil{integer} 46r48 66r50 68r92
-30i41 Biogasolina{integer} 46r63 67r60 68r125
+30i23 Gasolina{integer} 46r31 65r48 68r61
+30i33 Gasoil{integer} 46r48 66r50 68r100
+30i41 Biogasolina{integer} 46r63 67r60 68r133
 31Y13 Servir_Gasolina 31>30 72b18 80l15 80t30 120s22
-31i30 Pedido{integer} 73r16 77r50 78r64
+31i30 Pedido{integer} 73r16 77r50 78r72
 32Y13 Servir_Gasoil 32>28 83b18 91l15 91t28 136s21
-32i28 Pedido{integer} 84r16 88r52 89r62
+32i28 Pedido{integer} 84r16 88r52 89r70
 33Y13 Servir_Biogasolina 33>33 94b18 102l15 102t33 117s22
-33i33 Pedido{integer} 95r16 99r62 100r67
+33i33 Pedido{integer} 95r16 99r62 100r75
 39o7 Next{7|41O9} 43m10 47m10 47r18 48r22
 40o7 Period{7|46O9} 47r25
-53i6 Cantidad_Super{integer} 65m13 65r31 71r16 73r26 74r79 75m15 77m15 77r33
-. 78r99
-54i6 Cantidad_Gasoil{integer} 66m13 66r32 82r16 84r26 85r77 86m15 88m15 88r34
-. 89r96
+53i6 Cantidad_Super{integer} 65m13 65r31 71r16 73r26 74r87 75m15 77m15 77r33
+. 78r107
+54i6 Cantidad_Gasoil{integer} 66m13 66r32 82r16 84r26 85r85 86m15 88m15 88r34
+. 89r104
 55i6 Cantidad_Biogasolina{integer} 67m13 67r37 93r16 95r25 97m15 99m15 99r39
-. 100r101
+. 100r109
 64i28 Gasolina{integer}
 64i38 Gasoil{integer}
 64i46 Biogasolina{integer}

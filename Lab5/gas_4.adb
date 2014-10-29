@@ -9,7 +9,7 @@
 with Consolas, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO;
 use  Consolas, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO;
 
-procedure Gas_2 is
+procedure Gas_4 is
 
    -- Especificación de tareas y tipos tarea
 
@@ -39,7 +39,7 @@ procedure Gas_2 is
   end Genera_Alarmas;
 
   task Proteccion_Civil is
-    entry Start
+    entry Start;
   end Proteccion_Civil;
 
    -- Cuerpo de las tareas
@@ -73,11 +73,11 @@ procedure Gas_2 is
           when Cantidad_Gasoil /= 0 =>
           accept Servir_Gasoil(Pedido : in Integer) do
             if Pedido >= Cantidad_Gasoil then
-              Put_Line("=_= DEPOSITO GASOIL VACIO. Servidos "&Integer'Image(Cantidad_Gasoil)&" litros.");
+              Consola.Put_Line("=_= DEPOSITO GASOIL VACIO. Servidos "&Integer'Image(Cantidad_Gasoil)&" litros.");
               Cantidad_Gasoil := 0;
             else
               Cantidad_Gasoil := Cantidad_Gasoil - Pedido;
-              Put_Line("==> SERVICIO GASOIL: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Gasoil)&" litros de GASOIL.");
+              Consola.Put_Line("==> SERVICIO GASOIL: "&Integer'Image(Pedido)&"; Quedan "&Integer'Image(Cantidad_Gasoil)&" litros de GASOIL.");
             end if;
           end Servir_Gasoil;
           
@@ -86,21 +86,6 @@ procedure Gas_2 is
   end Gasolinera;
 
  
-   task body Consumidor_Gasolina is
-      Next   : Time;
-      Period : Time_Span := Milliseconds (1500);
-   begin
-      accept Start do
-         Next := Clock;
-      end Start;
-      loop
-        Gasolinera.Servir_Gasolina (30);
-        Consola.Put_Line("----------------------Me han servido Gasolina");
-        Next := Next + Period;
-        delay until Next;
-      end loop;
-   end Consumidor_Gasolina;
-
    task body Consumidor_Gasoil is
       Next   : Time;
       Period : Time_Span := Seconds (3);
@@ -151,15 +136,24 @@ procedure Gas_2 is
     end Start;
     loop
       select
-         
-
-      Next := Next + Period; 
-      delay until Next;   
+        Alarma.Esperar;
+        Consola.Put_Line("--------Alarma atendida");
+      then abort
+        loop
+          Consola.Put_Line("/// P.C. solicita repostar");
+          Gasolinera.Servir_Gasoil(35);
+          Consola.Put_Line("/// Proteccion Civil ha repostado GASOIL");
+          Next := Next + Period; 
+          delay until Next;  
+        end loop; 
+      end select; 
     end loop;
+  end Proteccion_Civil;
 
 begin
    Gasolinera.Start;
    Reparto.Start;
    Consumidor_Gasoil.Start;
+   Proteccion_Civil.Start;
    Genera_Alarmas.Start;
-end Gas_2;
+end Gas_4;

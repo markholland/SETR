@@ -3,7 +3,7 @@ M P W=b
 P SS ZX
 R nnnnnnnnnvnnnnnnnnvnnvnnnvnvvnnvnnnnnnnnnnvnvnnnnvnvnnnnnnvnnnnnnnnnnv3nv4nv1+nnnnnn
 
-U gas_1%b		gas_1.adb		5c657c4f NE OO SU
+U gas_1%b		gas_1.adb		2b6695ff NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
@@ -36,7 +36,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
 D consolas.ads		20001025203310 6b07c94f
-D gas_1.adb		20141028223229 9ab4bf19
+D gas_1.adb		20141028230807 edb756a9
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
@@ -109,9 +109,9 @@ X 15 gas_1.adb
 32i28 Pedido{integer} 81r16 85r52 86r62
 38o7 Next{7|41O9} 42m10 46m10 46r18 47r22
 39o7 Period{7|46O9} 46r25
-52i6 Cantidad_Super{integer} 63m13 63r31 68r16 70r25 71r79 72m15 74m15 74r33
+52i6 Cantidad_Super{integer} 63m13 63r31 68r16 70r26 71r79 72m15 74m15 74r33
 . 75r99
-53i6 Cantidad_Gasoil{integer} 64m13 64r32 79r16 81r25 82r77 83m15 85m15 85r34
+53i6 Cantidad_Gasoil{integer} 64m13 64r32 79r16 81r26 82r77 83m15 85m15 85r34
 . 86r96
 62i28 Gasolina{integer}
 62i38 Gasoil{integer}
