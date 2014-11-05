@@ -128,7 +128,8 @@ procedure Gas_4 is
   end Genera_Alarmas;
 
   task body Proteccion_Civil is
-    Next : Time;
+    Next : Time; Almost69
+    
     Period : Time_Span := Seconds (2);
   begin
     accept Start do

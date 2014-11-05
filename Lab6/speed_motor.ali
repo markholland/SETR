@@ -1,0 +1,137 @@
+V "GNAT Lib v4.6"
+M P 48 W=b
+P LC QP TF  SS ZX
+R nnnnnnnnnvnnnnnnnnvnnvnvnvnvvnnvnvnnvnnvnnvnvnnnnvnvnnnnnnvnnnnnnnnnnv2nv2nv1+nnnv1+nn
+
+U speed_motor%b		speed_motor.adb		8fd089a8 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W motor_sim%s		motor_sim.adb		motor_sim.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.img_dec%s	s-imgdec.adb		s-imgdec.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W system.val_dec%s	s-valdec.adb		s-valdec.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-caldel.ads		20090409150019 9f20b83d
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-inteio.ads		20070406091342 f64b89a4
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-reatim.ads		20090409150019 63f07669
+D a-retide.ads		20090409150019 081cdaa4
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D motor_sim.ads		20141031100309 a04028f4
+D speed_motor.adb	20141105105759 a1a75c4e
+D system.ads		20140416172229 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-conca2.ads		20090420091404 fbd0f2fc
+D s-conca3.ads		20090420091404 762a026a
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-imgdec.ads		20090409150019 ae2d09db
+D s-imgint.ads		20090409150019 02dbe0c2
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taprop.ads		20090409150019 07f79e46
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-tpoben.ads		20090409150019 e8374469
+D s-tasren.ads		20090409150019 86fa7427
+D s-tassta.ads		20101018103456 e88ef99e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-valdec.ads		20090409150019 bc6527bb
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 20|1r17 1r32 1r45 2r16 2r31 2r44
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[14|45] 20|1w49 2r48
+X 9 a-reatim.ads
+39K13*Real_Time 139e18 20|1w21 2r20
+41O9*Time 20|36r14 67r14
+46O9*Time_Span 20|35r16 66r16
+53V13*Clock{41O9} 20|41s21 72s21
+55V13*"+"{41O9} 20|42s26 52s20 73s26 81s20
+84V13*Microseconds{46O9} 20|35s29 66s29
+X 13 a-textio.ads
+49K13*Text_IO 472e16 20|1w36 2r35
+264U14*Put_Line 20|80s7 88s4 89s4 92s4 93s4 94s4 99s4 104s4 108s4 112s4 115s4
+. 117s4 120s7
+X 19 motor_sim.ads
+5K9*Motor_Sim 19e14 20|1w6 2r5 47r26
+7N4*Max_Speed 20|89r45
+9n24*Full{9E9} 20|105r15
+9n30*Half{9E9} 20|100r15
+11U14*Motor_On 20|101s4
+12U14*Motor_Off 20|109s4
+13U14*Set_Speed 20|100s4 105s4
+14V13*Motor_Pulse{boolean} 20|47s36
+16U14*Start_Simulation 20|90s4
+17U14*End_Simulation 20|116s4
+X 20 speed_motor.adb
+4U11*Speed_Motor 4b11 121l5 121t16
+8w14 Edges 15b19 25l8 25t13 50r10 78r7
+9U17 Add 16b17 19l11 19t14 50s16
+10U17 Count_And_Reset 10<33 20b17 24l11 24t26 78s13
+10i33 Count{natural} 20b33 22r10
+12i7 Nr_Of_Edges{natural} 18r10 18r25 22r19 23r10
+27t9 Sampler 32b14 55l8 55t15 95r4 114r4
+28Y13 Start 40b17 95s12
+29Y13 Stop 44b17 114s12
+33b7 Pulse_Value{boolean} 48r11 49m10
+34b7 Pulse_Value_Aux{boolean} 47m7 48r26 49r25
+35o7 Period{9|46O9} 42r28 52r22
+36o7 Next{9|41O9} 41m13 42m13 42r21 52m7 52r15 53r19
+57t9 Speedometer 62b14 85l8 85t19 96r4 113r4
+58Y13 Start 71b17 96s16
+59Y13 Finish 75b17 113s16
+63D12 Velocity 64r15 79r16 80r29
+64d7 Speed{63D12} 79m7 80r44
+65i7 Count{natural} 78m29 79r45
+66o7 Period{9|46O9} 73r28 81r22
+67o7 Next{9|41O9} 72m13 73m13 73r21 81m7 81r15 82r19
+X 21 system.ads
+37K9*System 20|1w66 2r65 5r20 21|153e11
+105I12*Any_Priority{integer}
+106I12*Priority{105I12}
+109i4*Default_Priority{106I12} 20|5r27
+
