@@ -4,10 +4,8 @@ use Motor_Sim, System, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO, Ada.Floa
 procedure Speed_Motor with
    Priority => System.Default_Priority is
 
-   period_sampler : constant Time_Span := Microseconds(Integer((((1.0/((Float(motor_sim.Max_Speed)*8.0)/60.0))/5.0))*1000.0)); --ms
-   period_speedometer : constant Time_Span := Microseconds(Integer(Float(motor_sim.Max_Speed)/((Float(motor_sim.Max_Speed)*8.0*5.0)/60.0)*1000000.0)); 
-   --period_sampler : constant Time_Span := Microseconds(60_000_000 / ((Max_Speed * 8))); --ms
-   --period_speedometer : constant Time_Span := Microseconds((motor_sim.Max_Speed*1_000_000)/((motor_sim.Max_Speed*8_000_000*5)/60_000_000)); --s
+   period_sampler : constant Time_Span := Microseconds(60_000_000 / ((Max_Speed * 8))); --ms
+   period_speedometer : constant Time_Span := Microseconds((motor_sim.Max_Speed*1_000_000)/((motor_sim.Max_Speed*8_000_000*5)/60_000_000)); --s
 
 
    protected Edges with Priority => System.Priority'Last - 1 is
