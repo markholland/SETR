@@ -1,0 +1,125 @@
+V "GNAT Lib v4.6"
+P LC QP TF  SS ZX
+R nnnnnnnnnvnnnnnnnnvvnvnvnvvnvvnvnnnnnnnnnnvnvnnnnnnvnnnnnnvnnnnvnnnnnv6nv6nv1nnnnnn
+
+U motor_sim%b		motor_sim.adb		23f11206 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U motor_sim%s		motor_sim.ads		a04028f4 EE NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-reatim.ads		20090409150019 63f07669
+D a-retide.ads		20090409150019 081cdaa4
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D motor_sim.ads		20141105112533 a04028f4
+D motor_sim.adb		20141105110716 f7bc548d
+D system.ads		20140416172229 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-conca2.ads		20090420091404 fbd0f2fc
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taprop.ads		20090409150019 07f79e46
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-tpoben.ads		20090409150019 e8374469
+D s-tasren.ads		20090409150019 86fa7427
+D s-tassta.ads		20101018103456 e88ef99e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 16|1r6 1r26 2r6 2r26 3r6 3r26
+X 2 a-except.ads
+55K13*Exceptions 370e19 16|2w10 2r30
+77V13*Exception_Name{string} 16|65s19
+99V13*Exception_Message{string} 16|65s41
+X 6 a-reatim.ads
+39K13*Real_Time 139e18 16|3w10 3r30
+41O9*Time 16|26r14
+46O9*Time_Span 16|23r36 24r36 25r26
+53V13*Clock{41O9} 16|40s27
+55V13*"+"{41O9} 16|40s33 52s29
+69V13*"*"{46O9} 16|24s51
+84V13*Microseconds{46O9} 16|23s49
+X 10 a-textio.ads
+49K13*Text_IO 472e16 16|1w10 1r30
+243U14*Put 16|64s10
+264U14*Put_Line 16|65s10
+X 15 motor_sim.ads
+5K9*Motor_Sim 19l5 19e14 16|6b14 126l5 126t14
+7N4*Max_Speed 16|23r78
+9E9*Speed_Mode 9e35 13r32 16|14r31 31r37 91r31
+9n24*Full{9E9} 16|33r24
+9n30*Half{9E9} 16|34r24
+11U14*Motor_On 16|73b14 76l8 76t16
+12U14*Motor_Off 16|82b14 85l8 85t17
+13U14*Set_Speed 13>25 16|91b14 94l8 94t17
+13e25 S{9E9} 16|91b25 93r28
+14V13*Motor_Pulse{boolean} 16|101b13 106l8 106t19
+16U14*Start_Simulation 16|112b14 115l8 115t24
+17U14*End_Simulation 16|121b14 124l8 124t22
+X 16 motor_sim.adb
+8t9 Simulator 18b14 66l8 66t17 75r7 84r7 93r7 104r7 114r7 123r7
+10Y13 Start_Simulation 28b14 114s17
+11Y13 End_Simulation 58b20 123s17
+12Y13 Motor_On 38b20 43l17 43t25 75s17
+13Y13 Motor_Off 45b20 47l17 47t26 84s17
+14Y13 Set_Speed 14>24 31b20 36l17 36t26 93s17
+14e24 S{15|9E9} 32r21
+15Y13 Pulse 15<20 54b20 56l17 56t22 104s17
+15b20 P{boolean} 55m16
+19b7 Pulse_Value{boolean} 51m16 51r35 55r21
+20b7 Running{boolean} 39r23 41m19 46m16 49r18
+23o7 Period_Full_Speed{6|46O9} 24r53 25r39 33r52
+24o7 Period_Half_Speed{6|46O9} 34r52
+25o7 Simulator_Period{6|46O9} 33m32 34m32 40r35 52r31
+26o7 Next{6|41O9} 40m19 50r28 52m16 52r24
+31e31 S{15|9E9}
+54b27 P{boolean}
+63r12 Exc{2|68R9} 65r34 65r59
+102b7 Value{boolean} 104m23 105r14
+X 17 system.ads
+37K9*System 16|4w6 17|153e11
+

@@ -1,8 +1,8 @@
 with Motor_Sim, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO, System;    
 use Motor_Sim, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO, System;
 
-procedure Speed_Motor with
-   Priority => System.Default_Priority is
+procedure Speed_Motor is 
+   --Priority => System.Default_Priority is
 
 
    protected Edges is
@@ -32,7 +32,8 @@ procedure Speed_Motor with
    task body Sampler is 
       Pulse_Value : Boolean := False;
       Pulse_Value_Aux : Boolean := False;
-      Period : Time_Span := Microseconds(3000);
+      Running : Boolean := False;
+      Period : Time_Span := Microseconds(4000);
       Next : Time;
    begin
       loop
@@ -40,17 +41,22 @@ procedure Speed_Motor with
          accept Start;
             Next := Clock;
             Next := Next + Period;
+            Running := True;
       or
          accept Stop;
             exit;
+      or
+         when Running =>
+            delay until Next;
+            Pulse_Value_Aux := Motor_Sim.Motor_Pulse;
+            --Put_Line("1:"&Boolean'Image(Pulse_Value_Aux));
+            --Put_Line("2:"&Boolean'Image(Pulse_Value));
+            if (Pulse_Value /= Pulse_Value_Aux) then
+               Pulse_Value := Pulse_Value_Aux;
+               Edges.Add;
+            end if;
+            Next := Next + Period;
       end select;
-      Pulse_Value_Aux := Motor_Sim.Motor_Pulse;
-      if (Pulse_Value /= Pulse_Value_Aux) then
-         Pulse_Value := Pulse_Value_Aux;
-         Edges.Add;
-      end if;
-      Next := Next + Period;
-      delay until Next;
       end loop;
    end Sampler;
 
@@ -60,28 +66,32 @@ procedure Speed_Motor with
    end Speedometer;
 
    task body Speedometer is
-      type Velocity is delta 0.1 digits 4;
+      type Velocity is delta 0.1 digits 5;
       Speed : Velocity;
       Count : Natural := 0;
+      Running : Boolean := False;
       Period : Time_Span := Microseconds(1500000);
       Next : Time;
    begin
       loop
-      select
-         accept Start;
-            Next := Clock;
-            Next := Next + Period;
-      or 
-         accept Finish;
-            exit;
-      end select;
-      Edges.Count_And_Reset(Count);
-      Speed := Velocity'Value(Integer'Image(Count * 5));
-      Put_Line("Velocity: "&Velocity'Image(Speed));
-      Next := Next + Period;
-      delay until Next;
-      end loop;
-
+         select
+            accept Start;
+               Next := Clock;
+               Next := Next + Period;
+               Running := True;
+         or 
+            accept Finish;
+               Running := False;
+               exit;
+         or
+            when Running =>
+               delay until Next;
+               Edges.Count_And_Reset(Count);
+               Speed := Velocity'Value(Integer'Image(Count * 5));
+               Put_Line("Velocity: "&Velocity'Image(Speed));
+               Next := Next + Period;
+         end select;
+      end loop;    
    end Speedometer;
 
 begin
