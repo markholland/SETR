@@ -4,8 +4,11 @@ use Motor_Sim, System, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO, Ada.Floa
 procedure Speed_Motor with
    Priority => System.Default_Priority is
 
-   period_sampler : constant Float := Float((1.0/((Float(motor_sim.Max_Speed)*8.0)/60.0))/5.0); -- in ms
-   period_speedometer : constant Float := Float(Float(motor_sim.Max_Speed)/(((Float(motor_sim.Max_Speed)*8.0)/60.0)*5.0)); -- in ms
+   period_sampler : constant Time_Span := Microseconds(Integer((((1.0/((Float(motor_sim.Max_Speed)*8.0)/60.0))/5.0))*1000.0)); --ms
+   period_speedometer : constant Time_Span := Microseconds(Integer(Float(motor_sim.Max_Speed)/((Float(motor_sim.Max_Speed)*8.0*5.0)/60.0)*1000000.0)); 
+   --period_sampler : constant Time_Span := Microseconds(60_000_000 / ((Max_Speed * 8))); --ms
+   --period_speedometer : constant Time_Span := Microseconds((motor_sim.Max_Speed*1_000_000)/((motor_sim.Max_Speed*8_000_000*5)/60_000_000)); --s
+
 
    protected Edges with Priority => System.Priority'Last - 1 is
       procedure Add;
@@ -35,7 +38,7 @@ procedure Speed_Motor with
       Pulse_Value : Boolean := False;
       Pulse_Value_Aux : Boolean := False;
       Running : Boolean := False;
-      Period : Time_Span := Microseconds(Integer(period_sampler*1000000.0));
+      Period : Time_Span := period_sampler;
       Next : Time;
    begin
       loop
@@ -56,7 +59,9 @@ procedure Speed_Motor with
             if (Pulse_Value /= Pulse_Value_Aux) then
                Pulse_Value := Pulse_Value_Aux;
                Edges.Add;
-            end if;
+               end if;
+            --Put_Line("sampler= "&Duration'Image(To_Duration(period_sampler)));
+            --Put_Line("speedometer= "&Duration'Image(To_Duration(period_sampler)));
             Next := Next + Period;
       end select;
       end loop;
@@ -72,7 +77,7 @@ procedure Speed_Motor with
       Speed : Velocity;
       Count : Natural := 0;
       Running : Boolean := False;
-      Period : Time_Span := Microseconds(Integer(period_speedometer*1000000.0));
+      Period : Time_Span := period_speedometer;
       Next : Time;
    begin
       loop
@@ -89,7 +94,9 @@ procedure Speed_Motor with
             when Running =>
                delay until Next;
                Edges.Count_And_Reset(Count);
-               Speed := Velocity'Value(Integer'Image(Count * 5));
+               --Put_Line("calc1:"&Float'Image(((Float(motor_sim.Max_Speed)*8.0)/60.0)/5.0));
+               Speed := Velocity(Count * 5);
+               --Put_Line("period:"&Float'Image(period_speedometer));
                Put_Line("Velocity: "&Velocity'Image(Speed));
                Next := Next + Period;
          end select;
