@@ -1,11 +1,13 @@
-with Motor_Sim, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO, System;    
-use Motor_Sim, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO, System;
+with Motor_Sim, System, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO, Ada.Float_Text_IO;    
+use Motor_Sim, System, Ada.Real_Time, Ada.Text_IO, Ada.Integer_Text_IO, Ada.Float_Text_IO;
 
-procedure Speed_Motor is 
-   --Priority => System.Default_Priority is
+procedure Speed_Motor with
+   Priority => System.Default_Priority is
 
+   period_sampler : constant Float := Float((1.0/((Float(motor_sim.Max_Speed)*8.0)/60.0))/5.0); -- in ms
+   period_speedometer : constant Float := Float(Float(motor_sim.Max_Speed)/(((Float(motor_sim.Max_Speed)*8.0)/60.0)*5.0)); -- in ms
 
-   protected Edges is
+   protected Edges with Priority => System.Priority'Last - 1 is
       procedure Add;
       procedure Count_And_Reset(Count: out Natural);
    private
@@ -24,8 +26,7 @@ procedure Speed_Motor is
       end Count_And_Reset;
    end Edges;
 
-   task Sampler is
-      --with Priority => System.Priority'Last - 1 is
+   task Sampler with Priority => System.Priority'Last - 1 is
       entry Start;
       entry Stop;
    end Sampler;
@@ -34,7 +35,7 @@ procedure Speed_Motor is
       Pulse_Value : Boolean := False;
       Pulse_Value_Aux : Boolean := False;
       Running : Boolean := False;
-      Period : Time_Span := Microseconds(3500);
+      Period : Time_Span := Microseconds(Integer(period_sampler*1000000.0));
       Next : Time;
    begin
       loop
@@ -61,7 +62,7 @@ procedure Speed_Motor is
       end loop;
    end Sampler;
 
-   task Speedometer is
+   task Speedometer with Priority => System.Priority'Last - 2 is
       entry Start;
       entry Finish;
    end Speedometer;
@@ -71,7 +72,7 @@ procedure Speed_Motor is
       Speed : Velocity;
       Count : Natural := 0;
       Running : Boolean := False;
-      Period : Time_Span := Microseconds(1500000);
+      Period : Time_Span := Microseconds(Integer(period_speedometer*1000000.0));
       Next : Time;
    begin
       loop
