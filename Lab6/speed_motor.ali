@@ -3,7 +3,7 @@ M P W=b
 P LC QP TF  SS ZX
 R nnnnnnnnnvnnnnnnnnvnnvnvnvvvvvnvnvnnvnnvnnvnvnnnnvnvnnnnnnvnnnnnnnnnnv3nv2nv1+nnnv1+nn
 
-U speed_motor%b		speed_motor.adb		c0918855 NE OO SU
+U speed_motor%b		speed_motor.adb		e37b3a2e NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -45,7 +45,7 @@ D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
 D motor_sim.ads		20141105112533 a04028f4
-D speed_motor.adb	20141105112835 eee65db3
+D speed_motor.adb	20141105113535 cd0cefc8
 D system.ads		20140416172229 23e1f70b
 D s-atacco.ads		20090409150019 1dc856ad
 D s-conca2.ads		20090420091404 fbd0f2fc
@@ -87,50 +87,50 @@ X 7 a-inteio.ads
 18K13*Integer_Text_IO[14|45] 20|1w49 2r48
 X 9 a-reatim.ads
 39K13*Real_Time 139e18 20|1w21 2r20
-41O9*Time 20|37r14 74r14
-46O9*Time_Span 20|36r16 73r16
-53V13*Clock{41O9} 20|42s21 79s24
-55V13*"+"{41O9} 20|43s26 58s26 80s29 92s29
-84V13*Microseconds{46O9} 20|36s29 73s29
+41O9*Time 20|38r14 75r14
+46O9*Time_Span 20|37r16 74r16
+53V13*Clock{41O9} 20|43s21 80s24
+55V13*"+"{41O9} 20|44s26 59s26 81s29 93s29
+84V13*Microseconds{46O9} 20|37s29 74s29
 X 13 a-textio.ads
 49K13*Text_IO 472e16 20|1w36 2r35
-264U14*Put_Line 20|91s16 98s4 99s4 102s4 103s4 104s4 109s4 114s4 118s4 122s4
-. 125s4 127s4 130s7
+264U14*Put_Line 20|92s16 99s4 100s4 103s4 104s4 105s4 110s4 115s4 119s4 123s4
+. 126s4 128s4 131s7
 X 19 motor_sim.ads
-5K9*Motor_Sim 19e14 20|1w6 2r5 51r32
-7N4*Max_Speed 20|99r45
-9n24*Full{9E9} 20|115r15
-9n30*Half{9E9} 20|110r15
-11U14*Motor_On 20|111s4
-12U14*Motor_Off 20|119s4
-13U14*Set_Speed 20|110s4 115s4
-14V13*Motor_Pulse{boolean} 20|51s42
-16U14*Start_Simulation 20|100s4
-17U14*End_Simulation 20|126s4
+5K9*Motor_Sim 19e14 20|1w6 2r5 52r32
+7N4*Max_Speed 20|100r45
+9n24*Full{9E9} 20|116r15
+9n30*Half{9E9} 20|111r15
+11U14*Motor_On 20|112s4
+12U14*Motor_Off 20|120s4
+13U14*Set_Speed 20|111s4 116s4
+14V13*Motor_Pulse{boolean} 20|52s42
+16U14*Start_Simulation 20|101s4
+17U14*End_Simulation 20|127s4
 X 20 speed_motor.adb
-4U11*Speed_Motor 4b11 131l5 131t16
-8w14 Edges 15b19 25l8 25t13 56r16 89r16
-9U17 Add 16b17 19l11 19t14 56s22
-10U17 Count_And_Reset 10<33 20b17 24l11 24t26 89s22
+4U11*Speed_Motor 4b11 132l5 132t16
+8w14 Edges 15b19 25l8 25t13 57r16 90r16
+9U17 Add 16b17 19l11 19t14 57s22
+10U17 Count_And_Reset 10<33 20b17 24l11 24t26 90s22
 10i33 Count{natural} 20b33 22r10
 12i7 Nr_Of_Edges{natural} 18r10 18r25 22r19 23r10
-27t9 Sampler 32b14 61l8 61t15 105r4 124r4
-28Y13 Start 41b17 105s12
-29Y13 Stop 46b17 124s12
-33b7 Pulse_Value{boolean} 54r17 55m16
-34b7 Pulse_Value_Aux{boolean} 51m13 54r32 55r31
-35b7 Running{boolean} 44m13 49r15
-36o7 Period{9|46O9} 43r28 58r28
-37o7 Next{9|41O9} 42m13 43m13 43r21 50r25 58m13 58r21
-63t9 Speedometer 68b14 95l8 95t19 106r4 123r4
-64Y13 Start 78b20 106s16
-65Y13 Finish 83b20 123s16
-69D12 Velocity 70r15 90r25 91r38
-70d7 Speed{69D12} 90m16 91r53
-71i7 Count{natural} 89m38 90r54
-72b7 Running{boolean} 81m16 84m16 87r18
-73o7 Period{9|46O9} 80r31 92r31
-74o7 Next{9|41O9} 79m16 80m16 80r24 88r28 92m16 92r24
+27t9 Sampler 33b14 62l8 62t15 106r4 125r4
+29Y13 Start 42b17 106s12
+30Y13 Stop 47b17 125s12
+34b7 Pulse_Value{boolean} 55r17 56m16
+35b7 Pulse_Value_Aux{boolean} 52m13 55r32 56r31
+36b7 Running{boolean} 45m13 50r15
+37o7 Period{9|46O9} 44r28 59r28
+38o7 Next{9|41O9} 43m13 44m13 44r21 51r25 59m13 59r21
+64t9 Speedometer 69b14 96l8 96t19 107r4 124r4
+65Y13 Start 79b20 107s16
+66Y13 Finish 84b20 124s16
+70D12 Velocity 71r15 91r25 92r38
+71d7 Speed{70D12} 91m16 92r53
+72i7 Count{natural} 90m38 91r54
+73b7 Running{boolean} 82m16 85m16 88r18
+74o7 Period{9|46O9} 81r31 93r31
+75o7 Next{9|41O9} 80m16 81m16 81r24 89r28 93m16 93r24
 X 21 system.ads
 37K9*System 20|1w66 2r65 21|153e11
 

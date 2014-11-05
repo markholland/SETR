@@ -6,7 +6,7 @@ with System;
 package body Motor_Sim is
 
    task Simulator is
-      --with Priority => System.Priority'Last is
+      --with Priority => System.Priority'Last-1 is
       entry Start_Simulation;
       entry End_Simulation;
       entry Motor_On;

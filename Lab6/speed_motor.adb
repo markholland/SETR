@@ -25,6 +25,7 @@ procedure Speed_Motor is
    end Edges;
 
    task Sampler is
+      --with Priority => System.Priority'Last - 1 is
       entry Start;
       entry Stop;
    end Sampler;
@@ -33,7 +34,7 @@ procedure Speed_Motor is
       Pulse_Value : Boolean := False;
       Pulse_Value_Aux : Boolean := False;
       Running : Boolean := False;
-      Period : Time_Span := Microseconds(4000);
+      Period : Time_Span := Microseconds(3500);
       Next : Time;
    begin
       loop
