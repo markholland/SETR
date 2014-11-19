@@ -1,0 +1,105 @@
+V "GNAT Lib v2014"
+M P W=b
+P ZX
+
+RN
+RV NO_DELAY
+RV NO_IO
+RV SPARK_05
+
+U ciclico%b		ciclico.adb		81d7f58a NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W logging_support%s	logging_support.adb	logging_support.ali
+W use_cpu%s		use_cpu.adb		use_cpu.ali
+
+D ada.ads		20140406181354 3ffc8e18 ada%s
+D a-except.ads		20140406181356 43d57f8c ada.exceptions%s
+D a-finali.ads		20140406181359 69f99942 ada.finalization%s
+D a-ioexce.ads		20140406181358 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20140406181358 63f07669 ada.real_time%s
+D a-retide.ads		20140406181357 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20140406181355 1a984740 ada.streams%s
+D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
+D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
+D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
+D ciclico.adb		20141119191341 7cefa0db ciclico%b
+D interfac.ads		20140406181359 69adb1b9 interfaces%s
+D i-c.ads		20140406181358 5421119b interfaces.c%s
+D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
+D logging_support.ads	20141110025429 3f314349 logging_support%s
+D system.ads		20140406181354 90249111 system%s
+D s-atacco.ads		20140406181355 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20140406181356 2c012597 system.crtl%s
+D s-exctab.ads		20140406181354 54135002 system.exception_table%s
+D s-ficobl.ads		20140406181355 078245e4 system.file_control_block%s
+D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
+D s-finroo.ads		20140406181359 4ff27390 system.finalization_root%s
+D s-linux.ads		20140406181355 befedf55 system.linux%s
+D s-multip.ads		20140406181358 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20140410142240 bac9b517 system.os_constants%s
+D s-osinte.ads		20140406181359 fd138fd1 system.os_interface%s
+D s-parame.ads		20140406181358 06da98b2 system.parameters%s
+D s-pooglo.ads		20140406181357 542f33d0 system.pool_global%s
+D s-soflin.ads		20140406181358 aa763b52 system.soft_links%s
+D s-stache.ads		20140406181355 a37c21ec system.stack_checking%s
+D s-stausa.ads		20140406181355 017a0a05 system.stack_usage%s
+D s-stalib.ads		20140406181355 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140406181357 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140406181355 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20140406181357 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20140406181357 2b3f8252 system.task_info%s
+D s-taspri.ads		20140406181359 15f617a8 system.task_primitives%s
+D s-taprop.ads		20140406181355 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20140406181355 3f821f32 system.tasking%s
+D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
+D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
+D use_cpu.ads		20141114115141 999495a5 use_cpu%s
+X 1 ada.ads
+16K9*Ada 19e8 11|1r6 1r19 2r6 2r19
+X 5 a-reatim.ads
+39K13*Real_Time 138e18 11|1w23 2r23
+41O9*Time<duration> 11|20r16
+46O9*Time_Span<duration> 11|17r25
+53V13*Clock{41O9} 11|78s17
+55V14*"+"{41O9} 11|81s30
+85V13*Milliseconds{46O9} 11|17s38
+X 9 a-textio.ads
+49K13*Text_IO 471e16 11|1w10 2r10
+166U14*New_Line 11|93s4
+242U14*Put 11|90s7
+263U14*Put_Line 11|65s4 94s4
+X 11 ciclico.adb
+14U11*Ciclico 14b11 95l5 95t12
+16M9 Ciclo_Menor 19r16
+17o4 Ts{5|46O9} 81r32
+19m4 Ciclo{16M9} 82r12 89m7 89r16
+20o4 Siguiente{5|41O9} 78m4 80r19 81m7 81r20
+21a4 CRLF{string} 68r33 69r24 70r44 71r44 72r44 73r44 74r28
+27U14 T1 27b14 32l8 32t10 84s20 85s33
+37U14 T2 37b14 42l8 42t10 86s33
+47U14 T3 47b14 52l8 52t10 84s23
+57U14 T4 57b14 62l8 62t10 87s21
+79i9 I{integer}
+X 15 logging_support.ads
+2K9*Logging_Support 11|1w43 2r43 15|28e20
+13n20*Off{13E9} 11|92r13
+13n25*On{13E9} 11|66r13
+14n24*No_Event{14E9} 11|68r9 69r9 70r9 71r9 72r9 73r9 74r9
+14n34*Start_Task{14E9} 11|29r12 39r12 49r12 59r12
+14n46*Stop_Task{14E9} 11|31r12 41r12 51r12 61r12
+14n57*Mode_Change{14E9} 11|75r9
+17U14*Set_Log 11|66s4 92s4
+23U14*Log 11|29s7 31s7 39s7 41s7 49s7 51s7 59s7 61s7 68s4 69s4 70s4 71s4
+. 72s4 73s4 74s4 75s4
+X 31 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 43 use_cpu.ads
+1K9*Use_CPU 11|1w34 2r34 43|4e12
+2U14*Work 11|30s7 40s7 50s7 60s7
+

@@ -13,8 +13,8 @@ use  Ada.Text_IO, Ada.Real_Time, Use_CPU, Logging_Support;
 
 procedure Ciclico is 
    -- Completar
-   type Ciclo_Menor is mod ...; 
-   Ts        : constant Time_Span := Milliseconds(...);  
+   type Ciclo_Menor is mod 10; 
+   Ts        : constant Time_Span := Milliseconds(20);  
 
    Ciclo     : Ciclo_Menor := 0;  
    Siguiente : Time; 
@@ -81,10 +81,10 @@ begin
       Siguiente := Siguiente + Ts;
       case Ciclo is
          -- Completar
-         when 0  => ...
-
-
-
+         when 0 => T1;T3;
+         when 2 | 4 | 6 | 9  => T1;
+         when 1 | 3 | 5 | 8  => T2;
+         when 7  => T4;
       end case;
       Ciclo := Ciclo + 1;
       Put(".");

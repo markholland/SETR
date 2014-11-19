@@ -1,0 +1,154 @@
+V "GNAT Lib v2014"
+P ZX
+
+RN
+RV NO_ENUMERATION_MAPS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_PROTECTED_TYPES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U logging_support%b	logging_support.adb	9a7beb85 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.img_lld%s	s-imglld.adb		s-imglld.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U logging_support%s	logging_support.ads	3f314349 EE NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+
+D ada.ads		20140406181354 3ffc8e18 ada%s
+D a-charac.ads		20140406181359 2d3ec45b ada.characters%s
+D a-chlat1.ads		20140406181359 66457d31 ada.characters.latin_1%s
+D a-except.ads		20140406181356 43d57f8c ada.exceptions%s
+D a-finali.ads		20140406181359 69f99942 ada.finalization%s
+D a-ioexce.ads		20140406181358 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20140406181358 63f07669 ada.real_time%s
+D a-stream.ads		20140406181355 1a984740 ada.streams%s
+D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
+D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
+D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20140406181359 69adb1b9 interfaces%s
+D i-c.ads		20140406181358 5421119b interfaces.c%s
+D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
+D logging_support.ads	20141110025429 3f314349 logging_support%s
+D logging_support.adb	20141110154305 08b6c751 logging_support%b
+D system.ads		20140406181354 90249111 system%s
+D s-atacco.ads		20140406181355 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20140406181358 02a0d7d0 system.concat_2%s
+D s-conca4.ads		20140406181354 7e642b20 system.concat_4%s
+D s-crtl.ads		20140406181356 2c012597 system.crtl%s
+D s-exctab.ads		20140406181354 54135002 system.exception_table%s
+D s-ficobl.ads		20140406181355 078245e4 system.file_control_block%s
+D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
+D s-finroo.ads		20140406181359 4ff27390 system.finalization_root%s
+D s-imenne.ads		20140406181354 614c06c0 system.img_enum_new%s
+D s-imglld.ads		20140406181359 f3220969 system.img_lld%s
+D s-linux.ads		20140406181355 befedf55 system.linux%s
+D s-multip.ads		20140406181358 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20140410142240 bac9b517 system.os_constants%s
+D s-osinte.ads		20140406181359 fd138fd1 system.os_interface%s
+D s-parame.ads		20140406181358 06da98b2 system.parameters%s
+D s-pooglo.ads		20140406181357 542f33d0 system.pool_global%s
+D s-soflin.ads		20140406181358 aa763b52 system.soft_links%s
+D s-stache.ads		20140406181355 a37c21ec system.stack_checking%s
+D s-stausa.ads		20140406181355 017a0a05 system.stack_usage%s
+D s-stalib.ads		20140406181355 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140406181357 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140406181355 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20140406181357 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20140406181357 2b3f8252 system.task_info%s
+D s-taspri.ads		20140406181359 15f617a8 system.task_primitives%s
+D s-taprop.ads		20140406181355 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20140406181355 3f821f32 system.tasking%s
+D s-taprob.ads		20140406181354 502249e3 system.tasking.protected_objects%s
+D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
+D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 16|3r6 4r6 4r35 5r6 5r35 30r17 40r13 47r16 48r43 63r14 64r14
+. 65r14 67r14 70r13 71r13
+X 2 a-charac.ads
+16K13*Characters 18e19 16|5r10 5r39
+X 3 a-chlat1.ads
+18K24*Latin_1 296e27 16|5w21 5r50
+34e4*HT{character} 16|20r33 20r38
+X 7 a-reatim.ads
+39K13*Real_Time 138e18 16|4w10 4r39
+41O9*Time<duration> 16|22r10
+46O9*Time_Span<duration> 16|55r23
+53V13*Clock{41O9} 16|43s21 57s24
+58V14*"-"{46O9} 16|57s30
+80V13*To_Duration{duration} 16|64s71
+X 10 a-textio.ads
+49K13*Text_IO 471e16 16|3w10 30r21 40r17 47r20 48r47 63r18 64r18 65r18 67r18
+. 70r17 71r17
+52P9*File_Type 16|30r29
+53n32*Out_File{53E9} 16|48r55
+86U14*Create 16|47s28
+87p7 File{52P9} 16|47r35
+88e7 Mode{53E9} 16|48r35
+89a7 Name{string} 16|49r35
+98U14*Close 16|40s25
+165U14*New_Line 16|65s26
+165p24 File{52P9} 16|65r35
+166U14*New_Line 16|71s25
+241U14*Put 16|63s26 64s26 67s26
+241p19 File{52P9} 16|63r30 64r30 67r30
+241a37 Item{string} 16|63r48 64r48 67r48
+242U14*Put 16|70s25
+242a19 Item{string} 16|70r29
+X 15 logging_support.ads
+2K9*Logging_Support 28l5 28e20 16|8b17 115l8 115t23
+13E9*Switch 13e28 17r36 16|25r39 36r39 78r39
+13n20*Off{13E9} 16|38r25
+13n25*On{13E9}
+14E9*Event_Type 15e71 23r28 16|26r31 54r31 63r56 70r47 95r31
+14n24*No_Event{14E9} 16|62r24
+14n34*Start_Task{14E9}
+14n46*Stop_Task{14E9}
+14n57*Mode_Change{14E9}
+15n24*Start_Resource{14E9}
+15n40*Stop_Resource{14E9}
+15n55*Missed_Deadline{14E9}
+17U14*Set_Log 17>22 17>44 16|78b17 93l11 93t18
+17e22 Which_Way{13E9} 16|78b25 80r26
+17a44 File_Name{string} 16|78b47 80r37
+23U14*Log 23>18 23>40 16|95b17 113l11 113t14
+23e18 Event{14E9} 16|95b21 97r22
+23a40 Message{string} 16|95b43 97r29
+X 16 logging_support.adb
+20a4 Two_Tabs{string} 63r81 63r102
+22o4 Init{7|41O9} 43m13 57r32
+24w14 Serialise 35b19 74l8 74t17 80r7 97r7
+25U17 Set_Log 25>25 25>47 36b17 52l11 52t18 80s17
+25e25 Which_Way{15|13E9} 36b25 38r13
+25a47 File_Name{string} 36b47 45r16 49r43
+26U17 Log 26>21 26>43 54b17 73l11 73t14 97s17
+26e21 Event{15|14E9} 54b21 62r15 63r73 70r64
+26a43 Message{string} 54b43 63r92 67r56 70r37
+28b7 Logging_Is_On{boolean} 39r13 42r13 58r17
+30p7 Log_File{10|52P9} 40r31 47r43 63r38 64r38 65r43 67r38
+31b7 Writing_To_File{boolean} 46r16 61r13
+55o10 Time_Stamp{7|46O9} 57m10 64r83
+X 17 system.ads
+37K9*System 16|6w6 24r41 17|152e11
+105I12*Any_Priority{integer}
+106I12*Priority{105I12} 16|24r48
+X 36 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

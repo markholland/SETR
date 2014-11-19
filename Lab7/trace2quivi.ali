@@ -1,0 +1,223 @@
+V "GNAT Lib v2014"
+M P W=b
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLICIT_LOOPS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U trace2quivi%b		trace2quivi.adb		24dd41a5 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
+W system.concat_5%s	s-conca5.adb		s-conca5.ali
+W system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.img_lli%s	s-imglli.adb		s-imglli.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.val_int%s	s-valint.adb		s-valint.ali
+W system.val_real%s	s-valrea.adb		s-valrea.ali
+
+D ada.ads		20140406181354 3ffc8e18 ada%s
+D a-comlin.ads		20140406181358 ea62afbc ada.command_line%s
+D a-except.ads		20140406181356 43d57f8c ada.exceptions%s
+D a-finali.ads		20140406181359 69f99942 ada.finalization%s
+D a-flteio.ads		20140406181358 e18a47a0 ada.float_text_io%s
+D a-ioexce.ads		20140406181358 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20140406181355 1a984740 ada.streams%s
+D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
+D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
+D a-tiflio.ads		20140406181359 56fbda09 ada.text_io.float_io%s
+D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20140406181359 69adb1b9 interfaces%s
+D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
+D system.ads		20140406181354 90249111 system%s
+D s-conca2.ads		20140406181358 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20140406181355 0b705ca5 system.concat_3%s
+D s-conca4.ads		20140406181354 7e642b20 system.concat_4%s
+D s-conca5.ads		20140406181356 875e432e system.concat_5%s
+D s-crtl.ads		20140406181356 2c012597 system.crtl%s
+D s-exctab.ads		20140406181354 54135002 system.exception_table%s
+D s-fatflt.ads		20140406181357 11beb392 system.fat_flt%s
+D s-fatgen.ads		20140406181356 9267ca45 system.fat_gen%s
+D s-ficobl.ads		20140406181355 078245e4 system.file_control_block%s
+D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
+D s-finroo.ads		20140406181359 4ff27390 system.finalization_root%s
+D s-imgint.ads		20140406181359 02dbe0c2 system.img_int%s
+D s-imglli.ads		20140406181359 114f55d1 system.img_lli%s
+D s-parame.ads		20140406181358 06da98b2 system.parameters%s
+D s-pooglo.ads		20140406181357 542f33d0 system.pool_global%s
+D s-secsta.ads		20140406181359 86a2856d system.secondary_stack%s
+D s-soflin.ads		20140406181358 aa763b52 system.soft_links%s
+D s-stache.ads		20140406181355 a37c21ec system.stack_checking%s
+D s-stalib.ads		20140406181355 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140406181357 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140406181355 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20140406181357 b16154c2 system.storage_pools%s
+D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
+D s-valint.ads		20140406181357 48a52a3f system.val_int%s
+D s-valrea.ads		20140406181356 fe297711 system.val_real%s
+D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
+D trace2quivi.adb	20141114112818 12b82831 trace2quivi%b
+D trace2quivi-extract_token.adb  20141109123618 46350bd0 trace2quivi.extract_token
+X 1 ada.ads
+16K9*Ada 19e8 42|1r6 1r19 1r38 1r56 2r6 2r19 2r38 2r56
+X 2 a-comlin.ads
+38K13*Command_Line 139e21 42|1w42 2r42
+48V13*Argument{string} 42|97s45 97s70 98s27 99s32 288s59
+X 3 a-except.ads
+53K13*Exceptions 360e19 42|1w60 2r60
+71V13*Exception_Name{string} 42|291s14
+103V13*Exception_Information{string} 42|291s42
+X 5 a-flteio.ads
+20K13*Float_Text_IO[10|46] 42|1w23 2r23
+X 9 a-textio.ads
+49K13*Text_IO 471e16 42|1w10 2r10
+52P9*File_Type 42|74r16
+53n23*In_File{53E9} 42|98r19
+53n32*Out_File{53E9} 42|99r23
+86U14*Create 42|99s3
+92U14*Open 42|98s3
+98U14*Close 42|282s3 283s3
+183V13*End_Of_File{boolean} 42|155s13
+207U14*Put 42|201s11
+241U14*Put 42|118s3 124s5 125s5 138s3 189s15 190s15 191s15 192s15 198s9 199s9
+. 206s9 216s16 217s16 218s16 219s16 230s13 231s13 232s13 233s13 244s16 245s16
+. 246s16 247s16 248s16 249s16 267s15 268s15
+242U14*Put 42|156s5
+244U14*Get_Line 42|101s3 111s3 121s5 140s3 147s7 153s3 277s5
+263U14*Put_Line 42|97s3 274s9 284s3 288s5 289s5 290s5 291s5
+X 10 a-tiflio.ads
+74U14*Get 42|172s9[5|20] 197s9[5|20] 214s13[5|20] 243s16[5|20] 266s15[5|20]
+X 42 trace2quivi.adb
+4U11*Trace2Quivi 4b11 292l5 292t16 43|3r10
+30E8 Events 30e77 31r16 36r38 43|7r36
+30n19 No_Event{30E8} 31r26 43|32r14 65r17
+30n28 Start_Task{30E8} 209r12 43|61r48
+30n39 Stop_Task{30E8} 238r12 43|62r48
+30n49 Mode_Change{30E8} 161r12 43|63r48
+30n61 Missed_Deadline{30E8} 261r12 43|64r49
+31e3 Last_Event{30E8} 103m38 107m40 113m38 123m40 128m42 130m42 132m42 134m42
+. 142m38 145m40 149m42 157m40 159r10 162m44 171m44 210m45 213m48 239m45 242m51
+. 262m45 265m50
+33U13 Extract_Token 33=27 34<27 35<27 36<27 103s3 107s5 113s3 123s5 128s7
+. 130s7 132s7 134s7 142s3 145s5 149s7 157s5 162s9 171s9 210s10 213s13 239s10
+. 242s16 262s10 265s15 43|4b11 79l5 79t18
+33a27 S{string} 43|4b25 31r6 38r10 38r24 38r38 38r52 38r65 38r84 43r17 44m7
+. 44r15 46r14 46r28 47m7 52r9 52r25 52r41 52r57 52r72 52r92 53r15 72r21 73m5
+. 73r18 75r12 75r27 76m5
+34a27 Token{string} 43|5b25 56m4
+35i27 Size{natural} 43|6b25 30m3 71m3 72r12 73r9 75r21
+36e27 Event{30E8} 43|7b25 32m5 61m39 62m39 63m39 64m40 65m8
+40N3 Max_Str_Size 54r50 55r50 71r35 77r18 79r20 200r21
+41N3 Max_Modes_Nr 55r23 63r56 67r30 85r34 86r31
+42N3 Max_Tasks_Nr 49r23 51r29 51r63 52r40 54r23 63r40 68r30 87r33
+44R8 Task_Log 48e13 49r40
+45f5 Last_Start{float} 216r92 224m25 244r92 253m41
+46i5 Release_Nr{natural} 182r53 183m27 183r53 185r50 194m25 225m25 225r51
+. 227r48
+47f5 Last_Release_Log_At{float} 187m27 229m25
+49a3 The_Task(44R8) 182r41 183m15 183r41 185r38 187m15 194m13 216r70 224m13
+. 225m13 225r39 227r36 229m13 244r70 253m19
+51a3 Preempted_List(integer) 221m16 251r34
+52i3 Preempted_Tasks_Nr{integer} 220m16 220r38 221r31 250r19 251r49 252m19
+. 252r41
+54a3 Task_Name(string) 126m5 212r24 241r24 264r24
+55a3 Mode_Name(string) 108m5 166r22 201r27 202r14
+57R8 Task_Profile_Record 62e13 63r73
+58f5 Period{float} 129m25 175r41 178r56 185r92 227r93
+59f5 Deadline{float} 131m25 191r114 232r112
+60f5 Phasing{float} 133m25 177r92 186r56 228r58
+61i5 Prio{integer} 135m25
+63A8 Task_Profile_Array(57R8)<integer><integer> 65r17
+65a3 Task_Profile{63A8} 129m7 131m7 133m7 135m7 175r16 177r67 178r31 185r67
+. 186r31 191r85 227r64 228r29 232r83
+67i3 Modes_Nr{integer} 104m3 106r15 127r17 165r21
+68i3 Tasks_Nr{integer} 114m3 118r54 120r15 174r23 211r22 240r22 263r22
+71a3 Body_Token{string} 144r18
+73p3 Input_File{9|52P9} 98m8 98r8 101r12 111r12 121r14 140r12 147r16 153r12
+. 155r25 277r14 282m9 282r9
+74p3 Output_File{9|52P9} 99m11 99r11 118r7 124r9 125r9 138r7 189r19 190r19
+. 191r19 192r19 198r13 199r13 201r15 206r13 216r20 217r20 218r20 219r20 230r17
+. 231r17 232r17 233r17 244r20 245r20 246r20 247r20 248r20 249r20 267r19 268r19
+. 283m9 283r9
+75a3 CRLF{string} 138r36 190r72 192r72 206r37 217r84 219r84 231r70 233r70
+. 245r74 247r74 249r74 268r83 274r18 284r12 288r14
+76i3 Processed_Lines{natural} 102m3 102r22 112m3 112r22 122m5 122r24 141m3
+. 141r22 148m7 148r26 154m3 154r22 274r70 278m5 278r24 289r53
+77a3 Str{string} 101m23 103m17 103r17 107m19 107r19 111m23 113m17 113r17
+. 121m25 123m19 123r19 128m21 128r21 130m21 130r21 132m21 132r21 134m21 134r21
+. 140m23 142m17 142r17 145m19 145r19 147m27 149m21 149r21 153m23 157m19 157r19
+. 162m23 162r23 171m23 171r23 210m24 210r24 213m27 213r27 239m24 239r24 242m30
+. 242r30 262m24 262r24 265m29 265r29 277m25 290r49
+78i3 Last{positive} 172m30 197m39 214m34 243m36 266m35
+79a3 Token{string} 103m21 104r29 107m23 108r20 113m21 114r28 123m23 124r21
+. 126r21 128m25 129r46 130m25 131r48 132m25 133r47 134m25 135r46 142m21 144r9
+. 145m23 149m25 157m23 162m27 166r14 171m27 172r13 197r13 210m28 212r16 213m31
+. 214r17 239m28 241r16 242m34 243r20 262m28 264r16 265m33 266r19
+80i3 Token_Size{natural} 103m27 107m29 113m27 123m29 124r30 128m31 130m31
+. 132m31 134m31 142m27 145m29 146r8 149m31 157m29 162m33 171m33 210m34 213m37
+. 239m34 242m40 262m34 265m39
+81i3 Line_Size{natural} 101m27 111m27 121m29 140m27 147m31 153m27 277m29
+82f3 Scale{float} 189r76 191r63 198r57 216r64 218r64 230r74 232r61 244r64
+. 246r64 248r64 267r63
+85i3 Current_Mode{integer} 163r21 167m13 191r100 201r37 202r24 227r79 228r44
+. 232r98
+86i3 Old_Mode{integer} 163m9 175r31 177r82 178r46 185r82 186r46
+87i3 Task_In_CPU{integer} 215r16 216r79 217r60 219r60 221r54 223m13 244r79
+. 251m19 253r28 255m19
+88f3 Last_Mode_Change_At{float} 177r45 184r31 197m19 198r63 226r29
+89i3 Mode_Changes{integer} 164m9 164r25 173r12
+90f3 Start_Time{float} 172m19 177r32 214m23 218r70 224r39
+91f3 Stop_Time{float} 243m26 246r70 248r70 253r55 266m25 267r69
+92f3 Release_Time{float} 184m15 187r50 189r63 191r70 226m13 229r48 230r61
+. 232r68
+93i3 Real_Releases{integer} 176m15 180m15 182r25
+106i7 I{integer} 108r15
+120i7 T{integer} 126r15 129r20 131r20 133r20 135r20
+127i9 M{integer} 129r22 131r22 133r22 135r22
+165i13 I{integer} 166r32 167r29
+174i15 T{integer} 175r29 177r80 178r44 182r50 183r24 183r50 185r47 185r80
+. 186r44 187r24 190r58 191r98 192r58 194r22
+182i17 N{integer}
+200i13 L{integer} 201r51 202r38
+211i14 T{integer} 212r34 223r28 224r22 225r22 225r48 227r45 227r77 228r42
+. 229r22 231r56 232r96 233r56
+240i14 T{integer} 241r34 245r60 247r60 249r60
+263i14 T{integer} 264r34 268r59
+287r8 E{3|62R9} 291r30 291r64
+X 43 trace2quivi-extract_token.adb
+11N3 Max_Str_Size 13r19 18r41 20r39 22r38 24r44
+12i3 I{integer} 37m3 38r12 38r26 38r40 38r54 38r67 38r80 39m5 39r10 42r6
+. 43r26 44r19 46r23 51m3 52r11 52r27 52r43 52r59 52r74 52r87 53r9 53r17 54m5
+. 54r10 71r11
+13a3 Tkn{string} 53m5 56r13 61r9 62r9 63r9 64r9
+14e3 Tab{character} 38r45 52r33
+15e3 CR{character} 38r59 52r65
+16e3 LF{character} 38r72 52r80
+18a4 Mode_Change_Str{string} 63r15
+20a3 Start_Task_Str{string} 61r15
+22a3 Stop_Task_Str{string} 62r15
+24a3 Missed_Deadline_Str{string} 64r15
+43i9 J{integer} 44r9 44r17
+46i9 J{integer} 47r9
+72i7 J{integer} 73r7 73r20
+75i7 J{integer} 76r7
+

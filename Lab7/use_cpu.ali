@@ -1,0 +1,103 @@
+V "GNAT Lib v2014"
+P ZX
+
+RN
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U use_cpu%b		use_cpu.adb		7b6d3be9 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+U use_cpu%s		use_cpu.ads		999495a5 EE NE OO PK
+
+D ada.ads		20140406181354 3ffc8e18 ada%s
+D a-except.ads		20140406181356 43d57f8c ada.exceptions%s
+D a-finali.ads		20140406181359 69f99942 ada.finalization%s
+D a-ioexce.ads		20140406181358 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20140406181358 63f07669 ada.real_time%s
+D a-stream.ads		20140406181355 1a984740 ada.streams%s
+D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
+D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
+D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20140406181359 69adb1b9 interfaces%s
+D i-c.ads		20140406181358 5421119b interfaces.c%s
+D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
+D system.ads		20140406181354 90249111 system%s
+D s-atacco.ads		20140406181355 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20140406181358 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20140406181356 2c012597 system.crtl%s
+D s-exctab.ads		20140406181354 54135002 system.exception_table%s
+D s-ficobl.ads		20140406181355 078245e4 system.file_control_block%s
+D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
+D s-finroo.ads		20140406181359 4ff27390 system.finalization_root%s
+D s-imgint.ads		20140406181359 02dbe0c2 system.img_int%s
+D s-linux.ads		20140406181355 befedf55 system.linux%s
+D s-multip.ads		20140406181358 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20140410142240 bac9b517 system.os_constants%s
+D s-osinte.ads		20140406181359 fd138fd1 system.os_interface%s
+D s-parame.ads		20140406181358 06da98b2 system.parameters%s
+D s-pooglo.ads		20140406181357 542f33d0 system.pool_global%s
+D s-soflin.ads		20140406181358 aa763b52 system.soft_links%s
+D s-stache.ads		20140406181355 a37c21ec system.stack_checking%s
+D s-stausa.ads		20140406181355 017a0a05 system.stack_usage%s
+D s-stalib.ads		20140406181355 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140406181357 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140406181355 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20140406181357 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20140406181357 2b3f8252 system.task_info%s
+D s-taspri.ads		20140406181359 15f617a8 system.task_primitives%s
+D s-taprop.ads		20140406181355 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20140406181355 3f821f32 system.tasking%s
+D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
+D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
+D use_cpu.ads		20141114115141 999495a5 use_cpu%s
+D use_cpu.adb		20141114115858 b9642df1 use_cpu%b
+X 1 ada.ads
+16K9*Ada 19e8 43|1r6 1r19 2r6 2r19
+X 5 a-reatim.ads
+39K13*Real_Time 138e18 43|1w23 2r23
+41O9*Time<duration> 43|6r17
+46O9*Time_Span<duration> 43|7r20 8r16
+53V13*Clock{41O9} 43|38s13 40s13 41s13
+58V14*"-"{46O9} 43|42s28 42s39
+66V14*"-"{46O9} 43|42s33 44s29
+76V14*"<="{boolean} 43|44r50
+77V14*">"{boolean} 43|46r28
+84V13*Microseconds{46O9} 43|8s29
+85V13*Milliseconds{46O9} 43|44s31 46s30
+X 8 a-textio.ads
+49K13*Text_IO 471e16 43|1w10 2r10
+166U14*New_Line 43|55s4
+263U14*Put_Line 43|35s4 54s4
+X 30 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 42 use_cpu.ads
+1K9*Use_CPU 4l5 4e12 43|4b14 57l5 57t12
+2U14*Work 2>20 43|28b14 32l8 32t12
+2i20 Amount_MS{natural} 43|28b20 29r41
+X 43 use_cpu.adb
+6o4 T1{5|41O9} 38m7 42r30
+6o8 T2{5|41O9} 40m7 42r25 42r41
+6o12 T3{5|41O9} 41m7 42r36
+7o4 Time_Measured{5|46O9} 42m7 44r15 46r14
+8o4 Tolerance{5|46O9} 44r53
+9f4 X{float}
+10i4 Min{integer} 12r31 49m10 52r17 52r31
+11i4 Max{integer} 12r25 47m10 52r25
+12i4 NTimes{integer} 29r32 39r16 47r17 49r17 52m7 54r62
+14U14 Iterate 14b14 14>23 25l8 25t15 31s7 39s7
+14i23 Iterations{integer} 17r21
+15f7 X{float} 18m10 18r15 19m10 19r15 20m10 20r15 21m10 21r15 22m10 22r15
+. 23m10 23r15
+17i11 I{integer}
+29i7 Iterations{integer} 31r16
+
