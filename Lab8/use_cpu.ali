@@ -1,0 +1,134 @@
+V "GNAT Lib v2014"
+A --RTS=marteuc_linux_lib
+P
+
+RN
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U use_cpu%b		use_cpu.adb		0c64f625 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+U use_cpu%s		use_cpu.ads		999495a5 EE NE OO PK
+
+D ada.ads		20141125214628 3ffc8e18 ada%s
+D a-except.ads		20141125214628 43d57f8c ada.exceptions%s
+D a-finali.ads		20141125214628 69f99942 ada.finalization%s
+D a-flteio.ads		20141125214629 e18a47a0 ada.float_text_io%s
+D a-ioexce.ads		20141125214628 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20141125214628 bb51c45a ada.numerics%s
+D a-nuelfu.ads		20141125214628 03e83d1c ada.numerics.elementary_functions%s
+D a-ngelfu.ads		20141125214628 ff061ca9 ada.numerics.generic_elementary_functions%s
+D a-reatim.ads		20141125214628 63f07669 ada.real_time%s
+D a-stream.ads		20141125214628 1a984740 ada.streams%s
+D a-tags.ads		20141125214628 dc4d0634 ada.tags%s
+D a-textio.ads		20141125214628 386df5d4 ada.text_io%s
+D a-tiflio.ads		20141125214628 56fbda09 ada.text_io.float_io%s
+D a-unccon.ads		20141125214628 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20141125214629 69adb1b9 interfaces%s
+D i-c.ads		20141125214628 5421119b interfaces.c%s
+D i-cstrea.ads		20141125214628 febc86ed interfaces.c_streams%s
+D system.ads		20141125214629 820bee89 system%s
+D s-atacco.ads		20141125214628 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20141125214628 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20141125214628 2c012597 system.crtl%s
+D s-exctab.ads		20141125214628 54135002 system.exception_table%s
+D s-ficobl.ads		20141125214628 078245e4 system.file_control_block%s
+D s-finmas.ads		20141125214628 814daec4 system.finalization_masters%s
+D s-finroo.ads		20141125214628 4ff27390 system.finalization_root%s
+D s-imgint.ads		20141125214628 02dbe0c2 system.img_int%s
+D s-linux.ads		20141125214628 befedf55 system.linux%s
+D s-multip.ads		20141125214628 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20141125214629 66009dac system.os_constants%s
+D s-osinte.ads		20141125214629 a44e3747 system.os_interface%s
+D s-parame.ads		20141125214628 06da98b2 system.parameters%s
+D s-pooglo.ads		20141125214628 542f33d0 system.pool_global%s
+D s-soflin.ads		20141125214628 aa763b52 system.soft_links%s
+D s-stache.ads		20141125214628 a37c21ec system.stack_checking%s
+D s-stausa.ads		20141125214628 017a0a05 system.stack_usage%s
+D s-stalib.ads		20141125214628 fa0a3617 system.standard_library%s
+D s-stoele.ads		20141125214628 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20141125214628 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20141125214628 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20141125214628 2b3f8252 system.task_info%s
+D s-taspri.ads		20141125214628 15f617a8 system.task_primitives%s
+D s-taprop.ads		20141125214629 1ea86599 system.task_primitives.operations%s
+D s-taskin.ads		20141125214629 664726f5 system.tasking%s
+D s-traent.ads		20141125214628 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20141125214628 510692af system.unsigned_types%s
+D s-wchcon.ads		20141125214629 1b7d22d2 system.wch_con%s
+D use_cpu.ads		20141114115141 999495a5 use_cpu%s
+D use_cpu.adb		20141121190925 2c0f9a81 use_cpu%b
+X 1 ada.ads
+16K9*Ada 19e8 48|1r6 1r19 1r38 1r53 2r6 2r19 2r38 2r53
+X 4 a-flteio.ads
+20K13*Float_Text_IO[13|46] 48|1w23 2r23
+X 6 a-numeri.ads
+16K13*Numerics 32e17 48|1r57 2r57
+X 7 a-nuelfu.ads
+18K22*Elementary_Functions[8|39] 48|1w66 2r66
+X 8 a-ngelfu.ads
+42V13*Sqrt{float} 48|75s15[7|18]
+X 9 a-reatim.ads
+39K13*Real_Time 138e18 48|1w42 2r42
+41O9*Time<duration> 48|6r17
+46O9*Time_Span<duration> 48|7r20 8r16
+53V13*Clock{41O9} 48|42s16 44s16 45s16
+58V14*"-"{46O9} 48|46s31 46s42
+66V14*"-"{46O9} 48|46s36 48s32
+76V14*"<="{boolean} 48|48r53
+77V14*">"{boolean} 48|50r31
+84V13*Microseconds{46O9} 48|8s29
+85V13*Milliseconds{46O9} 48|48s34 50s33
+X 12 a-textio.ads
+49K13*Text_IO 471e16 48|1w10 2r10
+73I12*Field{integer}
+166U14*New_Line 48|77s4 82s4
+242U14*Put 48|38s4 61s7 80s4
+263U14*Put_Line 48|78s4 79s4
+X 13 a-tiflio.ads
+68U14*Put 48|81s4[4|20]
+69f7 Item{float} 48|81r8[4|20]
+71i7 Aft{12|73I12} 48|81r25[4|20]
+72i7 Exp{12|73I12} 48|81r35[4|20]
+X 35 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 47 use_cpu.ads
+1K9*Use_CPU 4l5 4e12 48|4b14 84l5 84t12
+2U14*Work 2>20 48|31b14 35l8 35t12
+2i20 Amount_MS{natural} 48|31b20 32r41
+X 48 use_cpu.adb
+6o4 T1{9|41O9} 42m10 46r33
+6o8 T2{9|41O9} 44m10 46r28 46r44
+6o12 T3{9|41O9} 45m10 46r39
+7o4 Time_Measured{9|46O9} 46m10 48r18 50r17
+8o4 Tolerance{9|46O9} 48r56
+9f4 X{float}
+10i4 Min{integer} 12r31 53m13 56r20 56r34 59m7
+11i4 Max{integer} 12r25 51m13 56r28 60m7
+12i4 NTimes{integer} 32r32 43r19 51r20 53r20 56m10 58r27 59r14 60r14 63m4
+. 65m7 65r17 69m4 69r14 72r54 79r64
+13i4 Sample_Size{integer} 15r29 39r16 64r16 69r23 71r16 74r31
+14f4 Std_Dev{float} 72m7 72r18 74m4 74r15 75m4 75r21 81r16
+15a4 Measurements(integer) 58m7 65r26 72r35
+17U14 Iterate 17b14 17>23 28l8 28t15 34s7 43s10
+17i23 Iterations{integer} 20r21
+18f7 X{float} 21m10 21r15 22m10 22r15 23m10 23r15 24m10 24r15 25m10 25r15
+. 26m10 26r15
+20i11 I{integer}
+32i7 Iterations{integer} 34r16
+39i8 I{integer} 58r21
+64i8 I{integer} 65r39
+71i8 I{integer} 72r49
+

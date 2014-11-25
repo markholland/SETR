@@ -1,0 +1,181 @@
+V "GNAT Lib v2014"
+M P 9 W=b
+A --RTS=marteuc_linux_lib
+P LC QP SS
+
+RN
+RV NO_ABORT_STATEMENTS
+RV NO_DELAY
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_RELATIVE_DELAY
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_HIERARCHY
+RV NO_TASKING
+RV STATIC_PRIORITIES
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+RV MAX_TASK_ENTRIES=1
+RV MAX_TASKS=1+
+S E 10 10 1
+
+U tasks_test%b		tasks_test.adb		3900aba1 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.dispatching%s	a-dispat.ads		a-dispat.ali
+W ada.dispatching.edf%s	a-disedf.adb		a-disedf.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W logging_support%s	logging_support.adb	logging_support.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W use_cpu%s		use_cpu.adb		use_cpu.ali
+
+D ada.ads		20141125214628 3ffc8e18 ada%s
+D a-calend.ads		20141125214628 d86d6c8c ada.calendar%s
+D a-caldel.ads		20141125214628 9f20b83d ada.calendar.delays%s
+D a-dispat.ads		20141125214628 5229f0fb ada.dispatching%s
+D a-disedf.ads		20141125214629 6ac42473 ada.dispatching.edf%s
+D a-except.ads		20141125214628 43d57f8c ada.exceptions%s
+D a-finali.ads		20141125214628 69f99942 ada.finalization%s
+D a-ioexce.ads		20141125214628 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20141125214628 63f07669 ada.real_time%s
+D a-retide.ads		20141125214628 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20141125214628 1a984740 ada.streams%s
+D a-tags.ads		20141125214628 dc4d0634 ada.tags%s
+D a-taside.ads		20141125214629 9a31e556 ada.task_identification%s
+D a-textio.ads		20141125214628 386df5d4 ada.text_io%s
+D a-unccon.ads		20141125214628 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20141125214629 69adb1b9 interfaces%s
+D i-c.ads		20141125214628 5421119b interfaces.c%s
+D i-cstrea.ads		20141125214628 febc86ed interfaces.c_streams%s
+D logging_support.ads	20141110025429 3f314349 logging_support%s
+D system.ads		20141125214629 820bee89 system%s
+D s-atacco.ads		20141125214628 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20141125214628 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20141125214628 0b705ca5 system.concat_3%s
+D s-crtl.ads		20141125214628 2c012597 system.crtl%s
+D s-exctab.ads		20141125214628 54135002 system.exception_table%s
+D s-ficobl.ads		20141125214628 078245e4 system.file_control_block%s
+D s-finmas.ads		20141125214628 814daec4 system.finalization_masters%s
+D s-finroo.ads		20141125214628 4ff27390 system.finalization_root%s
+D s-imgint.ads		20141125214628 02dbe0c2 system.img_int%s
+D s-linux.ads		20141125214628 befedf55 system.linux%s
+D s-multip.ads		20141125214628 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20141125214629 66009dac system.os_constants%s
+D s-osinte.ads		20141125214629 a44e3747 system.os_interface%s
+D s-parame.ads		20141125214628 06da98b2 system.parameters%s
+D s-pooglo.ads		20141125214628 542f33d0 system.pool_global%s
+D s-secsta.ads		20141125214628 86a2856d system.secondary_stack%s
+D s-soflin.ads		20141125214628 aa763b52 system.soft_links%s
+D s-stache.ads		20141125214628 a37c21ec system.stack_checking%s
+D s-stausa.ads		20141125214628 017a0a05 system.stack_usage%s
+D s-stalib.ads		20141125214628 fa0a3617 system.standard_library%s
+D s-stoele.ads		20141125214628 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20141125214628 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20141125214628 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20141125214628 2b3f8252 system.task_info%s
+D s-taspri.ads		20141125214628 15f617a8 system.task_primitives%s
+D s-taprop.ads		20141125214629 1ea86599 system.task_primitives.operations%s
+D s-taskin.ads		20141125214629 664726f5 system.tasking%s
+D s-taprob.ads		20141125214629 502249e3 system.tasking.protected_objects%s
+D s-tpoben.ads		20141125214628 b641f948 system.tasking.protected_objects.entries%s
+D s-tasren.ads		20141125214629 a67a9949 system.tasking.rendezvous%s
+D s-tassta.ads		20141125214628 70812003 system.tasking.stages%s
+D s-traent.ads		20141125214628 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20141125214628 510692af system.unsigned_types%s
+D s-wchcon.ads		20141125214629 1b7d22d2 system.wch_con%s
+D tasks_test.adb	20141121191559 6f224b86 tasks_test%b
+D use_cpu.ads		20141114115141 999495a5 use_cpu%s
+X 1 ada.ads
+16K9*Ada 19e8 55|7r6 7r19 7r34 7r55 8r6 8r19 8r34 8r55
+X 4 a-dispat.ads
+16K13*Dispatching 20e20 55|7r38 8r38
+X 5 a-disedf.ads
+21K25*EDF 41e24 55|7w50 8r50
+32U14*Delay_Until_And_Set_Deadline 55|85s10
+X 6 a-except.ads
+53K13*Exceptions 360e19 55|7w59 8r59
+71V13*Exception_Name{string} 55|72s20 89s20
+93V13*Exception_Message{string} 55|72s47 89s47
+X 9 a-reatim.ads
+39K13*Real_Time 138e18 55|7w23 8r23
+41O9*Time<duration> 55|13r16 59r14 76r14
+46O9*Time_Span<duration>
+53V13*Clock{41O9} 55|13s24 107s17
+55V14*"+"{41O9} 55|13s30 66s23 83s23
+85V13*Milliseconds{46O9} 55|13s32 31s48 66s25 83s25 85s46
+X 14 a-textio.ads
+49K13*Text_IO 471e16 55|7w10 8r10
+242U14*Put 55|120s4 122s4
+263U14*Put_Line 55|72s10 89s10 132s4
+X 19 logging_support.ads
+2K9*Logging_Support 28e20 55|7w80 8r80
+13n20*Off{13E9} 55|123r13
+13n25*On{13E9} 55|96r13
+14n24*No_Event{14E9} 55|97r9 98r9 100r9 101r9 102r9 103r9 104r9 105r9 106r9
+14n34*Start_Task{14E9} 55|64r24 81r24
+14n46*Stop_Task{14E9} 55|67r24 84r24
+14n57*Mode_Change{14E9} 55|108r9
+17U14*Set_Log 55|96s4 123s4
+23U14*Log 55|64s10 67s10 81s10 84s10 97s4 98s4 100s4 101s4 102s4 103s4 104s4
+. 105s4 106s4 108s4
+23e18 Event{14E9} 55|64r15 67r15 81r15 84r15
+23a40 Message{string} 55|64r36 67r35 81r36 84r35
+X 20 system.ads
+37K9*System 152e11 55|7w97 20r42 28r46 45r78 46r78 47r78 48r78
+105I12*Any_Priority{integer}
+106I12*Priority{105I12} 55|20r49 28r53 45r85 46r85 47r85 48r85
+X 39 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 55 tasks_test.adb
+10U11*Tasks_Test 10b11 133l5 133t15
+13o4 Init_Time{9|41O9} 62r15 79r15 107m4
+15a4 CRLF{string} 97r34 98r45 100r45 101r45 102r45 103r45 104r45 105r45 106r29
+18T14 CPU_Consumer 18d28 19d28 20d28 21d28 24l8 24e20 45r9 46r9 47r9 48r9
+. 58b14 73l8 73t20
+18i28 Period_MS{natural} 66r39
+19i28 CPU_Time_MS{natural} 65r16
+20i28 Prio{20|106I12} 22r21
+21i28 Id{integer} 64r58 67r57
+23Y13 Start 61b14 112s7 113s7 114s7 115s7
+26T14 EDF_CPU_Consumer 26d32 27d32 28d32 29d32 30d32 33l8 33e24 52r9 53r9
+. 75b14 90l8 90t24
+26i32 Period_MS{natural} 83r39
+27i32 CPU_Time_MS{natural} 82r15
+28i32 Prio{20|106I12} 31r21
+29i32 Deadline_MS{natural} 31r61 85r59
+30i32 Id{integer} 81r58 84r57
+32Y13 Start 78b14 116s7 117s7
+39N4 Tasks_Nr 40r28 98r33
+40a4 Task_Name(string) 64r47 67r46 81r47 84r46
+45t4 T1{18T14} 112r4 126r10
+46t4 T2{18T14} 113r4 127r10
+47t4 T3{18T14} 114r4 128r10
+48t4 T4{18T14} 115r4 129r10
+52t4 T5{26T14} 116r4 130r10
+53t4 T6{26T14} 117r4 131r10
+59o7 Next{9|41O9} 62m7 66m10 66r18 68r22
+71r12 E{6|62R9} 72r35 72r65
+76o7 Next{9|41O9} 79m7 83m10 83r18 85r40
+88r12 E{6|62R9} 89r35 89r65
+X 56 use_cpu.ads
+1K9*Use_CPU 55|7w71 8r71 56|4e12
+2U14*Work 55|65s10 82s10
+
