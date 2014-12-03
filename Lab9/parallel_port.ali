@@ -1,0 +1,70 @@
+V "GNAT Lib v2014"
+A --RTS=marteuc_x86
+P
+
+RN
+RV NO_UNCHECKED_CONVERSION
+RV SPARK_05
+
+U parallel_port%b	parallel_port.adb	032a5e89 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W port_io%s		port_io.adb		port_io.ali
+W system%s		system.ads		system.ali
+
+U parallel_port%s	parallel_port.ads	4162610a EE NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W port_io%s		port_io.adb		port_io.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20141203121819 3ffc8e18 ada%s
+D a-unccon.ads		20141203121819 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20141203121819 69adb1b9 interfaces%s
+D parallel_port.ads	20141203182151 f7a99f69 parallel_port%s
+D parallel_port.adb	20141203105201 d20e013c parallel_port%b
+D port_io.ads		20141202115439 5d6da153 port_io%s
+D system.ads		20141203121819 820bee89 system%s
+X 1 ada.ads
+16K9*Ada 19e8 5|1r14 7r42 12r44
+X 2 a-unccon.ads
+17+9 Source 5|8r67 13r71
+18+9 Target 5|9r67 14r71
+20v14*Unchecked_Conversion 5|1w18 7r46 12r48
+X 3 interfac.ads
+38K9*Interfaces 179e15 4|3w6 11r30
+57M9*Unsigned_8 4|11r41
+60M9*Unsigned_16
+X 4 parallel_port.ads
+7K9*Parallel_Port 14E9 44l5 44e18 5|4b14 43l5 43t18
+9m4*Base_Address{6|6M9} 12r57 22r59 5|23r35
+11M9*Data_Register<3|57M9> 24r45 5|8r77 15r45
+12m4*Data_Register_Address{6|6M9}
+14R9*Status_Register 21e17 25r41 33r8 41r8 42r8 5|14r80 28r42 30r14
+16b10*Inv_S7{boolean} 35r10
+17b10*S6{boolean} 36r12
+18b10*S5{boolean} 37r12
+19b10*S4{boolean} 38r12
+20b10*S3{boolean} 39r12
+22m4*Status_Register_Address{6|6M9} 5|36r41
+24U14*Write_Data_Register 24>35 5|15b14 26l9 26t28
+24m35 Data{11M9} 5|15b35 22r40
+25V13*Read_Status_Register{14R9} 5|28b14 42l8 42t28
+X 5 parallel_port.adb
+7V13 Data_Register_To_Byte[2|20]{6|7M9} 22s18
+12V13 Byte_To_Status_Register[2|20]{4|14R9} 37s15
+16m7 Destino{6|7M9} 22m7 24r35
+29m7 Data{6|7M9} 36m7 37r39
+30r7 Dato{4|14R9} 37m7 41r12
+X 6 port_io.ads
+4K9*Port_IO 4|5w6 5r19 5|2w6 2r19 23r7 36r15 6|19e12
+6M9*IO_Address_Range<3|60M9> 4|9r28 12r37 22r39
+7M9*Byte<3|57M9> 5|9r77 13r80 16r17 29r14
+11U14*Out_Byte 5|23s15
+11m24 Address{6M9} 5|23r24
+12m24 Data{7M9} 5|24r24
+13V13*In_Byte{7M9} 5|36s23
+13m22 Address{6M9} 5|36r31
+X 7 system.ads
+37K9*System 4|2w6 42r38 5|1w6 7|152e11
+88n41*Low_Order_First{88E9} 4|42r45
+

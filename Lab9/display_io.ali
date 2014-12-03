@@ -1,0 +1,46 @@
+V "GNAT Lib v2014"
+A --RTS=marteuc_x86
+P
+
+RN
+RV SPARK_05
+
+U display_io%b		display_io.adb		d74c018a NE OO PK
+W parallel_port%s	parallel_port.adb	parallel_port.ali
+
+U display_io%s		display_io.ads		e49e6b20 EE NE OO PK
+W port_io%s		port_io.adb		port_io.ali
+
+D display_io.ads	20141202115400 b9f3ca73 display_io%s
+D display_io.adb	20141203120609 99165490 display_io%b
+D interfac.ads		20141203121819 69adb1b9 interfaces%s
+D parallel_port.ads	20141203182151 f7a99f69 parallel_port%s
+D port_io.ads		20141202115439 5d6da153 port_io%s
+D system.ads		20141203121819 820bee89 system%s
+X 1 display_io.ads
+3K9*Display_IO 14l5 14e15 2|2b14 46l8 46t18
+5M12*Digit_Type{5|7M9} 9r37 2|4r25 23r40
+6M12*Switches_Type{5|7M9} 12r34 2|30r37 32r18
+9U14*Write_Digit 9>26 2|23b17 28l11 28t22
+9m26 Digit{5M12} 2|23b29 26r42
+12V13*Read_Switches{6M12} 2|30b16 44l11 44t24
+X 2 display_io.adb
+4a4 To_Segments(4|11M9) 26r30
+31r7 Status{4|14R9} 35m7 37r13 38r13 39r17 40r13
+32m7 Switches{1|6M12} 37m28 37r40 38m28 38r40 39m36 39r48 40m28 40r40 42r14
+X 3 interfac.ads
+57M9*Unsigned_8
+X 4 parallel_port.ads
+7K9*Parallel_Port 2|1w6 1r25 4|44e18
+11M9*Data_Register<3|57M9> 2|4r46
+14R9*Status_Register 2|31r16 4|21e17
+16b10*Inv_S7{boolean} 2|39r24
+17b10*S6{boolean} 2|40r20
+18b10*S5{boolean} 2|38r20
+19b10*S4{boolean} 2|37r20
+24U14*Write_Data_Register 2|26s10
+25V13*Read_Status_Register{14R9} 2|35s17
+X 5 port_io.ads
+4K9*Port_IO 1|1w6 1r19 5|19e12
+7M9*Byte<3|57M9> 1|5r26 6r29
+

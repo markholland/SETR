@@ -1,0 +1,42 @@
+V "GNAT Lib v2014"
+M P W=b
+A --RTS=marteuc_x86
+P
+
+RN
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_RELATIVE_DELAY
+RV SPARK_05
+
+U main%b		main.adb		3c7fbb05 NE OO SU
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W display_io%s		display_io.adb		display_io.ali
+
+D ada.ads		20141203121819 3ffc8e18 ada%s
+D a-calend.ads		20141203121819 d86d6c8c ada.calendar%s
+D a-caldel.ads		20141203121819 9f20b83d ada.calendar.delays%s
+D a-unccon.ads		20141203121819 f9eb8f06 ada.unchecked_conversion%s
+D display_io.ads	20141202115400 b9f3ca73 display_io%s
+D interfac.ads		20141203121819 69adb1b9 interfaces%s
+D main.adb		20141203111751 858c7176 main%b
+D port_io.ads		20141202115439 5d6da153 port_io%s
+D system.ads		20141203121819 820bee89 system%s
+D s-exctab.ads		20141203121819 54135002 system.exception_table%s
+D s-stalib.ads		20141203121819 fa0a3617 system.standard_library%s
+X 5 display_io.ads
+3K9*Display_IO 14e15 7|1w6 2r5 10r19 11r7 16r6
+5M12*Digit_Type{8|7M9} 7|11r30 16r29
+6M12*Switches_Type{8|7M9} 7|5r14
+9U14*Write_Digit 7|11s18 16s17
+12V13*Read_Switches{6M12} 7|10s30
+X 6 interfac.ads
+57M9*Unsigned_8
+X 7 main.adb
+4U11*Main 4b11 19l5 19t9
+5m4 Switches{5|6M12} 10m7 11r41
+7i8 I{integer}
+14i8 I{integer} 16r40
+X 8 port_io.ads
+7M9*Byte<6|57M9>
+

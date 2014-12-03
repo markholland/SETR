@@ -1,0 +1,64 @@
+V "GNAT Lib v2014"
+A --RTS=marteuc_x86
+P
+
+RN
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV SPARK_05
+
+U port_io%b		port_io.adb		8576f01c NE OO PK
+W system%s		system.ads		system.ali
+W system.machine_code%s	s-maccod.ads		s-maccod.ali
+
+U port_io%s		port_io.ads		34c010ea EE NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+
+D interfac.ads		20141203121819 69adb1b9 interfaces%s
+D port_io.ads		20141202115439 5d6da153 port_io%s
+D port_io.adb		20141202115437 d7a02a81 port_io%b
+D system.ads		20141203121819 820bee89 system%s
+D s-maccod.ads		20141203121819 0fbb7bce system.machine_code%s
+X 1 interfac.ads
+38K9*Interfaces 179e15 2|2w6 2r22
+57M9*Unsigned_8 2|7r21
+60M9*Unsigned_16 2|6r33 8r21
+X 2 port_io.ads
+4K9*Port_IO 19l5 19e12 3|4b14 55l5 55t12
+6M9*IO_Address_Range<1|60M9> 11r37 13r35 15r37 17r35 3|6r37 13r21 18r35 24r20
+. 31r37 38r21 43r35 49r20
+7M9*Byte<1|57M9> 12r34 13r60 3|7r34 12r21 18r60 19r16 23r21
+8M9*Word<1|60M9> 16r34 17r60 3|32r34 37r21 43r60 44r16 48r21
+11U14*Out_Byte 11>24 12>24 3|6b14 16l8 16t16
+11m24 Address{6M9} 3|6b24 13r53
+12m24 Data{7M9} 3|7b24 12r42
+13V13*In_Byte{7M9} 13>22 3|18b13 29l8 29t15
+13m22 Address{6M9} 3|18b22 24r52
+15U14*Out_Word 15>24 16>24 3|31b14 41l8 41t16
+15m24 Address{6M9} 3|31b24 38r53
+16m24 Data{8M9} 3|32b24 37r42
+17V13*In_Word{8M9} 17>22 3|43b13 53l8 53t15
+17m22 Address{6M9} 3|43b22 49r52
+X 3 port_io.adb
+19m7 Result{2|7M9} 23m44 23r44 28r14
+44m7 Result{2|8M9} 48m44 48r44 52r14
+X 4 system.ads
+37K9*System 3|2r6 2r31 9r7 21r7 34r7 46r7 4|152e11
+X 5 s-maccod.ads
+36K16*Machine_Code 3|2w13 2r38 9r14 21r14 34r14 46r14 5|130e24
+43I9*Asm_Input_Operand<integer>
+44I9*Asm_Output_Operand<integer>
+49i4*No_Output_Operands{44I9} 3|11r21 36r21
+51A9*Asm_Input_Operand_List(43I9)<integer>
+68U14*Asm 3|9s27 34s27
+69a6 Template{string} 3|10r10 35r10
+70i6 Outputs{44I9} 3|11r10 36r10
+71a6 Inputs{51A9} 3|12r10 37r10
+72a6 Clobber{string} 3|14r10 39r10
+73b6 Volatile{boolean} 3|15r10 40r10
+82U14*Asm 3|21s27 46s27
+83a6 Template{string} 3|22r10 47r10
+84i6 Outputs{44I9} 3|23r10 48r10
+85i6 Inputs{43I9} 3|24r10 49r10
+86a6 Clobber{string} 3|25r10 50r10
+87b6 Volatile{boolean} 3|26r10 51r10
+
