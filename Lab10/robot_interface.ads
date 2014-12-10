@@ -1,6 +1,10 @@
+with System;
+
 package Robot_Interface is
 
    type Axis_Type is (Rotation, Forward, Height, Clamp);
+
+
 
    -- Command-related types
    type Motion_Type is (Stop, To_End, To_Init);
@@ -29,6 +33,34 @@ package Robot_Interface is
 
 private
    -- Clauses for Command_Type
-   -- Completar con las cláusulas necesarias para    -- los tipos que intervienen en la definición de Command_Type
-   -- Clauses for Status_Type   -- Completar con las cláusulas necesarias para   -- los tipos que intervienen en la definición de Switches_Type
+   -- Completar con las cláusulas necesarias para 
+   -- los tipos que intervienen en la definición de Command_Type
+   -- Compiler error if declared in private section
+   
+   for Motion_Type use(Stop => 0, To_End => 1,
+                        To_Init => 2);
+   for Motion_Type'Size use 2; --2 bits needed
+
+   for Command_Type'Component_Size use Motion_Type'Size;
+   for Command_Type'Size use 4*Motion_Type'Size; -- 4 elements * 
+
+   Stop_All : constant Command_Type := (others => Stop);
+   Init_All : constant Command_Type := (others => To_Init);
+   
+   -- Clauses for Status_Type
+   -- Completar con las cláusulas necesarias para
+   -- los tipos que intervienen en la definición de Switches_Type
+   for Init_Switch_Type use(Pressed => 0, Not_Pressed => 1);
+   for Init_Switch_Type'Size use 1;  --2 bits needed
+ 
+   for Switches_Type use
+      record
+         Init_Switch at 0 range 0..0;
+         Pulse_Switch at 0 range 1..1;
+      end record;
+   --for Switches_Type'Size use 1+Init_Switch_Type'Size; -- boolean'Size + 
+   for Switches_Type'Bit_Order use System.Low_Order_First;
+
+   for Status_Type'Component_Size use 2;--Switches_Type'Size;
+   for Status_Type'Size use 8;--4 elements * 2 component size;
 end Robot_Interface;

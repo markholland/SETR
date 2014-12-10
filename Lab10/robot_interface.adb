@@ -33,6 +33,7 @@ package body Robot_Interface is
       begin
          return Last_Command_Applied;
       end Current_Command;
+
    end Robot;
 
    ----------------
@@ -58,5 +59,7 @@ package body Robot_Interface is
    begin
       return Byte_To_Command(Robot.Current_Command);
    end Last_Robot_Command;
+
+   
 
 end Robot_Interface;

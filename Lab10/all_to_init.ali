@@ -1,0 +1,84 @@
+V "GNAT Lib v2014"
+M P W=b
+P ZX
+
+RN
+RV NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FIXED_POINT
+RV NO_RELATIVE_DELAY
+RV NO_UNCHECKED_CONVERSION
+RV SPARK_05
+
+U all_to_init%b		all_to_init.adb		1dba6ac8 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.unchecked_conversion%s
+W digital_io_sim%s	digital_io_sim.adb	digital_io_sim.ali
+W low_level_types%s	low_level_types.ads	low_level_types.ali
+W robot_interface%s	robot_interface.adb	robot_interface.ali
+
+D ada.ads		20140406181354 3ffc8e18 ada%s
+D a-calend.ads		20140406181358 d86d6c8c ada.calendar%s
+D a-caldel.ads		20140406181355 9f20b83d ada.calendar.delays%s
+D a-except.ads		20140406181356 43d57f8c ada.exceptions%s
+D a-finali.ads		20140406181359 69f99942 ada.finalization%s
+D a-inteio.ads		20140406181359 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20140406181358 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20140406181355 1a984740 ada.streams%s
+D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
+D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
+D a-tiinio.ads		20140406181359 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
+D all_to_init.adb	20141210192717 c40a00e5 all_to_init%b
+D digital_io_sim.ads	20141210005123 4cffc727 digital_io_sim%s
+D interfac.ads		20140406181359 69adb1b9 interfaces%s
+D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
+D low_level_types.ads	20141209181346 09d2a761 low_level_types%s
+D robot_interface.ads	20141210191456 6576856d robot_interface%s
+D system.ads		20140406181356 bd760655 system%s
+D s-crtl.ads		20140406181356 2c012597 system.crtl%s
+D s-exctab.ads		20140406181354 54135002 system.exception_table%s
+D s-ficobl.ads		20140406181355 078245e4 system.file_control_block%s
+D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
+D s-finroo.ads		20140406181359 4ff27390 system.finalization_root%s
+D s-parame.ads		20140406181358 06da98b2 system.parameters%s
+D s-pooglo.ads		20140406181357 542f33d0 system.pool_global%s
+D s-soflin.ads		20140406181358 aa763b52 system.soft_links%s
+D s-stache.ads		20140406181355 a37c21ec system.stack_checking%s
+D s-stalib.ads		20140406181355 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140406181357 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140406181355 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20140406181357 b16154c2 system.storage_pools%s
+D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
+D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 13|5r6
+X 12 a-unccon.ads
+20v14*Unchecked_Conversion 13|5w10
+X 13 all_to_init.adb
+7U11*All_To_Init 7b11 67l5 67t16
+8a4 Status{18|22A9} 20m7 31r10 36r10 41r10 46r10 53r17 55r17 57r17 59r17
+9a4 Command{18|11A9} 21m7 33m10 34r21 38m10 39r21 43m10 44r21 48m10 49r21
+X 14 digital_io_sim.ads
+14K9*Digital_IO_Sim 13|2w6 2r27 14|31e19
+28U14*Put_Line 13|12s4 16s4 32s10 37s10 42s10 47s10 66s4
+X 17 low_level_types.ads
+3K9*Low_Level_Types 13|3w6 3r27 17|8e20
+X 18 robot_interface.ads
+3K9*Robot_Interface 13|1w6 1r27 18|66e20
+5n23*Rotation{5E9} 13|31r17 33r18 53r24
+5n33*Forward{5E9} 13|36r17 38r18 55r24
+5n42*Height{5E9} 13|41r17 43r18 57r24
+5n50*Clamp{5E9} 13|46r17 48r18 59r24
+10n25*Stop{10E9} 13|33r31 38r30 43r29 48r28
+11A9*Command_Type(10E9)<5E9> 13|9r14
+13a4*Init_All{11A9} 13|15r15
+16n30*Pressed{16E9} 13|31r41 36r40 41r39 46r38 53r48 55r47 57r46 59r45
+19e10*Init_Switch{16E9} 13|31r27 36r26 41r25 46r24 53r34 55r33 57r32 59r31
+22A9*Status_Type(17R9)<5E9> 13|8r13
+26U14*Move_Robot 13|15s4 34s10 39s10 44s10 49s10
+29V13*Robot_State{22A9} 13|20s17
+32V13*Last_Robot_Command{11A9} 13|21s18
+
