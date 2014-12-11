@@ -26,45 +26,17 @@ package body Robot_Monitor is
             -- get state
             Status := Robot_State;
             Command := Last_Robot_Command;
-            
-            --Put_Line("Checking switches...");
-            --Put_Line("Rotation: "&Init_Switch_Type'Image(Status(Rotation).Init_Switch));
-            --Put_Line("Forward: "&Init_Switch_Type'Image(Status(Forward).Init_Switch));
-            --Put_Line("Height: "&Init_Switch_Type'Image(Status(Height).Init_Switch));
-            --Put_Line("Clamp: "&Init_Switch_Type'Image(Status(Clamp).Init_Switch));
 
+            exit when Command = Stop_All;
+            
             -- check init switches
             -- stop a motor if necessary
-            if Status(Rotation).Init_Switch = pressed then
-               -- Put_Line("Rotation at init...");
-               Command(Rotation) := Stop;
-               Move_Robot(Command);
-            end if;
-            if Status(Forward).Init_Switch = pressed then
-               -- Put_Line("Forward at init...");
-               Command(Forward) := Stop;
-               Move_Robot(Command);
-            end if;
-            if Status(Height).Init_Switch = pressed then
-               -- Put_Line("Height at init...");
-               Command(Height) := Stop;
-               Move_Robot(Command);
-            end if;
-            if Status(Clamp).Init_Switch = pressed then
-               -- Put_Line("Clamp at init...");
-               Command(Clamp) := Stop;
-               Move_Robot(Command);
-            end if;
-
-            -- all motors at init   
-            exit when Status(Rotation).Init_Switch = pressed 
-                      and
-                      Status(Forward).Init_Switch = pressed
-                      and
-                      Status(Height).Init_Switch = pressed
-                      and
-                      Status(Clamp).Init_Switch = pressed;
-
+            for Ax in Axis_Type'Range loop
+               if Status(Ax).Init_Switch = pressed then
+                  Command(Ax) := Stop; 
+                  Move_Robot(Command);       
+               end if;
+            end loop;
          end loop;
          -- end loop
 
