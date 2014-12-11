@@ -51,7 +51,7 @@ private
    -- Completar con las cláusulas necesarias para
    -- los tipos que intervienen en la definición de Switches_Type
    for Init_Switch_Type use(Pressed => 0, Not_Pressed => 1);
-   for Init_Switch_Type'Size use 1;  --2 bits needed
+   for Init_Switch_Type'Size use 1;  --1 bit needed
  
    for Switches_Type use
       record

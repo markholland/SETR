@@ -12,7 +12,8 @@ procedure Test_Robot_Monitor is
       4 => (111,222,333,0));
    Temp : Natural;
 begin
-   Put_Line("Test_Robot_Monitor starts...");
+
+  Put_Line("Test_Robot_Monitor starts...");
    Robot_Mon.Reset;
    delay 3.0;
 
