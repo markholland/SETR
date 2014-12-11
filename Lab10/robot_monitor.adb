@@ -108,7 +108,6 @@ package body Robot_Monitor is
 
    task body Positioner is 
       Target_Pos : Position;
-      Actual_Pos : Position := Robot_Mon.Get_Pos;
       Period : Time_Span := Milliseconds(3); -- (1/((300*4)/60))/3
       Next : Time; 
       Command : Command_Type;
@@ -117,7 +116,7 @@ package body Robot_Monitor is
          Accept Move_Robot_To (P : in Position) do 
             Target_Pos := P;
             Next := Clock;
-            while Actual_Pos /= Target_Pos loop
+            while Robot_Mon.Get_Pos /= Target_Pos loop
                
                for Ax in Axis_Type'Range loop
                   if Robot_Mon.Get_Pos(Ax) < Target_Pos(Ax) then
@@ -133,7 +132,7 @@ package body Robot_Monitor is
                Move_Robot(Command);
                Next := Next + Period;
                delay until Next;
-               Actual_Pos := Robot_Mon.Get_Pos;
+               
               
             end loop;
             -- Stop all
