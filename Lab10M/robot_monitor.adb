@@ -62,6 +62,7 @@ package body Robot_Monitor is
 
    task Robot_Sampler is
       pragma Priority (System.Priority'Last - 1);
+      entry Start;
    end Robot_Sampler;
 
    task Positioner is
@@ -74,14 +75,21 @@ package body Robot_Monitor is
       Positioner.Move_Robot_To (P);
    end Move_Robot_To;
 
+   procedure Start_Sampler is
+   begin
+      Robot_Sampler.Start;
+   end Start_Sampler;
+
    task body Robot_Sampler is 
       Status_Actual : Status_Type := Robot_State;
       Status_Anterior : Status_Type := Robot_State;
-      Pos_Aux : Position;
-      Sampler_Period : constant Time_Span := Milliseconds(10); -- (1/((300*4)/60))/5
+      Pos_Aux : Position;-- :=(200,200,200,40);
+      Sampler_Period : Time_Span := Milliseconds(10); -- (1/((300*4)/60))/5
       Next : Time; 
    begin
       Next := Clock;  
+      --Robot_Mon.Set_Pos(Pos_Aux);
+      Accept Start;
       loop
          Status_Anterior := Status_Actual;
          Status_Actual := Robot_State;
@@ -106,7 +114,7 @@ package body Robot_Monitor is
 
    task body Positioner is 
       Target_Pos : Position;
-      Period : constant Time_Span := Milliseconds(17); -- (1/((300*4)/60))/3
+      Period : Time_Span := Milliseconds(17); -- (1/((300*4)/60))/3
       Next : Time; 
       Command : Command_Type;
    begin

@@ -1,0 +1,21 @@
+V "GNAT Lib v2014"
+P ZX
+
+RN
+RV SPARK_05
+
+U low_level_types%s	low_level_types.ads	607f16d8 NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+
+D interfac.ads		20140406181359 69adb1b9 interfaces%s
+D low_level_types.ads	20141212115441 09d2a761 low_level_types%s
+D system.ads		20140406181356 bd760655 system%s
+X 1 interfac.ads
+38K9*Interfaces 179e15 2|1w6 5r21 6r21
+57M9*Unsigned_8 2|6r32
+60M9*Unsigned_16 2|5r32
+X 2 low_level_types.ads
+3K9*Low_Level_Types 8l5 8e20
+5M9*Word<1|60M9>
+6M9*Byte<1|57M9>
+
