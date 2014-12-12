@@ -15,7 +15,7 @@ RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=2
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U robot_monitor%b	robot_monitor.adb	93fbbc5f OO PK
+U robot_monitor%b	robot_monitor.adb	023401aa OO PK
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -58,7 +58,7 @@ D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
 D low_level_types.ads	20141209181346 09d2a761 low_level_types%s
 D robot_interface.ads	20141210203816 6576856d robot_interface%s
 D robot_monitor.ads	20141210020401 c0ed828f robot_monitor%s
-D robot_monitor.adb	20141211175608 7c198f9e robot_monitor%b
+D robot_monitor.adb	20141212104033 edd6326b robot_monitor%b
 D system.ads		20140406181356 bd760655 system%s
 D s-atacco.ads		20140406181355 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20140406181356 2c012597 system.crtl%s
@@ -99,8 +99,7 @@ X 6 a-reatim.ads
 46O9*Time_Span<duration> 20|81r24 111r16
 53V13*Clock{41O9} 20|84s15 118s21
 55V14*"+"{41O9} 20|103s23 133s29
-84V13*Microseconds{46O9} 20|81s37
-85V13*Milliseconds{46O9} 20|111s29
+85V13*Milliseconds{46O9} 20|81s37 111s29
 X 13 digital_io_sim.ads
 14K9*Digital_IO_Sim 31e19 20|4w6 4r27
 22U14*Put 20|55s10 57s13
