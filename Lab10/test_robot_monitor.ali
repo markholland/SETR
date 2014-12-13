@@ -9,7 +9,7 @@ RV NO_RELATIVE_DELAY
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U test_robot_monitor%b	test_robot_monitor.adb	7af77d47 NE OO SU
+U test_robot_monitor%b	test_robot_monitor.adb	fa1b6309 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -35,7 +35,7 @@ D interfac.ads		20140406181359 69adb1b9 interfaces%s
 D i-c.ads		20140406181358 5421119b interfaces.c%s
 D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
 D low_level_types.ads	20141209181346 09d2a761 low_level_types%s
-D robot_interface.ads	20141210203816 6576856d robot_interface%s
+D robot_interface.ads	20141212170201 e59a9b23 robot_interface%s
 D robot_monitor.ads	20141210020401 c0ed828f robot_monitor%s
 D system.ads		20140406181356 bd760655 system%s
 D s-atacco.ads		20140406181355 4c36d12f system.address_to_access_conversions%s

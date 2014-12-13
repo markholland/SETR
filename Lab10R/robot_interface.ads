@@ -4,6 +4,8 @@ package Robot_Interface is
 
    type Axis_Type is (Rotation, Forward, Height, Clamp);
 
+
+
    -- Command-related types
    type Motion_Type is (Stop, To_End, To_Init);
    type Command_Type is array (Axis_Type'Range) of Motion_Type;
@@ -37,10 +39,10 @@ private
    
    for Motion_Type use(Stop => 0, To_End => 1,
                         To_Init => 2);
-   --for Motion_Type'Size use 2; --2 bits needed
+   for Motion_Type'Size use 2; --2 bits needed
 
-   for Command_Type'Component_Size use 2;
-   for Command_Type'Size use 8; -- 4 elements * size
+   for Command_Type'Component_Size use Motion_Type'Size;
+   for Command_Type'Size use 4*Motion_Type'Size; -- 4 elements * 
 
    Stop_All : constant Command_Type := (others => Stop);
    Init_All : constant Command_Type := (others => To_Init);
@@ -49,7 +51,7 @@ private
    -- Completar con las cláusulas necesarias para
    -- los tipos que intervienen en la definición de Switches_Type
    for Init_Switch_Type use(Pressed => 0, Not_Pressed => 1);
-   --for Init_Switch_Type'Size use 1;  --1 bit needed
+   for Init_Switch_Type'Size use 1;  --1 bit needed
  
    for Switches_Type use
       record
