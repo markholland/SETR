@@ -84,7 +84,7 @@ package body Robot_Monitor is
       Status_Actual : Status_Type := Robot_State;
       Status_Anterior : Status_Type := Robot_State;
       Pos_Aux : Position;-- :=(200,200,200,40);
-      Sampler_Period : Time_Span := Milliseconds(10); -- (1/((300*4)/60))/5
+      Sampler_Period : Time_Span := Milliseconds(5); -- (1/((300*8)/60))/5
       Next : Time; 
    begin
       Next := Clock;  
@@ -114,7 +114,7 @@ package body Robot_Monitor is
 
    task body Positioner is 
       Target_Pos : Position;
-      Period : Time_Span := Milliseconds(17); -- (1/((300*4)/60))/3
+      Period : Time_Span := Milliseconds(8); -- (1/((300*8)/60))/3
       Next : Time; 
       Command : Command_Type;
    begin

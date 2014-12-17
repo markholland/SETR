@@ -98,7 +98,7 @@ package body Robot_Monitor is
             end if;
          end loop;
          
-         Next := Next + Sampler_Period;
+         Next := Next + Sampler_Period;c
          delay until Next;
 
       end loop;
