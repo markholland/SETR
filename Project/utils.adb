@@ -34,6 +34,7 @@ procedure Move_Within_Limits(A : in Axis_Type;
                              C : in Character) is
 
       Input : Character;
+      Avail : Boolean;
       Period : constant Time_Span := Milliseconds(17); -- (1/((300*4)/60))/3
       Next : Time; 
       Command : Command_Type := Stop_All;
@@ -41,12 +42,13 @@ procedure Move_Within_Limits(A : in Axis_Type;
    
          Next := Clock;
          Command(A) := M;
-         Move_Robot(Command)
-         if A := Clamp then -- Clamp axis has different limit
+         Move_Robot(Command);
+         if A = Clamp then -- Clamp axis has different limit
 
-            while Robot_Mon.Get_Pos(A) <= End_Clamp loop
+            while Robot_Mon.Get_Pos(A) < End_Clamp and
+                  Robot_Mon.Get_Pos(A) >= Init_Axis loop
                --Stop when same key pressed
-               Get(Item => Input);
+               Get_Immediate(Item => Input, Available => Avail);
                exit when Input = C;
 
                Next := Next + Period;
@@ -57,14 +59,15 @@ procedure Move_Within_Limits(A : in Axis_Type;
 
          else -- Rest of axis share same limit
 
-            while Robot_Mon.Get_Pos(A) <= End_Axis loop
+            while Robot_Mon.Get_Pos(A) < End_Axis and
+                  Robot_Mon.Get_Pos(A) >= Init_Axis loop
                --Stop when same key pressed
-               Get(Item => Input);
+               Get_Immediate(Item => Input, Available => Avail);
                exit when Input = C;
 
                Next := Next + Period;
                delay until Next;      
-            end loop
+            end loop;
             Command := Stop_All;
             Move_Robot(Command);     
 
@@ -76,23 +79,26 @@ end Move_Within_Limits;
 procedure Move_With_Keys (C : in Character) is
 
    begin
+      Put_Line(Character'Image(C));
       case C is
-         when Q => -- rotate to init
+         when 'q' => -- rotate to init
             Move_Within_Limits(Rotation, To_Init, C);
-         when A => -- rotate to end
+         when 'a' => -- rotate to end
             Move_Within_Limits(Rotation, To_End, C);
-         when W => -- Forward to init
+         when 'w' => -- Forward to init
             Move_Within_Limits(Forward, To_Init, C);
-         when S => -- Forward to end
+         when 's' => -- Forward to end
             Move_Within_Limits(Forward, To_End, C);
-         when E => -- Height to init
+         when 'e' => -- Height to init
             Move_Within_Limits(Height, To_Init, C);
-         when D => -- Height to end
+         when 'd' => -- Height to end
             Move_Within_Limits(Height, To_End, C);
-         when R => -- Clamp to init
+         when 'r' => -- Clamp to init
             Move_Within_Limits(Clamp, To_Init, C);
-         when F => -- Clamp to end
+         when 'f' => -- Clamp to end
             Move_Within_Limits(Clamp, To_End, C);
+         when others =>
+            return;
       end case;
 
 end Move_With_Keys;

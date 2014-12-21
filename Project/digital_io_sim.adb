@@ -362,6 +362,12 @@ package body Digital_Io_Sim is
       Kbd_Scan.Natural_Getter (Item);
    end Get;
 
+   procedure Get_Immediate(Item : out Character;
+                           Available : out Boolean) is
+   begin
+      Ada.Text_IO.Get_Immediate(Item => Item, Available => Available);
+   end Get_Immediate;
+
    task body Kbd_Scan is
       Scan_Period : constant Time_Span := Milliseconds (50);
       Next_Scan : Time;

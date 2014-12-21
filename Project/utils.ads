@@ -21,6 +21,7 @@ package Utils is
 	-- Constants for keeping simulator from forcing an axis
 	End_Axis : Constant Natural := 200;
 	End_Clamp : Constant Natural := 40;
+	Init_Axis : Constant Natural := 0;
 
 
 
