@@ -9,42 +9,45 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_UNCHECKED_DEALLOCATION
 RV SPARK_05
 
-U queue%b		queue.adb		1b9aa9ee NE OO PK GE
+U queue%b		queue.adb		c4142e37 NE OO PK GE
 W ada%s			ada.ads			ada.ali
 W ada.unchecked_deallocation%s
 
-U queue%s		queue.ads		7e981705 BN EE NE OO PK GE
+U queue%s		queue.ads		46a38f1e BN EE NE OO PK GE
 
 D ada.ads		20140406181354 3ffc8e18 ada%s
 D a-uncdea.ads		20140406181359 f15a5ed1 ada.unchecked_deallocation%s
-D queue.ads		20141222152303 7e981705 queue%s
-D queue.adb		20141222152306 9458e03a queue%b
+D queue.ads		20141226172717 46a38f1e queue%s
+D queue.adb		20141226173335 73edfff8 queue%b
 D system.ads		20140406181356 bd760655 system%s
 X 1 ada.ads
 16K9*Ada 19e8 4|1r6 26r29
 X 2 a-uncdea.ads
 20u15*Unchecked_Deallocation 4|1w10 26r33
 X 3 queue.ads
-3+9 Element_Type 6r55 7r55 18r15 4|9r56 25r56
-4k9*Queue 3z9 11E9 21l5 21e10 4|3b14 49l5 49t10
-5R9*Queue_Type 6r33 7r32 8r29 13c9 16e14 4|9r34 25r33 44r30
+3+9 Element_Type 6r55 7r55 19r15 4|9r56 25r56 54r14
+4k9*Queue 3z9 12E9 22l5 22e10 4|3b14 61l5 61t10
+5R9*Queue_Type 6r33 7r32 8r40 9r29 14c9 17e14 4|9r34 25r33 44r30 53r40
 6U14*Push 6=19 6>45 4|9b14 19l8 19t12
 6r19 List{5R9} 4|9b20 12r10 13m10 15r10 16r9 18m7
 6*45 Item{3+9} 4|9b46 10r46
-7U14*Pop 7=18 7<44 4|25b14 38l8 38t11
+7U14*Pop 7=18 7<44 4|25b14 38l8 38t11 57s10
 7r18 List{5R9} 4|25b19 27r27 29r10 32r15 33m7 33r20 34r10 35m10
 7*44 Item{3+9} 4|25b45 32m7
-8V13*Is_Empty{boolean} 8>22 4|44b13 47l8 47t16
-8r22 List{5R9} 4|44b23 46r14
-9X4*Empty_Error 4|30r16
-11R9 Queue_Element 12r29 17c9 20e14 4|10r31 26r56
-12P9 Queue_Ptr(11R9) 14r14 15r14 19r15 4|10r14 26r71 27r14
-14p7 Head{12P9} 4|15r15 16r13 16r14 18m12 29r15 35m15 46r19
-15p7 Tail{12P9} 4|12r15 13m15 27r32 32r19 32r20 33m12 33r24 33r25 34r15
-18*7 Value{3+9} 4|32r25
-19p7 Next{12P9} 4|16m19 33r30
+8U14*Empty_Queue 8=26 4|53b14 59l8 59t19
+8r26 List{5R9} 4|53b26 56r26 57m14
+9V13*Is_Empty{boolean} 9>22 4|44b13 47l8 47t16 56s17
+9r22 List{5R9} 4|44b23 46r14
+10X4*Empty_Error 4|30r16
+12R9 Queue_Element 13r29 18c9 21e14 4|10r31 26r56
+13P9 Queue_Ptr(12R9) 15r14 16r14 20r15 4|10r14 26r71 27r14
+15p7 Head{13P9} 4|15r15 16r13 16r14 18m12 29r15 35m15 46r19
+16p7 Tail{13P9} 4|12r15 13m15 27r32 32r19 32r20 33m12 33r24 33r25 34r15
+19*7 Value{3+9} 4|32r25
+20p7 Next{13P9} 4|16m19 33r30
 X 4 queue.adb
-10p7 Temp{3|12P9} 13r23 16r27 18r20
+10p7 Temp{3|13P9} 13r23 16r27 18r20
 26U17 Free[2|20] 37s7
-27p7 Temp{3|12P9} 37m12 37r12
+27p7 Temp{3|13P9} 37m12 37r12
+54*7 Item{3|3+9} 57m20
 

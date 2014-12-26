@@ -44,6 +44,18 @@ package body Queue is
    function Is_Empty (List : Queue_Type) return Boolean is
    begin
       return List.Head = null;
-   end Is_Empty; 
+   end Is_Empty;
+
+   --------------
+   --  Empty   --
+   --------------
+
+   Procedure Empty_Queue(List : in out Queue_Type) is
+      Item : Element_Type;
+   begin
+      while not Is_Empty(List) loop
+         Pop(List, Item);
+      end loop;
+   end Empty_Queue;
  
 end Queue;

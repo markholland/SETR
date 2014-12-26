@@ -97,6 +97,9 @@ procedure Move_With_Keys (C : in Character) is
             Put_Line("Saved!");
          when 'p' => -- Repeat from memory
             Repeat_From_Memory;
+         when 'l' => -- Empty memory
+            Empty_Queue(Saved_Positions);
+            Put_Line("Removed all saved positions");
          when others =>
             return;
       end case;
@@ -112,9 +115,9 @@ procedure Repeat_From_Memory is
       Pop(Saved_Positions, Next_Position);
       Put_Line("Going to saved position:"&Natural'Image(Count));      
       Move_Robot_To(Next_Position);
-      Put_Line("I'm at position:"&Natural'Image(Count) &" and will wait 3 seconds");
+      Put_Line("I'm at position:"&Natural'Image(Count) &" and will wait 2 seconds");
       Count := Count + 1;
-      delay 3.0;
+      delay 2.0;
       --Put_Line(Position'Image(Val));
    end loop;
    Put_Line("I've done all the movements I know!");

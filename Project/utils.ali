@@ -15,7 +15,7 @@ RV NO_ELABORATION_CODE
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U utils%b		utils.adb		4e0e8db6 OO PK
+U utils%b		utils.adb		4ac8fed0 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
@@ -59,8 +59,8 @@ D interfac.ads		20140406181359 69adb1b9 interfaces%s
 D i-c.ads		20140406181358 5421119b interfaces.c%s
 D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
 D low_level_types.ads	20141209181346 09d2a761 low_level_types%s
-D queue.ads		20141222152303 7e981705 queue%s
-D queue.adb		20141222152306 9458e03a queue%b
+D queue.ads		20141226172717 46a38f1e queue%s
+D queue.adb		20141226173335 73edfff8 queue%b
 D robot_interface.ads	20141213171338 2174e2d4 robot_interface%s
 D robot_monitor.ads	20141216215653 c0ed828f robot_monitor%s
 D system.ads		20140406181356 bd760655 system%s
@@ -95,7 +95,7 @@ D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
 D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
 D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
 D utils.ads		20141226170402 025fccbf utils%s
-D utils.adb		20141226171132 04a7eeba utils%b
+D utils.adb		20141226173022 385a05c7 utils%b
 X 1 ada.ads
 16K9*Ada 19e8 57|5r6 5r27
 X 8 a-reatim.ads
@@ -107,16 +107,17 @@ X 8 a-reatim.ads
 85V13*Milliseconds{46O9} 57|42s38
 X 16 digital_io_sim.ads
 14K9*Digital_IO_Sim 33e19 57|4w6 4r27
-28U14*Put_Line 57|95s13 97s13 113s7 115s7 120s4
+28U14*Put_Line 57|95s13 97s13 102s13 116s7 118s7 123s4
 30U14*Get_Immediate 57|53s16 61s16
 30e28 Item{character} 57|53r30 61r30
 31b28 Available{boolean} 57|53r45 61r45
 X 21 queue.ads
-4k9*Queue 21e10 57|7w6 11r29
+4k9*Queue 22e10 57|7w6 11r29
 5R9*Queue_Type 57|13r22[11]
 6U14*Push 57|96s13[11]
-7U14*Pop 57|112s7[11]
-8V13*Is_Empty{boolean} 57|111s14[11]
+7U14*Pop 57|115s7[11]
+8U14*Empty_Queue 57|101s13[11]
+9V13*Is_Empty{boolean} 57|114s14[11]
 X 23 robot_interface.ads
 3K9*Robot_Interface 64e20 56|1w6 1r27
 5E9*Axis_Type 5e56 56|6r38 9r45 22r36 57|15r31 36r37
@@ -132,17 +133,17 @@ X 23 robot_interface.ads
 24U14*Move_Robot 57|21s10 32s10 48s10 69s10
 X 24 robot_monitor.ads
 4K9*Robot_Monitor 22e18 57|6w6 6r27
-6A9*Position(natural)<23|5E9> 57|11r35 16r14 17r14 107r20
+6A9*Position(natural)<23|5E9> 57|11r35 16r14 17r14 110r20
 8w14*Robot_Mon 57|16r26 23r21 51r19 59r19 96r35
 10V16 Get_Pos{6A9} 57|16s36 23s31 51s29 59s29 96s45
-20U14*Move_Robot_To 57|114s7
+20U14*Move_Robot_To 57|117s7
 X 25 system.ads
 37K9*System 152e11 56|2w6
 X 43 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 X 56 utils.ads
-4K9*Utils 27E9 38l5 38e10 57|9b14 124l5 124t10
+4K9*Utils 27E9 38l5 38e10 57|9b14 127l5 127t10
 6U19*Move_By_One 6>31 7>51 57|15b11 34l5 34t16
 6e31 A{23|5E9} 57|15b24 20r18 25r32 25r43 27r32 27r43
 7e51 M{23|8E9} 57|15b42 20r24 24r16 26r19
@@ -151,10 +152,10 @@ X 56 utils.ads
 9e38 A{23|5E9} 57|36b30 47r18 51r37 59r37 59r55
 10e51 M{23|8E9} 57|37b30 47r24 50r13 58r16
 11e51 C{character} 57|38b30 54r34 62r34
-13U19*Move_With_Keys 13>34 57|73b11 104l5 104t19
+13U19*Move_With_Keys 13>34 57|73b11 107l5 107t19
 13e34 C{character} 57|73b27 77r12 79r51 81r50 83r50 85r49 87r49 89r48 91r48
 . 93r47
-15U19*Repeat_From_Memory 57|99s13 106b11 122l5 122t23
+15U19*Repeat_From_Memory 57|99s13 109b11 125l5 125t23
 18i9*End_Axis{natural} 27c9 31r58 32r93 33r92
 19i9*End_Clamp{natural} 28c9 34r87
 20i9*Init_Axis{natural} 29c9 57|51r42
@@ -162,7 +163,8 @@ X 56 utils.ads
 23a9*Simul_Limits{22A14} 31c9 57|59r42
 X 57 utils.adb
 11K12 Int_Queue[21|4] 12r8
-13r4 Saved_Positions{21|5R9[11]} 96m18 96r18 111r23 112m11 112r11
+13r4 Saved_Positions{21|5R9[11]} 96m18 96r18 101m25 101r25 114r23 115m11
+. 115r11
 16a7 pos1{24|6A9} 25r38 27r38
 17a7 pos2{24|6A9} 23m13 25r27 27r27
 18a7 command{23|9A9} 20m10 21r21
@@ -171,6 +173,6 @@ X 57 utils.adb
 42o7 Period{8|46O9} 55r31 63r31
 43o7 Next{8|41O9} 46m10 55m16 55r24 56r28 63m16 63r24 64r28
 44a7 Command{23|9A9} 47m10 48r21 68m10 69r21
-107a4 Next_Position{24|6A9} 112m28 114r21
-108i4 Count{natural} 113r57 115r49 116m7 116r16
+110a4 Next_Position{24|6A9} 115m28 117r21
+111i4 Count{natural} 116r57 118r49 119m7 119r16
 

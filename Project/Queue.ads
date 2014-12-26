@@ -5,6 +5,7 @@ package Queue is
    type Queue_Type is private;
    procedure Push(List : in out Queue_Type; Item : in Element_Type);
    procedure Pop(List : in out Queue_Type; Item : out Element_Type);
+   procedure Empty_Queue(List : in out Queue_Type);
    function Is_Empty(List : Queue_Type) return Boolean;
    Empty_Error : exception;
 private
