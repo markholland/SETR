@@ -1,12 +1,7 @@
 with Robot_Interface; use Robot_Interface;
 with System;
 
-
-
 package Utils is
-
-
-	--type valid_Movement_keys is (Q, A, W, S, E, D, R, F);
 
 	procedure Move_By_One(A : in Axis_Type; 
 						  M : in Motion_Type);
@@ -18,7 +13,6 @@ package Utils is
 	procedure Move_With_Keys(C : in Character);
 
 	procedure Repeat_From_Memory; -- Pop from queue calling positioner
-
 
 	-- Constants for keeping simulator from forcing an axis
 	End_Axis : Constant Natural;

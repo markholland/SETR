@@ -10,7 +10,7 @@ package body Utils is
 
    package Int_Queue is new Queue(Position);
    use Int_Queue;
-   My_Queue : Queue_Type;
+   Saved_Positions : Queue_Type;
 
 procedure Move_By_One (A : in Axis_Type; M : in Motion_Type) is
       pos1 : Position := Robot_Mon.Get_Pos;
@@ -93,7 +93,7 @@ procedure Move_With_Keys (C : in Character) is
             Move_Within_Limits(Clamp, To_End, C);
          when 'm' => -- Position to memory
             Put_Line("Saving position to memory");
-            Push(My_Queue, Robot_Mon.Get_Pos);
+            Push(Saved_Positions, Robot_Mon.Get_Pos);
             Put_Line("Saved!");
          when 'p' => -- Repeat from memory
             Repeat_From_Memory;
@@ -104,15 +104,15 @@ procedure Move_With_Keys (C : in Character) is
 end Move_With_Keys;
 
 procedure Repeat_From_Memory is
-   Val : Position;
+   Next_Position : Position;
    Count : Natural := 1;
    begin
    --Robot_Mon.Reset;
-   while not Is_Empty(My_Queue) loop
-      Pop(My_Queue, Val);
-      Put_Line("Going to saved position: "&Natural'Image(Count));      
-      Move_Robot_To(Val);
-      Put_Line("I'm at position: "&Natural'Image(Count) &" and will wait 3 seconds");
+   while not Is_Empty(Saved_Positions) loop
+      Pop(Saved_Positions, Next_Position);
+      Put_Line("Going to saved position:"&Natural'Image(Count));      
+      Move_Robot_To(Next_Position);
+      Put_Line("I'm at position:"&Natural'Image(Count) &" and will wait 3 seconds");
       Count := Count + 1;
       delay 3.0;
       --Put_Line(Position'Image(Val));

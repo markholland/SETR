@@ -15,7 +15,7 @@ RV NO_ELABORATION_CODE
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U utils%b		utils.adb		c8c39390 OO PK
+U utils%b		utils.adb		4e0e8db6 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
@@ -54,7 +54,7 @@ D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
 D a-tiinio.ads		20140406181359 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
 D a-uncdea.ads		20140406181359 f15a5ed1 ada.unchecked_deallocation%s
-D digital_io_sim.ads	20141217181641 95734c50 digital_io_sim%s
+D digital_io_sim.ads	20141226170604 95734c50 digital_io_sim%s
 D interfac.ads		20140406181359 69adb1b9 interfaces%s
 D i-c.ads		20140406181358 5421119b interfaces.c%s
 D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
@@ -94,8 +94,8 @@ D s-taprob.ads		20140406181354 502249e3 system.tasking.protected_objects%s
 D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
 D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
 D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
-D utils.ads		20141226164327 025fccbf utils%s
-D utils.adb		20141226165301 826af09c utils%b
+D utils.ads		20141226170402 025fccbf utils%s
+D utils.adb		20141226171132 04a7eeba utils%b
 X 1 ada.ads
 16K9*Ada 19e8 57|5r6 5r27
 X 8 a-reatim.ads
@@ -113,18 +113,18 @@ X 16 digital_io_sim.ads
 31b28 Available{boolean} 57|53r45 61r45
 X 21 queue.ads
 4k9*Queue 21e10 57|7w6 11r29
-5R9*Queue_Type 57|13r15[11]
+5R9*Queue_Type 57|13r22[11]
 6U14*Push 57|96s13[11]
 7U14*Pop 57|112s7[11]
 8V13*Is_Empty{boolean} 57|111s14[11]
 X 23 robot_interface.ads
 3K9*Robot_Interface 64e20 56|1w6 1r27
-5E9*Axis_Type 5e56 56|11r38 14r45 28r36 57|15r31 36r37
-5n23*Rotation{5E9} 56|37r48 57|79r32 81r32
-5n33*Forward{5E9} 56|38r84 57|83r32 85r32
-5n42*Height{5E9} 56|39r84 57|87r32 89r32
-5n50*Clamp{5E9} 56|40r80 57|91r32 93r32
-8E9*Motion_Type 8e47 56|12r58 15r58 57|15r49 37r37
+5E9*Axis_Type 5e56 56|6r38 9r45 22r36 57|15r31 36r37
+5n23*Rotation{5E9} 56|31r48 57|79r32 81r32
+5n33*Forward{5E9} 56|32r84 57|83r32 85r32
+5n42*Height{5E9} 56|33r84 57|87r32 89r32
+5n50*Clamp{5E9} 56|34r80 57|91r32 93r32
+8E9*Motion_Type 8e47 56|7r58 10r58 57|15r49 37r37
 8n31*To_End{8E9} 57|24r20 58r20 81r42 85r41 89r40 93r39
 8n39*To_Init{8E9} 57|26r23 50r17 79r42 83r41 87r40 91r39
 9A9*Command_Type(8E9)<5E9> 57|18r17 44r17
@@ -132,9 +132,9 @@ X 23 robot_interface.ads
 24U14*Move_Robot 57|21s10 32s10 48s10 69s10
 X 24 robot_monitor.ads
 4K9*Robot_Monitor 22e18 57|6w6 6r27
-6A9*Position(natural)<23|5E9> 57|11r35 16r14 17r14 107r10
-8w14*Robot_Mon 57|16r26 23r21 51r19 59r19 96r28
-10V16 Get_Pos{6A9} 57|16s36 23s31 51s29 59s29 96s38
+6A9*Position(natural)<23|5E9> 57|11r35 16r14 17r14 107r20
+8w14*Robot_Mon 57|16r26 23r21 51r19 59r19 96r35
+10V16 Get_Pos{6A9} 57|16s36 23s31 51s29 59s29 96s45
 20U14*Move_Robot_To 57|114s7
 X 25 system.ads
 37K9*System 152e11 56|2w6
@@ -142,27 +142,27 @@ X 43 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 X 56 utils.ads
-6K9*Utils 33E9 44l5 44e10 57|9b14 124l5 124t10
-11U19*Move_By_One 11>31 12>51 57|15b11 34l5 34t16
-11e31 A{23|5E9} 57|15b24 20r18 25r32 25r43 27r32 27r43
-12e51 M{23|8E9} 57|15b42 20r24 24r16 26r19
-14U19*Move_Within_Limits 14>38 15>51 16>51 57|36b11 70l5 70t23 79s13 81s13
+4K9*Utils 27E9 38l5 38e10 57|9b14 124l5 124t10
+6U19*Move_By_One 6>31 7>51 57|15b11 34l5 34t16
+6e31 A{23|5E9} 57|15b24 20r18 25r32 25r43 27r32 27r43
+7e51 M{23|8E9} 57|15b42 20r24 24r16 26r19
+9U19*Move_Within_Limits 9>38 10>51 11>51 57|36b11 70l5 70t23 79s13 81s13
 . 83s13 85s13 87s13 89s13 91s13 93s13
-14e38 A{23|5E9} 57|36b30 47r18 51r37 59r37 59r55
-15e51 M{23|8E9} 57|37b30 47r24 50r13 58r16
-16e51 C{character} 57|38b30 54r34 62r34
-18U19*Move_With_Keys 18>34 57|73b11 104l5 104t19
-18e34 C{character} 57|73b27 77r12 79r51 81r50 83r50 85r49 87r49 89r48 91r48
+9e38 A{23|5E9} 57|36b30 47r18 51r37 59r37 59r55
+10e51 M{23|8E9} 57|37b30 47r24 50r13 58r16
+11e51 C{character} 57|38b30 54r34 62r34
+13U19*Move_With_Keys 13>34 57|73b11 104l5 104t19
+13e34 C{character} 57|73b27 77r12 79r51 81r50 83r50 85r49 87r49 89r48 91r48
 . 93r47
-20U19*Repeat_From_Memory 57|99s13 106b11 122l5 122t23
-24i9*End_Axis{natural} 33c9 37r58 38r93 39r92
-25i9*End_Clamp{natural} 34c9 40r87
-26i9*Init_Axis{natural} 35c9 57|51r42
-28A14*Limits_Type(natural)<23|5E9> 29r33 37r33
-29a9*Simul_Limits{28A14} 37c9 57|59r42
+15U19*Repeat_From_Memory 57|99s13 106b11 122l5 122t23
+18i9*End_Axis{natural} 27c9 31r58 32r93 33r92
+19i9*End_Clamp{natural} 28c9 34r87
+20i9*Init_Axis{natural} 29c9 57|51r42
+22A14*Limits_Type(natural)<23|5E9> 23r33 31r33
+23a9*Simul_Limits{22A14} 31c9 57|59r42
 X 57 utils.adb
 11K12 Int_Queue[21|4] 12r8
-13r4 My_Queue{21|5R9[11]} 96m18 96r18 111r23 112m11 112r11
+13r4 Saved_Positions{21|5R9[11]} 96m18 96r18 111r23 112m11 112r11
 16a7 pos1{24|6A9} 25r38 27r38
 17a7 pos2{24|6A9} 23m13 25r27 27r27
 18a7 command{23|9A9} 20m10 21r21
@@ -171,6 +171,6 @@ X 57 utils.adb
 42o7 Period{8|46O9} 55r31 63r31
 43o7 Next{8|41O9} 46m10 55m16 55r24 56r28 63m16 63r24 64r28
 44a7 Command{23|9A9} 47m10 48r21 68m10 69r21
-107a4 Val{24|6A9} 112m21 114r21
-108i4 Count{natural} 113r58 115r50 116m7 116r16
+107a4 Next_Position{24|6A9} 112m28 114r21
+108i4 Count{natural} 113r57 115r49 116m7 116r16
 

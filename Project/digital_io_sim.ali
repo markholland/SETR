@@ -64,7 +64,7 @@ D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
 D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
 D a-tiinio.ads		20140406181359 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
-D digital_io_sim.ads	20141217181641 95734c50 digital_io_sim%s
+D digital_io_sim.ads	20141226170604 95734c50 digital_io_sim%s
 D digital_io_sim.adb	20141217181702 36ed39cc digital_io_sim%b
 D interfac.ads		20140406181359 69adb1b9 interfaces%s
 D i-c.ads		20140406181358 5421119b interfaces.c%s

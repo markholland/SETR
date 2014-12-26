@@ -6,13 +6,7 @@ with Utils;           use Utils;
 with Ada.Integer_Text_IO;
 
 procedure Test_Robot_Move_By_Keys is
-   Target_Pos : array (1 .. 4) of Position :=
-     (1 => (100, 100, 100, 10),
-      2 => (5, 50, 200, 20),
-      3 => (300, 300, 300, 30),
-      4 => (111,222,333,0));
-   Temp : Natural;
-
+   
    Input : Character := 'Z';
    Available : Boolean := False;
 
