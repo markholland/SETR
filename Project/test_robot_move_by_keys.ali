@@ -4,13 +4,12 @@ P ZX
 
 RN
 RV NO_DELAY
-RV NO_ENUMERATION_MAPS
 RV NO_FIXED_POINT
 RV NO_RELATIVE_DELAY
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U test_robot_move_by_keys%b  test_robot_move_by_keys.adb  bf1f09f4 NE OO SU
+U test_robot_move_by_keys%b  test_robot_move_by_keys.adb  642e9875 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -18,7 +17,6 @@ W ada.tags%s		a-tags.adb		a-tags.ali
 W digital_io_sim%s	digital_io_sim.adb	digital_io_sim.ali
 W robot_interface%s	robot_interface.adb	robot_interface.ali
 W robot_monitor%s	robot_monitor.adb	robot_monitor.ali
-W system.img_char%s	s-imgcha.adb		s-imgcha.ali
 W utils%s		utils.adb		utils.ali
 
 D ada.ads		20140406181354 3ffc8e18 ada%s
@@ -47,7 +45,6 @@ D s-exctab.ads		20140406181354 54135002 system.exception_table%s
 D s-ficobl.ads		20140406181355 078245e4 system.file_control_block%s
 D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
 D s-finroo.ads		20140406181359 4ff27390 system.finalization_root%s
-D s-imgcha.ads		20140406181358 9c3458e7 system.img_char%s
 D s-linux.ads		20140406181355 befedf55 system.linux%s
 D s-multip.ads		20140406181358 38ac9f73 system.multiprocessors%s
 D s-oscons.ads		20140410143800 04020b75 system.os_constants%s
@@ -68,35 +65,37 @@ D s-taprob.ads		20140406181354 502249e3 system.tasking.protected_objects%s
 D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
 D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
 D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
-D test_robot_move_by_keys.adb  20141221120617 20bfcb6a test_robot_move_by_keys%b
-D utils.ads		20141221115752 1d016731 utils%s
+D test_robot_move_by_keys.adb  20141226163545 e4d0f165 test_robot_move_by_keys%b
+D utils.ads		20141226164327 025fccbf utils%s
 X 1 ada.ads
-16K9*Ada 19e8 48|6r6
+16K9*Ada 19e8 47|6r6
 X 6 a-inteio.ads
-18K13*Integer_Text_IO[11|46] 48|6w10
+18K13*Integer_Text_IO[11|46] 47|6w10
 X 13 digital_io_sim.ads
-14K9*Digital_IO_Sim 33e19 48|3w6 3r27
-28U14*Put_Line 48|20s3 31s5 36s9 43s4
-30U14*Get_Immediate 48|34s7
-30e28 Item{character} 48|34r21
-31b28 Available{boolean} 48|34r36
+14K9*Digital_IO_Sim 33e19 47|3w6 3r27
+28U14*Put_Line 47|23s3 43s5 48s3
+30U14*Get_Immediate 47|37s7
+30e28 Item{character} 47|37r21
+31b28 Available{boolean} 47|37r36
 X 18 robot_interface.ads
-3K9*Robot_Interface 64e20 48|2w6 2r27
+3K9*Robot_Interface 64e20 47|2w6 2r27
 X 19 robot_monitor.ads
-4K9*Robot_Monitor 22e18 48|1w6 1r27
-6A9*Position(natural)<18|5E9> 48|9r35
-8w14*Robot_Mon 48|21r4
-11U17 Reset 48|21s14
-X 36 s-stausa.ads
+4K9*Robot_Monitor 22e18 47|1w6 1r27
+6A9*Position(natural)<18|5E9> 47|9r35 19r19
+8w14*Robot_Mon 47|24r4 46r19
+10V16 Get_Pos{6A9} 47|46s29
+11U17 Reset 47|24s14
+X 35 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 48 test_robot_move_by_keys.adb
-8U11*Test_Robot_Move_By_Keys 8b11 44l5 44t28
+X 47 test_robot_move_by_keys.adb
+8U11*Test_Robot_Move_By_Keys 8b11 49l5 49t28
 9a4 Target_Pos(19|6A9)
 14i4 Temp{natural}
-16e4 Input{character} 30r9 34m29 36r34 37r24
-17b4 Available{boolean} 32m5 33r11 34m49 35r10
-X 49 utils.ads
-6K9*Utils 48|4w6 4r27 49|28e10
-18U19*Move_With_Keys 48|37s9
+16e4 Input{character} 33r9 37m29 40r24
+17b4 Available{boolean} 35m5 36r11 37m49 38r10
+19a4 Position_aux{19|6A9} 46m3
+X 48 utils.ads
+6K9*Utils 47|4w6 4r27 48|44e10
+18U19*Move_With_Keys 47|40s9
 

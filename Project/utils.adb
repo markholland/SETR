@@ -4,9 +4,13 @@ pragma Locking_Policy (Ceiling_Locking);
 with Digital_IO_Sim;  use Digital_IO_Sim;
 with Ada.Real_Time;   use Ada.Real_Time;
 with Robot_Monitor;   use Robot_Monitor;
+with Queue; 
 
 package body Utils is
 
+   package Int_Queue is new Queue(Position);
+   use Int_Queue;
+   My_Queue : Queue_Type;
 
 procedure Move_By_One (A : in Axis_Type; M : in Motion_Type) is
       pos1 : Position := Robot_Mon.Get_Pos;
@@ -35,51 +39,41 @@ procedure Move_Within_Limits(A : in Axis_Type;
 
       Input : Character;
       Avail : Boolean;
-      Period : constant Time_Span := Milliseconds(17); -- (1/((300*4)/60))/3
+      Period : constant Time_Span := Milliseconds(5); -- (1/((300*8)/60))/3
       Next : Time; 
       Command : Command_Type := Stop_All;
       begin
-   
          Next := Clock;
          Command(A) := M;
          Move_Robot(Command);
-         if A = Clamp then -- Clamp axis has different limit
 
-            while Robot_Mon.Get_Pos(A) < End_Clamp and
-                  Robot_Mon.Get_Pos(A) >= Init_Axis loop
+         if M = To_Init then -- We stop before reaching zero
+            while Robot_Mon.Get_Pos(A) > Init_Axis loop
                --Stop when same key pressed
                Get_Immediate(Item => Input, Available => Avail);
                exit when Input = C;
-
                Next := Next + Period;
                delay until Next;      
             end loop;
-            Command := Stop_All;
-            Move_Robot(Command);
-
-         else -- Rest of axis share same limit
-
-            while Robot_Mon.Get_Pos(A) < End_Axis and
-                  Robot_Mon.Get_Pos(A) >= Init_Axis loop
+         elsif M = To_End then -- we might be starting in zero
+            while Robot_Mon.Get_Pos(A) < Simul_Limits(A) loop
                --Stop when same key pressed
                Get_Immediate(Item => Input, Available => Avail);
                exit when Input = C;
-
                Next := Next + Period;
                delay until Next;      
             end loop;
-            Command := Stop_All;
-            Move_Robot(Command);     
-
-         end if;             
-              
+         end if;
+      
+         Command := Stop_All;
+         Move_Robot(Command);
 end Move_Within_Limits;
 
 
 procedure Move_With_Keys (C : in Character) is
-
+ 
    begin
-      Put_Line(Character'Image(C));
+      --Put_Line(Character'Image(C));
       case C is
          when 'q' => -- rotate to init
             Move_Within_Limits(Rotation, To_Init, C);
@@ -97,10 +91,34 @@ procedure Move_With_Keys (C : in Character) is
             Move_Within_Limits(Clamp, To_Init, C);
          when 'f' => -- Clamp to end
             Move_Within_Limits(Clamp, To_End, C);
+         when 'm' => -- Position to memory
+            Put_Line("Saving position to memory");
+            Push(My_Queue, Robot_Mon.Get_Pos);
+            Put_Line("Saved!");
+         when 'p' => -- Repeat from memory
+            Repeat_From_Memory;
          when others =>
             return;
       end case;
 
 end Move_With_Keys;
+
+procedure Repeat_From_Memory is
+   Val : Position;
+   Count : Natural := 1;
+   begin
+   --Robot_Mon.Reset;
+   while not Is_Empty(My_Queue) loop
+      Pop(My_Queue, Val);
+      Put_Line("Going to saved position: "&Natural'Image(Count));      
+      Move_Robot_To(Val);
+      Put_Line("I'm at position: "&Natural'Image(Count) &" and will wait 3 seconds");
+      Count := Count + 1;
+      delay 3.0;
+      --Put_Line(Position'Image(Val));
+   end loop;
+   Put_Line("I've done all the movements I know!");
+
+end Repeat_From_Memory;
 
 end Utils;

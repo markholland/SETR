@@ -15,7 +15,7 @@ RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=2
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U robot_monitor%b	robot_monitor.adb	65f10f36 OO PK
+U robot_monitor%b	robot_monitor.adb	4a5e4df2 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -58,7 +58,7 @@ D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
 D low_level_types.ads	20141209181346 09d2a761 low_level_types%s
 D robot_interface.ads	20141213171338 2174e2d4 robot_interface%s
 D robot_monitor.ads	20141216215653 c0ed828f robot_monitor%s
-D robot_monitor.adb	20141216215025 539fb780 robot_monitor%b
+D robot_monitor.adb	20141226164130 7c30f544 robot_monitor%b
 D system.ads		20140406181356 bd760655 system%s
 D s-atacco.ads		20140406181355 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20140406181356 2c012597 system.crtl%s
