@@ -113,7 +113,7 @@ procedure Repeat_From_Memory is
    --Robot_Mon.Reset;
    while not Is_Empty(Saved_Positions) loop
       Pop(Saved_Positions, Next_Position);
-      Put_Line("Going to saved position:"&Natural'Image(Count));      
+      Put_Line("Going to saved position:"&Natural'Image(Count));
       Move_Robot_To(Next_Position);
       Put_Line("I'm at position:"&Natural'Image(Count) &" and will wait 2 seconds");
       Count := Count + 1;
