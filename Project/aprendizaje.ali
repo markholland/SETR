@@ -10,7 +10,7 @@ RV NO_RELATIVE_DELAY
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U aprendizaje%b		aprendizaje.adb		1559661b NE OO SU
+U aprendizaje%b		aprendizaje.adb		136475fe NE OO SU
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W digital_io_sim%s	digital_io_sim.adb	digital_io_sim.ali
@@ -29,7 +29,7 @@ D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
 D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
 D a-tiinio.ads		20140406181359 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
-D aprendizaje.adb	20150106134147 61b34a10 aprendizaje%b
+D aprendizaje.adb	20150107174752 678e59f5 aprendizaje%b
 D digital_io_sim.ads	20141226170604 95734c50 digital_io_sim%s
 D interfac.ads		20140406181359 69adb1b9 interfaces%s
 D i-c.ads		20140406181358 5421119b interfaces.c%s
@@ -65,44 +65,45 @@ D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
 D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
 D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
 X 13 aprendizaje.adb
-4U11*Aprendizaje 4b11 81l5 81t16
+4U11*Aprendizaje 4b11 85l5 85t16
 6e1 Ch{character} 22m22 24r15
 7b4 Available{boolean} 22m26 23r10
 8a4 Command{19|9A9} 27m16 27r41 29m16 29r41 32m16 32r40 34m16 34r40 37m16
-. 37r39 39m16 39r39 42m16 42r38 44m16 44r38 70r30 71r45 72m13 75r19
-9a4 Pos{20|6A9} 21m7 70r14 71r13
-10a4 Simul_Max_Pos{20|6A9} 71r23
-12i4 iter{integer} 47m16 47r24 48r25 52r28 58m16
+. 37r39 39m16 39r39 42m16 42r38 44m16 44r38 74r30 75r45 76m13 79r19
+9a4 Pos{20|6A9} 21m7 74r14 75r13
+10a4 Simul_Max_Pos{20|6A9} 75r23
+12i4 iter{integer} 47m16 47r24 48r25 53r28 62m16
 13A9 Posiciones(20|6A9)<integer> 15r15
-15a4 Posicion{13A9} 48m16 53r33
-52i20 i{integer} 53r42
-69e11 Ax{19|5E9} 70r18 70r38 71r17 71r37 71r53 72r21
+15a4 Posicion{13A9} 48m16 54r39 56r33
+53i20 i{integer} 54r48 56r42
+73e11 Ax{19|5E9} 74r18 74r38 75r17 75r37 75r53 76r21
 X 14 digital_io_sim.ads
 14K9*Digital_IO_Sim 13|1w6 2r5 14|33e19
-27U14*New_Line 13|78s4
-28U14*Put_Line 13|19s4 46s16 50s16 56s16 59s16 79s4
+27U14*New_Line 13|82s4
+28U14*Put_Line 13|19s4 46s16 50s16 55s19 60s16 63s16 83s4
 30U14*Get_Immediate 13|22s7
 X 19 robot_interface.ads
 3K9*Robot_Interface 13|1w21 2r20 19|64e20
-5E9*Axis_Type 13|69r17 19|5e56
+5E9*Axis_Type 13|73r17 19|5e56
 5n23*Rotation{5E9} 13|27r24 27r49 29r24 29r49
 5n33*Forward{5E9} 13|32r24 32r48 34r24 34r48
 5n42*Height{5E9} 13|37r24 37r47 39r24 39r47
 5n50*Clamp{5E9} 13|42r24 42r46 44r24 44r46
 8n25*Stop{8E9} 13|27r61 27r84 29r61 29r83 32r59 32r82 34r59 34r81 37r57 37r80
-. 39r57 39r79 42r55 42r78 44r55 44r77 72r28
-8n31*To_End{8E9} 13|29r71 34r69 39r67 44r65 71r59
-8n39*To_Init{8E9} 13|27r71 32r69 37r67 42r65 70r44
+. 39r57 39r79 42r55 42r78 44r55 44r77 76r28
+8n31*To_End{8E9} 13|29r71 34r69 39r67 44r65 75r59
+8n39*To_Init{8E9} 13|27r71 32r69 37r67 42r65 74r44
 9A9*Command_Type(8E9)<5E9> 13|8r14
 10a4*Stop_All{9A9} 13|8r30
-24U14*Move_Robot 13|75s7
+24U14*Move_Robot 13|79s7
 X 20 robot_monitor.ads
 4K9*Robot_Monitor 13|1w37 2r36 20|22e18
 6A9*Position(natural)<19|5E9> 13|9r10 10r20 13r41
-8w14*Robot_Mon 13|18r4 21r14 48r34 51r16
+8w14*Robot_Mon 13|18r4 21r14 48r34 51r16 54r19
 10V16 Get_Pos{6A9} 13|21s24 48s44
 11U17 Reset 13|18s14 51s26
-20U14*Move_Robot_To 13|53s19
+14U17 Print_Pos 13|54s29
+20U14*Move_Robot_To 13|56s19
 X 36 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22

@@ -49,9 +49,13 @@ begin
             when 'P' | 'p' => --repeticion
                Put_Line("Entering repetition mode.");
                Robot_Mon.Reset;
+               delay 2.0;
                for i in 1..iter loop
+                  Robot_Mon.Print_Pos(Posicion(i));
+                  Put_Line("");
                   Move_Robot_To(Posicion(i));
                delay 2.0;
+               
                end loop;
                Put_Line("Completed all known movements.");
             when 'L' | 'l' =>
