@@ -1,10 +1,13 @@
 V "GNAT Lib v2014"
-P LC TF  ZX
+A --RTS=marteuc_x86
+P LC TF
 
 RN
 RV NO_DELAY
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_HEAP_ALLOCATIONS
 RV NO_PROTECTED_TYPES
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASKING
@@ -15,12 +18,14 @@ RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=2
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U robot_monitor%b	robot_monitor.adb	4a5e4df2 OO PK
+U robot_monitor%b	robot_monitor.adb	79f6e606 OO PK
 W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.real_time.delays%s  a-retide.adb		a-retide.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
-W digital_io_sim%s	digital_io_sim.adb	digital_io_sim.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W digital_io%s		digital_io.adb		digital_io.ali
 W robot_interface%s	robot_interface.adb	robot_interface.ali  AD
 W system%s		system.ads		system.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
@@ -32,135 +37,135 @@ W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U robot_monitor%s	robot_monitor.ads	5cef660e EE OO PF PK
+U robot_monitor%s	robot_monitor.ads	63928ed2 EE OO PF PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W robot_interface%s	robot_interface.adb	robot_interface.ali
 W system%s		system.ads		system.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-D ada.ads		20140406181354 3ffc8e18 ada%s
-D a-except.ads		20140406181356 43d57f8c ada.exceptions%s
-D a-finali.ads		20140406181359 69f99942 ada.finalization%s
-D a-inteio.ads		20140406181359 f64b89a4 ada.integer_text_io%s
-D a-ioexce.ads		20140406181358 e4a01f64 ada.io_exceptions%s
-D a-reatim.ads		20140406181358 63f07669 ada.real_time%s
-D a-retide.ads		20140406181357 081cdaa4 ada.real_time.delays%s
-D a-stream.ads		20140406181355 1a984740 ada.streams%s
-D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
-D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
-D a-tiinio.ads		20140406181359 aa04e5d6 ada.text_io.integer_io%s
-D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
-D digital_io_sim.ads	20141226170604 95734c50 digital_io_sim%s
-D interfac.ads		20140406181359 69adb1b9 interfaces%s
-D i-c.ads		20140406181358 5421119b interfaces.c%s
-D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
+D ada.ads		20141203121819 3ffc8e18 ada%s
+D a-except.ads		20141203121819 43d57f8c ada.exceptions%s
+D a-finali.ads		20141203121819 69f99942 ada.finalization%s
+D a-ioexce.ads		20141203121819 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20141203121819 63f07669 ada.real_time%s
+D a-retide.ads		20141203121819 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20141203121819 1a984740 ada.streams%s
+D a-tags.ads		20141203121819 dc4d0634 ada.tags%s
+D a-textio.ads		20141203121819 386df5d4 ada.text_io%s
+D a-unccon.ads		20141203121819 f9eb8f06 ada.unchecked_conversion%s
+D digital_io.ads	20141218121430 42443fd9 digital_io%s
+D interfac.ads		20141203121819 69adb1b9 interfaces%s
+D i-c.ads		20141203121819 5421119b interfaces.c%s
+D i-cstrea.ads		20141203121819 febc86ed interfaces.c_streams%s
 D low_level_types.ads	20141209181346 09d2a761 low_level_types%s
 D robot_interface.ads	20141213171338 2174e2d4 robot_interface%s
 D robot_monitor.ads	20141216215653 c0ed828f robot_monitor%s
-D robot_monitor.adb	20141226164130 7c30f544 robot_monitor%b
-D system.ads		20140406181356 bd760655 system%s
-D s-atacco.ads		20140406181355 4c36d12f system.address_to_access_conversions%s
-D s-crtl.ads		20140406181356 2c012597 system.crtl%s
-D s-exctab.ads		20140406181354 54135002 system.exception_table%s
-D s-ficobl.ads		20140406181355 078245e4 system.file_control_block%s
-D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
-D s-finroo.ads		20140406181359 4ff27390 system.finalization_root%s
-D s-imgint.ads		20140406181359 02dbe0c2 system.img_int%s
-D s-linux.ads		20140406181355 befedf55 system.linux%s
-D s-multip.ads		20140406181358 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20140410143800 04020b75 system.os_constants%s
-D s-osinte.ads		20140406181359 fd138fd1 system.os_interface%s
-D s-parame.ads		20140406181358 06da98b2 system.parameters%s
-D s-pooglo.ads		20140406181357 542f33d0 system.pool_global%s
-D s-soflin.ads		20140406181358 aa763b52 system.soft_links%s
-D s-stache.ads		20140406181355 a37c21ec system.stack_checking%s
-D s-stausa.ads		20140406181355 017a0a05 system.stack_usage%s
-D s-stalib.ads		20140406181355 fa0a3617 system.standard_library%s
-D s-stoele.ads		20140406181357 2dc34a04 system.storage_elements%s
-D s-stoele.adb		20140406181355 ed88f8fb system.storage_elements%b
-D s-stopoo.ads		20140406181357 b16154c2 system.storage_pools%s
-D s-tasinf.ads		20140406181357 2b3f8252 system.task_info%s
-D s-taspri.ads		20140406181359 15f617a8 system.task_primitives%s
-D s-taprop.ads		20140406181355 1dd2e1b6 system.task_primitives.operations%s
-D s-taskin.ads		20140406181355 3f821f32 system.tasking%s
-D s-taprob.ads		20140406181354 502249e3 system.tasking.protected_objects%s
-D s-tpoben.ads		20140406181356 b641f948 system.tasking.protected_objects.entries%s
-D s-tasren.ads		20140406181358 a67a9949 system.tasking.rendezvous%s
-D s-tassta.ads		20140406181358 70812003 system.tasking.stages%s
-D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
-D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
-D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
+D robot_monitor.adb	20150114154713 a0c2d8ed robot_monitor%b
+D system.ads		20141203121819 820bee89 system%s
+D s-atacco.ads		20141203121819 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20141203121819 2c012597 system.crtl%s
+D s-exctab.ads		20141203121819 54135002 system.exception_table%s
+D s-ficobl.ads		20141203121819 078245e4 system.file_control_block%s
+D s-finmas.ads		20141203121819 814daec4 system.finalization_masters%s
+D s-finroo.ads		20141203121819 4ff27390 system.finalization_root%s
+D s-imgint.ads		20141203121819 02dbe0c2 system.img_int%s
+D s-linux.ads		20141203121819 befedf55 system.linux%s
+D s-multip.ads		20141203121819 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20141203121819 66009dac system.os_constants%s
+D s-osinte.ads		20141203121819 a44e3747 system.os_interface%s
+D s-parame.ads		20141203121819 06da98b2 system.parameters%s
+D s-pooglo.ads		20141203121819 542f33d0 system.pool_global%s
+D s-soflin.ads		20141203121819 aa763b52 system.soft_links%s
+D s-stache.ads		20141203121819 a37c21ec system.stack_checking%s
+D s-stausa.ads		20141203121819 017a0a05 system.stack_usage%s
+D s-stalib.ads		20141203121819 fa0a3617 system.standard_library%s
+D s-stoele.ads		20141203121819 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20141203121819 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20141203121819 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20141203121819 2b3f8252 system.task_info%s
+D s-taspri.ads		20141203121819 15f617a8 system.task_primitives%s
+D s-taprop.ads		20141203121819 1ea86599 system.task_primitives.operations%s
+D s-taskin.ads		20141203121819 664726f5 system.tasking%s
+D s-taprob.ads		20141203121819 502249e3 system.tasking.protected_objects%s
+D s-tpoben.ads		20141203121819 b641f948 system.tasking.protected_objects.entries%s
+D s-tasren.ads		20141203121819 a67a9949 system.tasking.rendezvous%s
+D s-tassta.ads		20141203121819 70812003 system.tasking.stages%s
+D s-traent.ads		20141203121819 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20141203121819 510692af system.unsigned_types%s
+D s-wchcon.ads		20141203121819 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 19e8 20|5r6 5r27
-X 6 a-reatim.ads
-39K13*Real_Time 138e18 20|5w10 5r31
-41O9*Time<duration> 20|84r14 112r14
-46O9*Time_Span<duration> 20|83r33 111r25
-53V13*Clock{41O9} 20|86s15 118s21
-55V14*"+"{41O9} 20|103s23 133s29
-85V13*Milliseconds{46O9} 20|83s46 111s38
-X 13 digital_io_sim.ads
-14K9*Digital_IO_Sim 33e19 20|4w6 4r27
-22U14*Put 20|55s10 57s13
-28U14*Put_Line 20|20s10 45s10
-X 18 robot_interface.ads
-3K9*Robot_Interface 64e20 19|1w6 1r27
-5E9*Axis_Type 5e56 19|6r28 20|34r23 56r22 91r20 121r26
-8n25*Stop{8E9} 20|36r34 129r37
-8n31*To_End{8E9} 20|96r47 123r37
-8n39*To_Init{8E9} 20|94r44 126r37
-9A9*Command_Type(8E9)<5E9> 20|18r20 113r17
-10a4*Stop_All{9A9} 20|30r33 137r24
-11a4*Init_All{9A9} 20|23r21
-14n30*Pressed{14E9} 20|35r44
-17e10*Init_Switch{14E9} 20|35r30
-18b10*Pulse_Switch{boolean} 20|93r34 93r70
-20A9*Status_Type(15R9)<5E9> 20|17r19 80r23 81r25
-24U14*Move_Robot 20|23s10 37s19 132s16 138s13
-27V13*Robot_State{20A9} 20|27s23 80s38 81s40 89s27
-30V13*Last_Robot_Command{9A9} 20|28s24 94s19 96s22
-X 19 robot_monitor.ads
-4K9*Robot_Monitor 22l5 22e18 20|7b14 143l5 143t18
-6A9*Position(natural)<18|5E9> 10r31 13r33 14r35 16r12 20r35 20|11r31 48r33
-. 53r35 69r35 72r36 82r17 110r20 116r39
-8w14*Robot_Mon 20|9b19 61l8 61t17 90r21 99r16 119r19 122r22 125r22 128r22
-10V16 Get_Pos{6A9} 20|11b16 14l11 14t18 90s31 119s29 122s32 125s32 128s32
-11U17 Reset 20|16b17 46l11 46t16
-13U17 Set_Pos 13>26 20|44s10 48b17 51l11 51t18 99s26
-13a26 P{6A9} 20|48b26 50r17
-14U17 Print_Pos 14>28 20|53b17 59l11 59t20
-14a28 P{6A9} 20|53b28 57r32
-16a7 Pos{6A9} 20|13r17 50r10
-20U14*Move_Robot_To 20>29 20|72b14 75l8 75t21
-20a29 P{6A9} 20|72b29 74r33
-X 20 robot_monitor.adb
-17a10 Status{18|20A9} 27m13 35r19
-18a10 Command{18|9A9} 28m13 30r23 36m19 37r30
-34e17 Ax{18|5E9} 35r26 36r27
-56e14 Axis{18|5E9} 57r34
-63t9 Robot_Sampler 79b14 107l8 107t21
-67t9 Positioner 74r7 109b14 141l8 141t18
-69Y13 Move_Robot_To 69>28 74s18 116b17 139l14 139t27
-69a28 P{19|6A9} 117r27
-80a7 Status_Actual{18|20A9} 88r29 89m10 93r16
-81a7 Status_Anterior{18|20A9} 88m10 93r50
-82a7 Pos_Aux{19|6A9} 90m10 95m19 95r34 97m19 97r34 99r34
-83o7 Sampler_Period{6|46O9} 103r25
-84o7 Next{6|41O9} 86m7 103m10 103r18 104r22
-91e14 Ax{18|5E9} 93r30 93r66 94r38 95r27 95r42 96r41 97r27 97r42
-110a7 Target_Pos{19|6A9} 117m13 119r40 122r46 125r46 128r46
-111o7 Period{6|46O9} 133r31
-112o7 Next{6|41O9} 118m13 133m16 133r24 134r28
-113a7 Command{18|9A9} 123m22 126m22 129m22 132r27 137m13 138r24
-116a32 P{19|6A9}
-121e20 Ax{18|5E9} 122r40 122r57 123r30 125r40 125r57 126r30 128r40 128r57
-. 129r30
-X 21 system.ads
-37K9*System 19|2w6 9r23 20|64r24 68r24 21|152e11
+16K9*Ada 19e8 18|5r6 5r27 6r6 6r24
+X 5 a-reatim.ads
+39K13*Real_Time 138e18 18|5w10 5r31
+41O9*Time<duration> 18|85r14 113r14
+46O9*Time_Span<duration> 18|84r33 112r25
+53V13*Clock{41O9} 18|87s15 119s21
+55V14*"+"{41O9} 18|104s23 134s29
+85V13*Milliseconds{46O9} 18|84s46 112s38
+X 9 a-textio.ads
+49K13*Text_IO 471e16 18|6w10 6r28
+242U14*Put 18|56s10 58s13
+263U14*Put_Line 18|21s10 46s10
+X 11 digital_io.ads
+11K9*Digital_IO 16e15 18|4w6 4r23
+X 16 robot_interface.ads
+3K9*Robot_Interface 64e20 17|1w6 1r27
+5E9*Axis_Type 5e56 17|6r28 18|35r23 57r22 92r20 122r26
+8n25*Stop{8E9} 18|37r34 130r37
+8n31*To_End{8E9} 18|97r47 124r37
+8n39*To_Init{8E9} 18|95r44 127r37
+9A9*Command_Type(8E9)<5E9> 18|19r20 114r17
+10a4*Stop_All{9A9} 18|31r33 138r24
+11a4*Init_All{9A9} 18|24r21
+14n30*Pressed{14E9} 18|36r44
+17e10*Init_Switch{14E9} 18|36r30
+18b10*Pulse_Switch{boolean} 18|94r34 94r70
+20A9*Status_Type(15R9)<5E9> 18|18r19 81r23 82r25
+24U14*Move_Robot 18|24s10 38s19 133s16 139s13
+27V13*Robot_State{20A9} 18|28s23 81s38 82s40 90s27
+30V13*Last_Robot_Command{9A9} 18|29s24 95s19 97s22
+X 17 robot_monitor.ads
+4K9*Robot_Monitor 22l5 22e18 18|8b14 144l5 144t18
+6A9*Position(natural)<16|5E9> 10r31 13r33 14r35 16r12 20r35 18|12r31 49r33
+. 54r35 70r35 73r36 83r17 111r20 117r39
+8w14*Robot_Mon 18|10b19 62l8 62t17 91r21 100r16 120r19 123r22 126r22 129r22
+10V16 Get_Pos{6A9} 18|12b16 15l11 15t18 91s31 120s29 123s32 126s32 129s32
+11U17 Reset 18|17b17 47l11 47t16
+13U17 Set_Pos 13>26 18|45s10 49b17 52l11 52t18 100s26
+13a26 P{6A9} 18|49b26 51r17
+14U17 Print_Pos 14>28 18|54b17 60l11 60t20
+14a28 P{6A9} 18|54b28 58r32
+16a7 Pos{6A9} 18|14r17 51r10
+20U14*Move_Robot_To 20>29 18|73b14 76l8 76t21
+20a29 P{6A9} 18|73b29 75r33
+X 18 robot_monitor.adb
+18a10 Status{16|20A9} 28m13 36r19
+19a10 Command{16|9A9} 29m13 31r23 37m19 38r30
+35e17 Ax{16|5E9} 36r26 37r27
+57e14 Axis{16|5E9} 58r34
+64t9 Robot_Sampler 80b14 108l8 108t21
+68t9 Positioner 75r7 110b14 142l8 142t18
+70Y13 Move_Robot_To 70>28 75s18 117b17 140l14 140t27
+70a28 P{17|6A9} 118r27
+81a7 Status_Actual{16|20A9} 89r29 90m10 94r16
+82a7 Status_Anterior{16|20A9} 89m10 94r50
+83a7 Pos_Aux{17|6A9} 91m10 96m19 96r34 98m19 98r34 100r34
+84o7 Sampler_Period{5|46O9} 104r25
+85o7 Next{5|41O9} 87m7 104m10 104r18 105r22
+92e14 Ax{16|5E9} 94r30 94r66 95r38 96r27 96r42 97r41 98r27 98r42
+111a7 Target_Pos{17|6A9} 118m13 120r40 123r46 126r46 129r46
+112o7 Period{5|46O9} 134r31
+113o7 Next{5|41O9} 119m13 134m16 134r24 135r28
+114a7 Command{16|9A9} 124m22 127m22 130m22 133r27 138m13 139r24
+117a32 P{17|6A9}
+122e20 Ax{16|5E9} 123r40 123r57 124r30 126r40 126r57 127r30 129r40 129r57
+. 130r30
+X 19 system.ads
+37K9*System 17|2w6 9r23 18|65r24 69r24 19|152e11
 105I12*Any_Priority{integer}
-106I12*Priority{105I12} 19|9r30 20|64r31 68r31
-X 37 s-stausa.ads
+106I12*Priority{105I12} 17|9r30 18|65r31 69r31
+X 35 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

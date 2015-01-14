@@ -1,5 +1,6 @@
 V "GNAT Lib v2014"
-P LC TF  SS ZX
+A --RTS=marteuc_x86
+P LC TF  SS
 
 RN
 RV NO_DELAY
@@ -8,6 +9,7 @@ RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
 RV NO_IO
+RV NO_IMPLICIT_HEAP_ALLOCATIONS
 RV NO_PROTECTED_TYPES
 RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
@@ -21,7 +23,7 @@ RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=3
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U digital_io_sim%b	digital_io_sim.adb	cc8f11e0 OO PK
+U digital_io_sim%b	digital_io_sim.adb	f3f2f93c OO PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
@@ -52,64 +54,64 @@ W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W low_level_types%s	low_level_types.ads	low_level_types.ali
 
-D ada.ads		20140406181354 3ffc8e18 ada%s
-D a-except.ads		20140406181356 43d57f8c ada.exceptions%s
-D a-finali.ads		20140406181359 69f99942 ada.finalization%s
-D a-inteio.ads		20140406181359 f64b89a4 ada.integer_text_io%s
-D a-ioexce.ads		20140406181358 e4a01f64 ada.io_exceptions%s
-D a-reatim.ads		20140406181358 63f07669 ada.real_time%s
-D a-retide.ads		20140406181357 081cdaa4 ada.real_time.delays%s
-D a-stream.ads		20140406181355 1a984740 ada.streams%s
-D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
-D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
-D a-tiinio.ads		20140406181359 aa04e5d6 ada.text_io.integer_io%s
-D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
+D ada.ads		20141203121819 3ffc8e18 ada%s
+D a-except.ads		20141203121819 43d57f8c ada.exceptions%s
+D a-finali.ads		20141203121819 69f99942 ada.finalization%s
+D a-inteio.ads		20141203121819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20141203121819 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20141203121819 63f07669 ada.real_time%s
+D a-retide.ads		20141203121819 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20141203121819 1a984740 ada.streams%s
+D a-tags.ads		20141203121819 dc4d0634 ada.tags%s
+D a-textio.ads		20141203121819 386df5d4 ada.text_io%s
+D a-tiinio.ads		20141203121819 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20141203121819 f9eb8f06 ada.unchecked_conversion%s
 D digital_io_sim.ads	20141226170604 95734c50 digital_io_sim%s
 D digital_io_sim.adb	20141217181702 36ed39cc digital_io_sim%b
-D interfac.ads		20140406181359 69adb1b9 interfaces%s
-D i-c.ads		20140406181358 5421119b interfaces.c%s
-D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
+D interfac.ads		20141203121819 69adb1b9 interfaces%s
+D i-c.ads		20141203121819 5421119b interfaces.c%s
+D i-cstrea.ads		20141203121819 febc86ed interfaces.c_streams%s
 D low_level_types.ads	20141209181346 09d2a761 low_level_types%s
-D system.ads		20140406181356 bd760655 system%s
-D s-atacco.ads		20140406181355 4c36d12f system.address_to_access_conversions%s
-D s-conca2.ads		20140406181358 02a0d7d0 system.concat_2%s
-D s-conca3.ads		20140406181355 0b705ca5 system.concat_3%s
-D s-conca4.ads		20140406181354 7e642b20 system.concat_4%s
-D s-conca5.ads		20140406181356 875e432e system.concat_5%s
-D s-crtl.ads		20140406181356 2c012597 system.crtl%s
-D s-exctab.ads		20140406181354 54135002 system.exception_table%s
-D s-ficobl.ads		20140406181355 078245e4 system.file_control_block%s
-D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
-D s-finroo.ads		20140406181359 4ff27390 system.finalization_root%s
-D s-imenne.ads		20140406181354 614c06c0 system.img_enum_new%s
-D s-imgint.ads		20140406181359 02dbe0c2 system.img_int%s
-D s-linux.ads		20140406181355 befedf55 system.linux%s
-D s-multip.ads		20140406181358 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20140410143800 04020b75 system.os_constants%s
-D s-osinte.ads		20140406181359 fd138fd1 system.os_interface%s
-D s-parame.ads		20140406181358 06da98b2 system.parameters%s
-D s-pooglo.ads		20140406181357 542f33d0 system.pool_global%s
-D s-secsta.ads		20140406181359 86a2856d system.secondary_stack%s
-D s-soflin.ads		20140406181358 aa763b52 system.soft_links%s
-D s-stache.ads		20140406181355 a37c21ec system.stack_checking%s
-D s-stausa.ads		20140406181355 017a0a05 system.stack_usage%s
-D s-stalib.ads		20140406181355 fa0a3617 system.standard_library%s
-D s-stoele.ads		20140406181357 2dc34a04 system.storage_elements%s
-D s-stoele.adb		20140406181355 ed88f8fb system.storage_elements%b
-D s-stopoo.ads		20140406181357 b16154c2 system.storage_pools%s
-D s-tasinf.ads		20140406181357 2b3f8252 system.task_info%s
-D s-taspri.ads		20140406181359 15f617a8 system.task_primitives%s
-D s-taprop.ads		20140406181355 1dd2e1b6 system.task_primitives.operations%s
-D s-taskin.ads		20140406181355 3f821f32 system.tasking%s
-D s-taprob.ads		20140406181354 502249e3 system.tasking.protected_objects%s
-D s-tpoben.ads		20140406181356 b641f948 system.tasking.protected_objects.entries%s
-D s-tasren.ads		20140406181358 a67a9949 system.tasking.rendezvous%s
-D s-tassta.ads		20140406181358 70812003 system.tasking.stages%s
-D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
-D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
-D s-valint.ads		20140406181357 48a52a3f system.val_int%s
-D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
-D unchconv.ads		20140406181355 ca2f9e18 unchecked_conversion%s
+D system.ads		20141203121819 820bee89 system%s
+D s-atacco.ads		20141203121819 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20141203121819 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20141203121819 0b705ca5 system.concat_3%s
+D s-conca4.ads		20141203121819 7e642b20 system.concat_4%s
+D s-conca5.ads		20141203121819 875e432e system.concat_5%s
+D s-crtl.ads		20141203121819 2c012597 system.crtl%s
+D s-exctab.ads		20141203121819 54135002 system.exception_table%s
+D s-ficobl.ads		20141203121819 078245e4 system.file_control_block%s
+D s-finmas.ads		20141203121819 814daec4 system.finalization_masters%s
+D s-finroo.ads		20141203121819 4ff27390 system.finalization_root%s
+D s-imenne.ads		20141203121819 614c06c0 system.img_enum_new%s
+D s-imgint.ads		20141203121819 02dbe0c2 system.img_int%s
+D s-linux.ads		20141203121819 befedf55 system.linux%s
+D s-multip.ads		20141203121819 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20141203121819 66009dac system.os_constants%s
+D s-osinte.ads		20141203121819 a44e3747 system.os_interface%s
+D s-parame.ads		20141203121819 06da98b2 system.parameters%s
+D s-pooglo.ads		20141203121819 542f33d0 system.pool_global%s
+D s-secsta.ads		20141203121819 86a2856d system.secondary_stack%s
+D s-soflin.ads		20141203121819 aa763b52 system.soft_links%s
+D s-stache.ads		20141203121819 a37c21ec system.stack_checking%s
+D s-stausa.ads		20141203121819 017a0a05 system.stack_usage%s
+D s-stalib.ads		20141203121819 fa0a3617 system.standard_library%s
+D s-stoele.ads		20141203121819 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20141203121819 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20141203121819 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20141203121819 2b3f8252 system.task_info%s
+D s-taspri.ads		20141203121819 15f617a8 system.task_primitives%s
+D s-taprop.ads		20141203121819 1ea86599 system.task_primitives.operations%s
+D s-taskin.ads		20141203121819 664726f5 system.tasking%s
+D s-taprob.ads		20141203121819 502249e3 system.tasking.protected_objects%s
+D s-tpoben.ads		20141203121819 b641f948 system.tasking.protected_objects.entries%s
+D s-tasren.ads		20141203121819 a67a9949 system.tasking.rendezvous%s
+D s-tassta.ads		20141203121819 70812003 system.tasking.stages%s
+D s-traent.ads		20141203121819 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20141203121819 510692af system.unsigned_types%s
+D s-valint.ads		20141203121819 48a52a3f system.val_int%s
+D s-wchcon.ads		20141203121819 1b7d22d2 system.wch_con%s
+D unchconv.ads		20141203121819 ca2f9e18 unchecked_conversion%s
 X 1 ada.ads
 16K9*Ada 19e8 13|12r6 12r19 25r29 25r50 26r29 26r56 27r37 14|51r6 51r27 52r6
 . 52r27 55r6 162r31 162r52 163r30 163r57 164r40 165r41 166r41 167r34 168r33

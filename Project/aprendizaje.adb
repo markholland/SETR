@@ -1,5 +1,5 @@
-with Digital_IO_Sim,Robot_Interface,Robot_Monitor;
-use Digital_IO_Sim,Robot_Interface,Robot_Monitor;
+with Digital_IO,Robot_Interface,Robot_Monitor,Ada.Text_IO;
+use Digital_IO,Robot_Interface,Robot_Monitor,Ada.Text_IO;
 
 procedure Aprendizaje is
 

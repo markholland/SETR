@@ -1,0 +1,178 @@
+V "GNAT Lib v2014"
+P LC TF  ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DELAY
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RELATIVE_DELAY
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U utils%b		utils.adb		4ac8fed0 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+Z ada.unchecked_deallocation%s
+W digital_io_sim%s	digital_io_sim.adb	digital_io_sim.ali
+W interfaces%s		interfac.ads		interfac.ali
+W queue%s		queue.adb		queue.ali  AD
+W robot_monitor%s	robot_monitor.adb	robot_monitor.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+U utils%s		utils.ads		9e5d283e EE NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W robot_interface%s	robot_interface.adb	robot_interface.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20140406181354 3ffc8e18 ada%s
+D a-calend.ads		20140406181358 d86d6c8c ada.calendar%s
+D a-caldel.ads		20140406181355 9f20b83d ada.calendar.delays%s
+D a-except.ads		20140406181356 43d57f8c ada.exceptions%s
+D a-finali.ads		20140406181359 69f99942 ada.finalization%s
+D a-inteio.ads		20140406181359 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20140406181358 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20140406181358 63f07669 ada.real_time%s
+D a-retide.ads		20140406181357 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20140406181355 1a984740 ada.streams%s
+D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
+D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
+D a-tiinio.ads		20140406181359 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
+D a-uncdea.ads		20140406181359 f15a5ed1 ada.unchecked_deallocation%s
+D digital_io_sim.ads	20141226170604 95734c50 digital_io_sim%s
+D interfac.ads		20140406181359 69adb1b9 interfaces%s
+D i-c.ads		20140406181358 5421119b interfaces.c%s
+D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
+D low_level_types.ads	20141209181346 09d2a761 low_level_types%s
+D queue.ads		20141226172717 46a38f1e queue%s
+D queue.adb		20141226173335 73edfff8 queue%b
+D robot_interface.ads	20141213171338 2174e2d4 robot_interface%s
+D robot_monitor.ads	20141216215653 c0ed828f robot_monitor%s
+D system.ads		20140406181356 bd760655 system%s
+D s-atacco.ads		20140406181355 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20140406181358 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20140406181355 0b705ca5 system.concat_3%s
+D s-crtl.ads		20140406181356 2c012597 system.crtl%s
+D s-exctab.ads		20140406181354 54135002 system.exception_table%s
+D s-ficobl.ads		20140406181355 078245e4 system.file_control_block%s
+D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
+D s-finroo.ads		20140406181359 4ff27390 system.finalization_root%s
+D s-imgint.ads		20140406181359 02dbe0c2 system.img_int%s
+D s-linux.ads		20140406181355 befedf55 system.linux%s
+D s-multip.ads		20140406181358 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20140410143800 04020b75 system.os_constants%s
+D s-osinte.ads		20140406181359 fd138fd1 system.os_interface%s
+D s-parame.ads		20140406181358 06da98b2 system.parameters%s
+D s-pooglo.ads		20140406181357 542f33d0 system.pool_global%s
+D s-soflin.ads		20140406181358 aa763b52 system.soft_links%s
+D s-stache.ads		20140406181355 a37c21ec system.stack_checking%s
+D s-stausa.ads		20140406181355 017a0a05 system.stack_usage%s
+D s-stalib.ads		20140406181355 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140406181357 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140406181355 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20140406181357 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20140406181357 2b3f8252 system.task_info%s
+D s-taspri.ads		20140406181359 15f617a8 system.task_primitives%s
+D s-taprop.ads		20140406181355 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20140406181355 3f821f32 system.tasking%s
+D s-taprob.ads		20140406181354 502249e3 system.tasking.protected_objects%s
+D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
+D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
+D utils.ads		20141226170402 025fccbf utils%s
+D utils.adb		20141226173022 385a05c7 utils%b
+X 1 ada.ads
+16K9*Ada 19e8 57|5r6 5r27
+X 8 a-reatim.ads
+39K13*Real_Time 138e18 57|5w10 5r31
+41O9*Time<duration> 57|43r14
+46O9*Time_Span<duration> 57|42r25
+53V13*Clock{41O9} 57|46s18
+55V14*"+"{41O9} 57|55s29 63s29
+85V13*Milliseconds{46O9} 57|42s38
+X 16 digital_io_sim.ads
+14K9*Digital_IO_Sim 33e19 57|4w6 4r27
+28U14*Put_Line 57|95s13 97s13 102s13 116s7 118s7 123s4
+30U14*Get_Immediate 57|53s16 61s16
+30e28 Item{character} 57|53r30 61r30
+31b28 Available{boolean} 57|53r45 61r45
+X 21 queue.ads
+4k9*Queue 22e10 57|7w6 11r29
+5R9*Queue_Type 57|13r22[11]
+6U14*Push 57|96s13[11]
+7U14*Pop 57|115s7[11]
+8U14*Empty_Queue 57|101s13[11]
+9V13*Is_Empty{boolean} 57|114s14[11]
+X 23 robot_interface.ads
+3K9*Robot_Interface 64e20 56|1w6 1r27
+5E9*Axis_Type 5e56 56|6r38 9r45 22r36 57|15r31 36r37
+5n23*Rotation{5E9} 56|31r48 57|79r32 81r32
+5n33*Forward{5E9} 56|32r84 57|83r32 85r32
+5n42*Height{5E9} 56|33r84 57|87r32 89r32
+5n50*Clamp{5E9} 56|34r80 57|91r32 93r32
+8E9*Motion_Type 8e47 56|7r58 10r58 57|15r49 37r37
+8n31*To_End{8E9} 57|24r20 58r20 81r42 85r41 89r40 93r39
+8n39*To_Init{8E9} 57|26r23 50r17 79r42 83r41 87r40 91r39
+9A9*Command_Type(8E9)<5E9> 57|18r17 44r17
+10a4*Stop_All{9A9} 57|18r33 32r21 44r33 68r21
+24U14*Move_Robot 57|21s10 32s10 48s10 69s10
+X 24 robot_monitor.ads
+4K9*Robot_Monitor 22e18 57|6w6 6r27
+6A9*Position(natural)<23|5E9> 57|11r35 16r14 17r14 110r20
+8w14*Robot_Mon 57|16r26 23r21 51r19 59r19 96r35
+10V16 Get_Pos{6A9} 57|16s36 23s31 51s29 59s29 96s45
+20U14*Move_Robot_To 57|117s7
+X 25 system.ads
+37K9*System 152e11 56|2w6
+X 43 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 56 utils.ads
+4K9*Utils 27E9 38l5 38e10 57|9b14 127l5 127t10
+6U19*Move_By_One 6>31 7>51 57|15b11 34l5 34t16
+6e31 A{23|5E9} 57|15b24 20r18 25r32 25r43 27r32 27r43
+7e51 M{23|8E9} 57|15b42 20r24 24r16 26r19
+9U19*Move_Within_Limits 9>38 10>51 11>51 57|36b11 70l5 70t23 79s13 81s13
+. 83s13 85s13 87s13 89s13 91s13 93s13
+9e38 A{23|5E9} 57|36b30 47r18 51r37 59r37 59r55
+10e51 M{23|8E9} 57|37b30 47r24 50r13 58r16
+11e51 C{character} 57|38b30 54r34 62r34
+13U19*Move_With_Keys 13>34 57|73b11 107l5 107t19
+13e34 C{character} 57|73b27 77r12 79r51 81r50 83r50 85r49 87r49 89r48 91r48
+. 93r47
+15U19*Repeat_From_Memory 57|99s13 109b11 125l5 125t23
+18i9*End_Axis{natural} 27c9 31r58 32r93 33r92
+19i9*End_Clamp{natural} 28c9 34r87
+20i9*Init_Axis{natural} 29c9 57|51r42
+22A14*Limits_Type(natural)<23|5E9> 23r33 31r33
+23a9*Simul_Limits{22A14} 31c9 57|59r42
+X 57 utils.adb
+11K12 Int_Queue[21|4] 12r8
+13r4 Saved_Positions{21|5R9[11]} 96m18 96r18 101m25 101r25 114r23 115m11
+. 115r11
+16a7 pos1{24|6A9} 25r38 27r38
+17a7 pos2{24|6A9} 23m13 25r27 27r27
+18a7 command{23|9A9} 20m10 21r21
+40e7 Input{character} 53m38 54r26 61m38 62r26
+41b7 Avail{boolean} 53m58 61m58
+42o7 Period{8|46O9} 55r31 63r31
+43o7 Next{8|41O9} 46m10 55m16 55r24 56r28 63m16 63r24 64r28
+44a7 Command{23|9A9} 47m10 48r21 68m10 69r21
+110a4 Next_Position{24|6A9} 115m28 117r21
+111i4 Count{natural} 116r57 118r49 119m7 119r16
+

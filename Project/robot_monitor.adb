@@ -1,8 +1,9 @@
 pragma Task_Dispatching_Policy (FIFO_Within_Priorities);
 pragma Locking_Policy (Ceiling_Locking);
 
-with Digital_IO_Sim;  use Digital_IO_Sim;
+with Digital_IO;  use Digital_IO;
 with Ada.Real_Time;   use Ada.Real_Time;
+with Ada.Text_IO;  use Ada.Text_IO; 
 
 package body Robot_Monitor is
 
