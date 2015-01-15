@@ -1,0 +1,117 @@
+V "GNAT Lib v2014"
+M P W=b
+A --RTS=marteuc_x86
+P
+
+RN
+RV NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_RELATIVE_DELAY
+RV SPARK_05
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U learn_rep%b		learn_rep.adb		a6681edb NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W digital_io%s		digital_io.adb		digital_io.ali
+W robot_interface%s	robot_interface.adb	robot_interface.ali
+W robot_monitor%s	robot_monitor.adb	robot_monitor.ali
+
+D ada.ads		20141203124250 3ffc8e18 ada%s
+D a-calend.ads		20141203124249 d86d6c8c ada.calendar%s
+D a-caldel.ads		20141203124250 9f20b83d ada.calendar.delays%s
+D a-except.ads		20141203124249 43d57f8c ada.exceptions%s
+D a-finali.ads		20141203124249 69f99942 ada.finalization%s
+D a-ioexce.ads		20141203124250 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141203124249 1a984740 ada.streams%s
+D a-tags.ads		20141203124250 dc4d0634 ada.tags%s
+D a-textio.ads		20141203124250 386df5d4 ada.text_io%s
+D a-unccon.ads		20141203124249 f9eb8f06 ada.unchecked_conversion%s
+D digital_io.ads	20141218121429 42443fd9 digital_io%s
+D interfac.ads		20141203124250 69adb1b9 interfaces%s
+D i-c.ads		20141203124249 5421119b interfaces.c%s
+D i-cstrea.ads		20141203124250 febc86ed interfaces.c_streams%s
+D learn_rep.adb		20150113165515 7a40bbb6 learn_rep%b
+D low_level_types.ads	20141210172748 09d2a761 low_level_types%s
+D robot_interface.ads	20141210182624 66ecedef robot_interface%s
+D robot_monitor.ads	20141212102754 c0ed828f robot_monitor%s
+D system.ads		20141203124251 820bee89 system%s
+D s-atacco.ads		20141203124248 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20141203124250 2c012597 system.crtl%s
+D s-exctab.ads		20141203124250 54135002 system.exception_table%s
+D s-ficobl.ads		20141203124248 078245e4 system.file_control_block%s
+D s-finmas.ads		20141203124249 814daec4 system.finalization_masters%s
+D s-finroo.ads		20141203124250 4ff27390 system.finalization_root%s
+D s-linux.ads		20141203124249 befedf55 system.linux%s
+D s-multip.ads		20141203124249 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20141203124251 66009dac system.os_constants%s
+D s-osinte.ads		20141203124251 a44e3747 system.os_interface%s
+D s-parame.ads		20141203124250 06da98b2 system.parameters%s
+D s-pooglo.ads		20141203124250 542f33d0 system.pool_global%s
+D s-soflin.ads		20141203124249 aa763b52 system.soft_links%s
+D s-stache.ads		20141203124248 a37c21ec system.stack_checking%s
+D s-stausa.ads		20141203124249 017a0a05 system.stack_usage%s
+D s-stalib.ads		20141203124249 fa0a3617 system.standard_library%s
+D s-stoele.ads		20141203124250 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20141203124250 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20141203124249 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20141203124250 2b3f8252 system.task_info%s
+D s-taspri.ads		20141203124250 15f617a8 system.task_primitives%s
+D s-taskin.ads		20141203124251 664726f5 system.tasking%s
+D s-taprob.ads		20141203124250 502249e3 system.tasking.protected_objects%s
+D s-traent.ads		20141203124248 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20141203124250 510692af system.unsigned_types%s
+D s-wchcon.ads		20141203124248 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 15|1r50 2r50
+X 9 a-textio.ads
+49K13*Text_IO 471e16 15|1w54 2r54
+166U14*New_Line 15|110s4
+231U14*Get_Immediate 15|18s7
+263U14*Put_Line 15|15s4 23s16 27s16 33s19 111s4
+X 11 digital_io.ads
+11K9*Digital_IO 16e15 15|1w6 2r6
+X 15 learn_rep.adb
+4U11*Learn_Rep 4b11 113l5 113t14
+5e4 Ch{character} 18m22 20r15
+6b4 Available{boolean} 18m26 19r10
+7a4 Command{17|8A9} 43r20 44m19 45m22 49r19 50m19 51m22 56r19 57m19 58m22
+. 62r20 63m19 64m22 69r20 70m19 71m22 75r20 76m19 77m22 82r20 83m19 84m22
+. 88r19 89m19 90m22 102r30 103r39 104m13 107r19
+8a4 Pos{18|6A9} 17m7 102r14 103r13
+9a4 Max_Pos{18|6A9} 103r23
+10A9 Pos_Array(18|6A9)<integer> 11r19
+11a4 Position_Mem{10A9} 25m16 26r37 32r40 34r33
+12i4 Iter_Array{integer} 24m16 24r30 25r29 26r50 31r29 39m16
+31i21 i{integer} 32r53 34r46
+101e11 Ax{17|4E9} 102r18 102r38 103r17 103r31 103r47 104r21
+X 17 robot_interface.ads
+2K9*Robot_Interface 15|1w18 2r18 17|61e20
+4E9*Axis_Type 15|101r17 17|4e56
+4n23*Rotation{4E9} 15|43r28 44r27 45r30 49r27 50r27 51r30
+4n33*Forward{4E9} 15|56r27 57r27 58r30 62r28 63r27 64r30
+4n42*Height{4E9} 15|69r28 70r27 71r30 75r28 76r27 77r30
+4n50*Clamp{4E9} 15|82r28 83r27 84r30 88r27 89r27 90r30
+7n25*Stop{7E9} 15|43r40 45r43 49r39 51r43 56r38 58r42 62r39 64r42 69r38 71r41
+. 75r38 77r41 82r37 84r40 88r36 90r40 104r28
+7n31*To_End{7E9} 15|50r40 63r39 76r38 89r37 103r53
+7n39*To_Init{7E9} 15|44r40 57r39 70r38 83r37 102r44
+8A9*Command_Type(7E9)<4E9> 15|7r14
+9a4*Stop_All{8A9} 15|7r30
+23U14*Move_Robot 15|107s7
+X 18 robot_monitor.ads
+4K9*Robot_Monitor 15|1w35 2r35 18|21e18
+6A9*Position(natural)<17|4E9> 15|8r10 9r14 10r40
+8w14*Robot_Mon 15|14r4 17r14 25r44 26r16 30r16 32r19
+10V16 Get_Pos{6A9} 15|17s24 25s54
+11U17 Reset 15|14s14 30s26
+13U17 Print_Pos 15|26s26 32s29
+19U14*Move_Robot_To 15|34s19
+X 34 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

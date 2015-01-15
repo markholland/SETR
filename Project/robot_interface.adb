@@ -1,5 +1,5 @@
-with Low_Level_Types, Digital_IO_Sim;
-use  Low_Level_Types, Digital_IO_Sim;
+with Low_Level_Types, Digital_IO;
+use  Low_Level_Types, Digital_IO;
 with System, Ada.Unchecked_Conversion;
 
 package body Robot_Interface is

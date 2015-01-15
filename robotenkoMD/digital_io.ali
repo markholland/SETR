@@ -1,0 +1,40 @@
+V "GNAT Lib v2014"
+A --RTS=marteuc_x86
+P
+
+RN
+RV SPARK_05
+
+U digital_io%b		digital_io.adb		6c4fecbf NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W port_io%s		port_io.adb		port_io.ali
+
+U digital_io%s		digital_io.ads		4b9698b8 EE NE OO PK
+W low_level_types%s	low_level_types.ads	low_level_types.ali
+
+D digital_io.ads	20141218121429 42443fd9 digital_io%s
+D digital_io.adb	20150113160856 0261c646 digital_io%b
+D interfac.ads		20141203124250 69adb1b9 interfaces%s
+D low_level_types.ads	20141210172748 09d2a761 low_level_types%s
+D port_io.ads		20141218121656 45c7a499 port_io%s
+D system.ads		20141203124251 820bee89 system%s
+X 1 digital_io.ads
+11K9*Digital_IO 16l5 16e15 2|15b14 29l5 29t15
+13U14*Write_Low_Byte 13>29 2|19b14 22l8 22t22
+13m29 Value{4|6M9} 2|19b30 21r21
+14V13*Read_Low_Byte{4|6M9} 2|24b13 27l8 27t21
+X 2 digital_io.adb
+17m4 Base{4|5M9} 21r16 26r22
+X 3 interfac.ads
+38K9*Interfaces 2|12w6 12r23 3|179e15
+57M9*Unsigned_8
+60M9*Unsigned_16
+X 4 low_level_types.ads
+3K9*Low_Level_Types 1|9w6 9r27 4|8e20
+5M9*Word<3|60M9> 2|17r11
+6M9*Byte<3|57M9> 1|13r39 14r34 2|19r40 24r34
+X 5 port_io.ads
+3K9*Port_IO 2|11w6 11r23 5|9e12
+5U14*Port_Out 2|21s7
+7V13*Port_In{4|6M9} 2|26s14
+

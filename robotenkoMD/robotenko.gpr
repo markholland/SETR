@@ -1,0 +1,6 @@
+project Robotenko is
+
+   for Main use ("test_robot_interface.adb");
+
+end Robotenko;
+

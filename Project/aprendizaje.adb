@@ -7,8 +7,8 @@ Ch : Character;
    Available : Boolean; -- For use with Get_Immediate
    Command : Command_Type := Stop_All; -- Ensure that initially all axis will be still
    Pos : Position;
-   Simul_Max_Pos : Position := (400, 400, 400, 40); -- Simulator axis limits
-
+   --Simul_Max_Pos : Position := (400, 400, 400, 40); -- Simulator axis limits
+   Max_Pos : Position := (239, 149, 234, 40);
    iter : Integer := 0; -- The first element won't hold a position
    type Posiciones is array (0..400) of Position;
 
@@ -24,28 +24,62 @@ begin
          case Ch is
             -- Rotation keys
             when 'Q' | 'q' =>
-               Command(Rotation) := (if Command(Rotation) = Stop then To_Init else Stop);
+              if Command(Rotation) = Stop then 
+		            Command(Rotation) := To_Init;
+	            else
+		            Command(Rotation) := Stop;
+	            end if;  
             when 'A' | 'a' =>
-               Command(Rotation) := (if Command(Rotation) = Stop then To_End else Stop);
+              if Command(Rotation) = Stop then
+		            Command(Rotation) := To_End;
+	            else 
+                Command(Rotation) := Stop;
+	            end if;  
             -- Forward keys
             when 'W' | 'w' =>
-               Command(Forward) := (if Command(Forward) = Stop then To_Init else Stop);
+              if Command(Forward) = Stop then
+		            Command(Forward) := To_Init;
+		          else 
+                Command(Forward) := Stop;
+		          end if; 
             when 'S' | 's' =>
-               Command(Forward) := (if Command(Forward) = Stop then To_End else Stop);
+              if Command(Forward) = Stop then
+		            Command(Forward) := To_End;
+		          else 
+                Command(Forward) := Stop;
+		          end if; 
             --  Height keys
             when 'E' | 'e' =>
-               Command(Height) := (if Command(Height) = Stop then To_Init else Stop);
+              if Command(Height) = Stop then
+		            Command(Height) := To_Init;
+		          else 
+                Command(Height) := Stop;
+		          end if;  
             when 'D' | 'd' =>
-               Command(Height) := (if Command(Height) = Stop then To_End else Stop);
+              if Command(Height) = Stop then
+		            Command(Height) := To_End;
+		          else 
+                Command(Height) := Stop;
+		          end if;
             -- Clamp keys
             when 'R' | 'r' =>
-               Command(Clamp) := (if Command(Clamp) = Stop then To_Init else Stop);
+              if Command(Clamp) = Stop then
+		            Command(Clamp) := To_Init;
+		          else 
+                Command(Clamp) := Stop;
+		          end if;
             when 'F' | 'f' =>
-               Command(Clamp) := (if Command(Clamp) = Stop then To_End else Stop);
+              if Command(Clamp) = Stop then
+		            Command(Clamp) := To_End;
+		          else 
+                Command(Clamp) := Stop;
+		          end if;
             when 'M' | 'm' => --memorizar
                Put_Line("Saving position");
                iter := iter + 1;
-               Posicion(iter) := Robot_Mon.Get_Pos;        
+               Posicion(iter) := Robot_Mon.Get_Pos;
+               Robot_Mon.Print_Pos (Posicion(iter));
+               Put_Line("");
             when 'P' | 'p' => --repeticion
                Put_Line("Entering repetition mode.");
                Robot_Mon.Reset;
@@ -54,8 +88,7 @@ begin
                   Robot_Mon.Print_Pos(Posicion(i));
                   Put_Line("");
                   Move_Robot_To(Posicion(i));
-               delay 2.0;
-               
+                  delay 2.0;     -- 2 second pause inbetween movements
                end loop;
                Put_Line("Completed all known movements.");
             when 'L' | 'l' =>
@@ -72,7 +105,7 @@ begin
       -- Check limits before applying Commands
       for Ax in Axis_Type'Range loop
          if (Pos(Ax) = 0 and Command(Ax) = To_Init) or else
-           (Pos(Ax) = Simul_Max_Pos(Ax) and Command(Ax) = To_End) then
+           (Pos(Ax) = Max_Pos(Ax) and Command(Ax) = To_End) then
             Command(Ax) := Stop;  -- Overwrite forcing commands with Stop
          end if;
       end loop;
